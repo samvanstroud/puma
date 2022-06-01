@@ -312,7 +312,7 @@ In this case, we use <code class="docutils literal notranslate"><span class="pre
 
 <span class="c1"># you can also use a lambda function</span>
 <span class="c1"># discs_rnnip = np.apply_along_axis(</span>
-<span class="c1">#     lambda a: np.log(a[2] / (0.018 * a[1] + 0.92 * a[0])),</span>
+<span class="c1">#     lambda a: np.log(a[2] / (0.018 * a[1] + (1 - 0.018) * a[0])),</span>
 <span class="c1">#     1,</span>
 <span class="c1">#     df[[&quot;rnnip_pu&quot;, &quot;rnnip_pc&quot;, &quot;rnnip_pb&quot;]].values,</span>
 <span class="c1"># )</span>
