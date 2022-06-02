@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>puma - Plotting UMami Api &#8212; puma 0.1.2 documentation</title>
+    <title>puma - Plotting UMami Api &#8212; puma 0.1.2dev documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -102,7 +102,7 @@
       <div class="navbar-end-item">
         <div class="dropdown" id="version_switcher">
     <button type="button" class="btn btn-primary btn-sm navbar-btn dropdown-toggle" id="version_switcher_button" data-toggle="dropdown">
-        v0.1.2  <!-- this text may get changed later by javascript -->
+        main  <!-- this text may get changed later by javascript -->
         <span class="caret"></span>
     </button>
     <div id="version_switcher_menu" class="dropdown-menu list-group-flush py-0" aria-labelledby="version_switcher_button">
@@ -112,7 +112,7 @@
 
 <!-- NOTE: this JS must live here (not in our global JS file) because it relies
      on being processed by Jinja before it is run (specifically for replacing
-     variables index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'v0.1.2'}.
+     variables index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
 -->
 
 <script type="text/javascript">
@@ -166,7 +166,7 @@ function checkPageExistsAndRedirect(event) {
             // this version, rather than using sphinx's  variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
-            if (entry.version == "v0.1.2") {
+            if (entry.version == "main") {
                 node.classList.add("active");
                 let btn = document.getElementById("version_switcher_button");
                 btn.innerText = btn.dataset["activeVersionName"] = entry.name;
@@ -292,7 +292,8 @@ function checkPageExistsAndRedirect(event) {
 <h1>puma - Plotting UMami Api<a class="headerlink" href="#puma-plotting-umami-api" title="Permalink to this headline">#</a></h1>
 <p><a class="reference external" href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 <a class="reference external" href="https://umami-hep.github.io/puma/"><img alt="Umami docs" src="https://img.shields.io/badge/info-documentation-informational" /></a>
-<a class="reference external" href="https://badge.fury.io/py/puma-hep"><img alt="PyPI version" src="https://badge.fury.io/py/puma-hep.svg" /></a></p>
+<a class="reference external" href="https://badge.fury.io/py/puma-hep"><img alt="PyPI version" src="https://badge.fury.io/py/puma-hep.svg" /></a>
+<a class="reference external" href="https://doi.org/10.5281/zenodo.6607414"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.6607414.svg" /></a></p>
 <p><img alt="Testing workflow" src="https://github.com/umami-hep/puma/actions/workflows/testing.yml/badge.svg" />
 <img alt="Linting workflow" src="https://github.com/umami-hep/puma/actions/workflows/linting.yml/badge.svg" />
 <img alt="Pages workflow" src="https://github.com/umami-hep/puma/actions/workflows/pages.yml/badge.svg" />
