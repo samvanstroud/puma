@@ -356,7 +356,7 @@ Attributes
       :type sub_plot_index: int, optional
 
 
-   .. py:method:: draw_vlines(self, vlines_xvalues: list, vlines_label_list: list = None, vlines_line_height_list: list = None, same_height: bool = False, colour: str = '#920000', fontsize: int = 10)
+   .. py:method:: draw_vlines(self, vlines_xvalues: list, vlines_label_list: list = None, vlines_line_height_list: list = None, same_height: bool = False, colour: str = '#000000', fontsize: int = 10)
 
       Drawing working points in plot
 
@@ -372,7 +372,7 @@ Attributes
       :type vlines_line_height_list: list, optional
       :param same_height: Working point lines on same height, by default False
       :type same_height: bool, optional
-      :param colour: Colour of the vertical line, by default "#920000"
+      :param colour: Colour of the vertical line, by default "#000000" (black)
       :type colour: str, optional
       :param fontsize: Fontsize of the vertical line text. By default 10.
       :type fontsize: int, optional
