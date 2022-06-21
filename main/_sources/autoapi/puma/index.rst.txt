@@ -677,6 +677,9 @@ Attributes
    :param atlas_brand: `brand` argument handed to atlasify. If you want to remove it just use an empty
                        string or None, by default "ATLAS"
    :type atlas_brand: str, optional
+   :param atlas_tag_outside: `outside` argument handed to atlasify. Decides if the ATLAS logo is plotted
+                             outside of the plot (on top), by default False
+   :type atlas_tag_outside: bool, optional
    :param plotting_done: Bool that indicates if plotting is done. Only then `atlasify()` can be called,
                          by default False
    :type plotting_done: bool
@@ -832,7 +835,7 @@ Attributes
       
 
    .. py:attribute:: atlas_second_tag
-      :annotation: :str = 
+      :annotation: :str
 
       
 
@@ -853,6 +856,11 @@ Attributes
 
    .. py:attribute:: atlas_brand
       :annotation: :str = ATLAS
+
+      
+
+   .. py:attribute:: atlas_tag_outside
+      :annotation: :bool = False
 
       
 
