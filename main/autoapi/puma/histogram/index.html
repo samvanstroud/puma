@@ -482,17 +482,17 @@ other histograms.</p>
 <li><p><strong>ratio_group</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the ratio group this histogram is compared with. The ratio group
 allows you to compare different groups of histograms within one plot.
 By default None</p></li>
-<li><p><strong>flavour</strong> (<em>str</em><em>, </em><em>optional</em>) – Jet flavour in case the histogram corresponds to one specific flavour. If
-this is specified, the correct colour will be extracted from the global
-config. Allowed values are the ones from the global config, i.e. “bjets”,
-“cjets”, “ujets”, “bbjets”, …, by default None</p></li>
+<li><p><strong>flavour</strong> (<em>str</em><em>, </em><em>optional</em>) – If set, the correct colour and a label prefix will be extracted from
+<code class="code docutils literal notranslate"><span class="pre">puma.utils.global_config</span></code> set for this histogram.
+Allowed values are e.g. “bjets”, “cjets”, “ujets”, “bbjets”, …
+By default None</p></li>
 <li><p><strong>add_flavour_label</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to False to suppress the automatic addition of the flavour label prefix
 in the label of the curve (i.e. “$b$-jets” in the case of b-jets).
-This is ignored if <code class="code docutils literal notranslate"><span class="pre">flavour</span></code> is not set. By default False</p></li>
+This is ignored if <code class="code docutils literal notranslate"><span class="pre">flavour</span></code> is not set. By default True</p></li>
 <li><p><strong>histtype</strong> (<em>str</em><em>, </em><em>optional</em>) – <code class="code docutils literal notranslate"><span class="pre">histtype</span></code> parameter which is handed to matplotlib.hist() when plotting the
 histograms. Supported values are “bar”, “barstacked”, “step”, “stepfilled”.
 By default “step”</p></li>
-<li><p><strong>**kwargs</strong> (<em>kwargs</em>) – Keyword arguments passed to <code class="code docutils literal notranslate"><span class="pre">PlotLineObject</span></code></p></li>
+<li><p><strong>**kwargs</strong> (<em>kwargs</em>) – Keyword arguments passed to <code class="code docutils literal notranslate"><span class="pre">puma.PlotLineObject</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises</dt>

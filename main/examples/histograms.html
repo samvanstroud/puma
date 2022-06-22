@@ -332,7 +332,7 @@ function checkPageExistsAndRedirect(event) {
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">from</span> <span class="nn">puma</span> <span class="kn">import</span> <span class="n">Histogram</span><span class="p">,</span> <span class="n">HistogramPlot</span>
-<span class="kn">from</span> <span class="nn">puma.utils</span> <span class="kn">import</span> <span class="n">get_dummy_2_taggers</span>
+<span class="kn">from</span> <span class="nn">puma.utils</span> <span class="kn">import</span> <span class="n">get_dummy_2_taggers</span><span class="p">,</span> <span class="n">global_config</span>
 
 <span class="c1"># The line below generates dummy data which is similar to a NN output</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">get_dummy_2_taggers</span><span class="p">()</span>
@@ -351,44 +351,44 @@ function checkPageExistsAndRedirect(event) {
 <span class="n">is_c</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;HadronConeExclTruthLabelID&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span>
 <span class="n">is_b</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;HadronConeExclTruthLabelID&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span>
 
+<span class="n">flav_cat</span> <span class="o">=</span> <span class="n">global_config</span><span class="p">[</span><span class="s2">&quot;flavour_categories&quot;</span><span class="p">]</span>
+
 <span class="n">hist_dips_light</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[</span><span class="n">is_light</span><span class="p">][</span><span class="s2">&quot;disc_dips&quot;</span><span class="p">],</span>
-    <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;DIPS&quot;</span><span class="p">,</span>
-    <span class="c1"># if not set, the &quot;ratio_group&quot; argument would be set to the flavour &quot;ujets&quot;</span>
-    <span class="c1"># so this is just done here for demonstration purposes</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light-flavour jets DIPS&quot;</span><span class="p">,</span>
+    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;ujets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
     <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">hist_dips_c</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[</span><span class="n">is_c</span><span class="p">][</span><span class="s2">&quot;disc_dips&quot;</span><span class="p">],</span>
-    <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;DIPS&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c$-jets DIPS&quot;</span><span class="p">,</span>
+    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;cjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
     <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">hist_dips_b</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[</span><span class="n">is_b</span><span class="p">][</span><span class="s2">&quot;disc_dips&quot;</span><span class="p">],</span>
-    <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;DIPS&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$b$-jets DIPS&quot;</span><span class="p">,</span>
+    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;bjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
     <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">hist_rnnip_light</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[</span><span class="n">is_light</span><span class="p">][</span><span class="s2">&quot;disc_rnnip&quot;</span><span class="p">],</span>
-    <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;RNNIP&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light-flavour jets RNNIP&quot;</span><span class="p">,</span>
+    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;ujets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
     <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span>
     <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">hist_rnnip_c</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[</span><span class="n">is_c</span><span class="p">][</span><span class="s2">&quot;disc_rnnip&quot;</span><span class="p">],</span>
-    <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;RNNIP&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c$-jets RNNIP&quot;</span><span class="p">,</span>
+    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;cjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
     <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span>
     <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">hist_rnnip_b</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
     <span class="n">df</span><span class="p">[</span><span class="n">is_b</span><span class="p">][</span><span class="s2">&quot;disc_rnnip&quot;</span><span class="p">],</span>
-    <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;RNNIP&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$b$-jets RNNIP&quot;</span><span class="p">,</span>
+    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;bjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
     <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span>
     <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">,</span>
 <span class="p">)</span>
@@ -443,7 +443,7 @@ function checkPageExistsAndRedirect(event) {
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">),</span>
     <span class="n">atlas_first_tag</span><span class="o">=</span><span class="s2">&quot;Simulation, $</span><span class="se">\\</span><span class="s2">sqrt</span><span class="si">{s}</span><span class="s2">=13$ TeV&quot;</span><span class="p">,</span>
     <span class="n">atlas_second_tag</span><span class="o">=</span><span class="s2">&quot;dummy sample, dummy jets&quot;</span><span class="p">,</span>
-    <span class="n">atlas_brand</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">atlas_brand</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># You can deactivate the ATLAS branding (e.g. for a thesis)</span>
     <span class="n">draw_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="c1"># bins=np.linspace(0, 1, 30),  # you can also force a binning for the plot here</span>
 <span class="p">)</span>
@@ -453,6 +453,8 @@ function checkPageExistsAndRedirect(event) {
 <span class="n">c_jets</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;HadronConeExclTruthLabelID==4&quot;</span><span class="p">)</span>
 <span class="n">b_jets</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;HadronConeExclTruthLabelID==5&quot;</span><span class="p">)</span>
 
+<span class="c1"># the &quot;flavour&quot; argument will add a &quot;light-flavour jets&quot; (or other) prefix to the label</span>
+<span class="c1"># + set the colour to the one that is defined in puma.utils.global_config</span>
 <span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Histogram</span><span class="p">(</span><span class="n">u_jets</span><span class="p">[</span><span class="s2">&quot;dips_pb&quot;</span><span class="p">],</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">))</span>
 <span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Histogram</span><span class="p">(</span><span class="n">c_jets</span><span class="p">[</span><span class="s2">&quot;dips_pb&quot;</span><span class="p">],</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">))</span>
 <span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Histogram</span><span class="p">(</span><span class="n">b_jets</span><span class="p">[</span><span class="s2">&quot;dips_pb&quot;</span><span class="p">],</span> <span class="n">flavour</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">))</span>

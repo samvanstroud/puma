@@ -151,20 +151,20 @@ Attributes
                        allows you to compare different groups of histograms within one plot.
                        By default None
    :type ratio_group: str, optional
-   :param flavour: Jet flavour in case the histogram corresponds to one specific flavour. If
-                   this is specified, the correct colour will be extracted from the global
-                   config. Allowed values are the ones from the global config, i.e. "bjets",
-                   "cjets", "ujets", "bbjets", ..., by default None
+   :param flavour: If set, the correct colour and a label prefix will be extracted from
+                   `puma.utils.global_config` set for this histogram.
+                   Allowed values are e.g. "bjets", "cjets", "ujets", "bbjets", ...
+                   By default None
    :type flavour: str, optional
    :param add_flavour_label: Set to False to suppress the automatic addition of the flavour label prefix
                              in the label of the curve (i.e. "$b$-jets" in the case of b-jets).
-                             This is ignored if `flavour` is not set. By default False
+                             This is ignored if `flavour` is not set. By default True
    :type add_flavour_label: bool, optional
    :param histtype: `histtype` parameter which is handed to matplotlib.hist() when plotting the
                     histograms. Supported values are "bar", "barstacked", "step", "stepfilled".
                     By default "step"
    :type histtype: str, optional
-   :param \*\*kwargs: Keyword arguments passed to `PlotLineObject`
+   :param \*\*kwargs: Keyword arguments passed to `puma.PlotLineObject`
    :type \*\*kwargs: kwargs
 
    :raises ValueError: If input data is not of type np.ndarray or list
