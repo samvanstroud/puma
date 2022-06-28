@@ -72,7 +72,7 @@ Classes
 
 
 
-.. py:class:: HistogramPlot(bins=40, bins_range: tuple = None, discrete_vals: list = None, plot_pie: bool = False, pie_colours: list = None, pie_labels: list = None, norm: bool = True, logy: bool = False, bin_width_in_ylabel: bool = False, **kwargs)
+.. py:class:: HistogramPlot(bins=40, bins_range: tuple = None, discrete_vals: list = None, norm: bool = True, logy: bool = False, bin_width_in_ylabel: bool = False, **kwargs)
 
    Bases: :py:obj:`puma.plot_base.PlotBase`
 
@@ -91,17 +91,9 @@ Classes
                       By default None
    :type bins_range: tuple, optional
    :param discrete_vals: List of values if a variable only has discrete values. If discrete_vals is
-                         specified only the bins containing these values are plotted. If a pie chart
-                         is plotted, discrete_vals is obligatory. By default None.
+                         specified only the bins containing these values are plotted.
+                         By default None.
    :type discrete_vals: list, optional
-   :param plot_pie: Set to True if you would like to plot a pie chart instead of a histogram
-   :type plot_pie: bool, optional
-   :param pie_colours: List of colours used for a pie chart or string providing the colour scheme.
-                       Possible colour schemes are 'red', 'blue', 'green' or 'yellow',
-                       by default None
-   :type pie_colours: list or str, optional
-   :param pie_labels: List of labels used for a pie chart, by default None
-   :type pie_labels: list, optional
    :param norm: Specify if the histograms are normalised, this means that histograms are
                 divided by the total numer of counts. Therefore, the sum of the bin counts
                 is equal to one, but NOT the area under the curve, which would be
@@ -151,19 +143,6 @@ Classes
       :returns: matplotlib Line2D object
       :rtype: Line2D
 
-      :raises ValueError: If specified bins type is not supported.
-
-
-   .. py:method:: plot_pie_chart(self)
-
-      Plotting Pie chart. Only variables with defined discrete values
-      can be plotted. Only non-zero values are plotted.
-
-      :returns: **Patch**
-      :rtype: matplotlib Patch object
-
-      :raises ValueError: If plot_pie is set to True but not the vertical_split
-      :raises ValueError: If no discrete values of the variable are provided
       :raises ValueError: If specified bins type is not supported.
 
 

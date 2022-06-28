@@ -6,36 +6,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>puma.utils.generate &#8212; puma 0.1.3dev documentation</title>
+    <title>puma.pie &#8212; puma 0.1.3dev documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
 </script>
 
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
 
 
   <link rel="stylesheet"
-    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../../search.html" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="None">
   </head>
@@ -56,7 +56,7 @@
   
 
 
-<a class="navbar-brand logo" href="../../../../index.html">
+<a class="navbar-brand logo" href="../../../index.html">
   
   
   
@@ -79,25 +79,25 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../../index.html">
+ <a class="reference internal nav-link" href="../../../index.html">
   Quickstart
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../../examples/index.html">
+ <a class="reference internal nav-link" href="../../../examples/index.html">
   Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../../dev_guidelines/index.html">
+ <a class="reference internal nav-link" href="../../../dev_guidelines/index.html">
   Develop
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../index.html">
+ <a class="reference internal nav-link" href="../../index.html">
   API Reference
  </a>
 </li>
@@ -131,14 +131,14 @@
 
 <!-- NOTE: this JS must live here (not in our global JS file) because it relies
      on being processed by Jinja before it is run (specifically for replacing
-     variables autoapi/puma/utils/generate/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
+     variables autoapi/puma/pie/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
 -->
 
 <script type="text/javascript">
 // Check if corresponding page path exists in other version of docs
 // and, if so, go there instead of the homepage of the other docs version
 function checkPageExistsAndRedirect(event) {
-    const currentFilePath = "autoapi/puma/utils/generate/index.html",
+    const currentFilePath = "autoapi/puma/pie/index.html",
           tryUrl = event.target.getAttribute("href");
     let otherDocsHomepage = tryUrl.replace(currentFilePath, "");
     $.ajax({
@@ -159,7 +159,7 @@ function checkPageExistsAndRedirect(event) {
 // Populate the version switcher from the JSON config file
 (function () {
     $.getJSON("https://umami-hep.github.io/puma/main/_static/switcher.json", function(data, textStatus, jqXHR) {
-        const currentFilePath = "autoapi/puma/utils/generate/index.html";
+        const currentFilePath = "autoapi/puma/pie/index.html";
         let btn = document.getElementById("version_switcher_button");
         // Set empty strings by default so that these attributes exist and can be used in CSS selectors
         btn.dataset["activeVersionName"] = "";
@@ -221,28 +221,28 @@ function checkPageExistsAndRedirect(event) {
 
 <!-- Only show if we have sidebars configured, else just a small margin  -->
 <div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../utils/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.utils
     </span>
    </code>
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../utils/generate/index.html">
      <code class="xref py py-mod docutils literal notranslate">
       <span class="pre">
        puma.utils.generate
@@ -251,7 +251,7 @@ function checkPageExistsAndRedirect(event) {
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../histogram/index.html">
+    <a class="reference internal" href="../utils/histogram/index.html">
      <code class="xref py py-mod docutils literal notranslate">
       <span class="pre">
        puma.utils.histogram
@@ -260,7 +260,7 @@ function checkPageExistsAndRedirect(event) {
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../logging/index.html">
+    <a class="reference internal" href="../utils/logging/index.html">
      <code class="xref py py-mod docutils literal notranslate">
       <span class="pre">
        puma.utils.logging
@@ -271,9 +271,9 @@ function checkPageExistsAndRedirect(event) {
   </ul>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../fraction_scan/index.html">
+  <a class="reference internal" href="../fraction_scan/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.fraction_scan
@@ -282,7 +282,7 @@ function checkPageExistsAndRedirect(event) {
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../histogram/index.html">
+  <a class="reference internal" href="../histogram/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.histogram
@@ -291,7 +291,7 @@ function checkPageExistsAndRedirect(event) {
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../metrics/index.html">
+  <a class="reference internal" href="../metrics/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.metrics
@@ -299,8 +299,8 @@ function checkPageExistsAndRedirect(event) {
    </code>
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../pie/index.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.pie
@@ -309,7 +309,7 @@ function checkPageExistsAndRedirect(event) {
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../plot_base/index.html">
+  <a class="reference internal" href="../plot_base/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.plot_base
@@ -318,7 +318,7 @@ function checkPageExistsAndRedirect(event) {
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../roc/index.html">
+  <a class="reference internal" href="../roc/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.roc
@@ -327,7 +327,7 @@ function checkPageExistsAndRedirect(event) {
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../var_vs_eff/index.html">
+  <a class="reference internal" href="../var_vs_eff/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.var_vs_eff
@@ -365,19 +365,21 @@ function checkPageExistsAndRedirect(event) {
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
+    <a class="reference internal nav-link" href="#classes">
+     Classes
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#puma.utils.generate.get_dummy_multiclass_scores">
-       get_dummy_multiclass_scores
+      <a class="reference internal nav-link" href="#puma.pie.PiePlot">
+       PiePlot
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#puma.utils.generate.get_dummy_2_taggers">
-       get_dummy_2_taggers
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.pie.PiePlot.plot">
+         plot
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -402,76 +404,56 @@ function checkPageExistsAndRedirect(event) {
               
               <article class="bd-article" role="main">
                 
-  <section id="module-puma.utils.generate">
-<span id="puma-utils-generate"></span><h1><a class="reference internal" href="#module-puma.utils.generate" title="puma.utils.generate"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.utils.generate</span></code></a><a class="headerlink" href="#module-puma.utils.generate" title="Permalink to this headline">#</a></h1>
-<p>Dummy data generation for plotting.</p>
+  <section id="module-puma.pie">
+<span id="puma-pie"></span><h1><a class="reference internal" href="#module-puma.pie" title="puma.pie"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.pie</span></code></a><a class="headerlink" href="#module-puma.pie" title="Permalink to this headline">#</a></h1>
+<p>Pie plot functions.</p>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">#</a></h2>
-<section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h3>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">#</a></h3>
 <table class="longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.generate.get_dummy_multiclass_scores" title="puma.utils.generate.get_dummy_multiclass_scores"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dummy_multiclass_scores</span></code></a>(size: int = 10000, bjets_mean: float = 1.4, seed: int = 42)</p></td>
-<td><p>Generate dummy data representing output of 3 class classifier.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.utils.generate.get_dummy_2_taggers" title="puma.utils.generate.get_dummy_2_taggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dummy_2_taggers</span></code></a>(size: int = 10000, shuffle: bool = True, seed: int = 42, add_pt: bool = False)</p></td>
-<td><p>Wrapper function of <code class="code docutils literal notranslate"><span class="pre">get_dummy_multiclass_scores</span></code> to generate classifier output</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.pie.PiePlot" title="puma.pie.PiePlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PiePlot</span></code></a></p></td>
+<td><p>Pie plot class</p></td>
 </tr>
 </tbody>
 </table>
-<dl class="py function">
-<dt class="sig sig-object py" id="puma.utils.generate.get_dummy_multiclass_scores">
-<span class="sig-prename descclassname"><span class="pre">puma.utils.generate.</span></span><span class="sig-name descname"><span class="pre">get_dummy_multiclass_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bjets_mean</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">42</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.utils.generate.get_dummy_multiclass_scores" title="Permalink to this definition">#</a></dt>
-<dd><p>Generate dummy data representing output of 3 class classifier.
-Adapted to light-, c- and b-jets and values of <code class="code docutils literal notranslate"><span class="pre">HadronConeExclTruthLabelID</span></code>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="puma.pie.PiePlot">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.pie.</span></span><span class="sig-name descname"><span class="pre">PiePlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wedge_sizes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colour_scheme</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_legend</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mpl_pie_kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.pie.PiePlot" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../plot_base/index.html#puma.plot_base.PlotBase" title="puma.plot_base.PlotBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">puma.plot_base.PlotBase</span></code></a></p>
+<p>Pie plot class</p>
+<p>Initialise the pie plot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of dummy data. For each of the 3 classes, the same amount of is produces,
-by default 10_000</p></li>
-<li><p><strong>bjets_mean</strong> (<em>float</em><em>, </em><em>optional</em>) – Mean value of the b-jets 3D gaussian, the more away from 0, the better the
-b-tagging performance, by default 1.4</p></li>
-<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – Random seed for number generation, by default 42</p></li>
+<li><p><strong>wedge_sizes</strong> (<em>1D array like</em>) – The size of the wedges. Will be translated into the fractions automatically.
+So they don’t have to add up to 1 or 100. The fractional area of each
+wedge is given by x/sum(x).</p></li>
+<li><p><strong>colours</strong> (<em>list</em><em>, </em><em>optional</em>) – List of colours for the separate wedges. You have to specify as many
+colours as you have wedges. Instead, you can also specify a colour scheme
+with the <code class="code docutils literal notranslate"><span class="pre">colour_scheme</span></code> argument, by default None</p></li>
+<li><p><strong>colour_scheme</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the colour schemes as defined in puma.utils.get_good_pie_colours,
+by default None</p></li>
+<li><p><strong>labels</strong> (<em>list</em><em>, </em><em>optional</em>) – A sequence of strings providing the labels for each wedge, by default None</p></li>
+<li><p><strong>draw_legend</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, a legend will be drawn on the right side of the plot.
+If False, the labels will be drawn directly to the wedges. By default True</p></li>
+<li><p><strong>mpl_pie_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – Keyword arguments that are handed to the matplotlib.pyplot.pie function.
+All arguments are allowed, except [<code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">labels</span></code>, <code class="code docutils literal notranslate"><span class="pre">colors</span></code>], by default None</p></li>
+<li><p><strong>**kwargs</strong> (<em>kwargs</em>) – Keyword arguments from <code class="code docutils literal notranslate"><span class="pre">puma.PlotObject</span></code></p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><em>np.ndarray</em> – Output scores of the shape (size, 3)</p></li>
-<li><p><em>np.ndarray</em> – Labels of shape (size,). The order of the output is light-jets, c-jets, b-jets</p></li>
-</ul>
-</p>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="puma.pie.PiePlot.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.pie.PiePlot.plot" title="Permalink to this definition">#</a></dt>
+<dd><p>Plot the pie chart</p>
 </dd></dl>
 
-<dl class="py function">
-<dt class="sig sig-object py" id="puma.utils.generate.get_dummy_2_taggers">
-<span class="sig-prename descclassname"><span class="pre">puma.utils.generate.</span></span><span class="sig-name descname"><span class="pre">get_dummy_2_taggers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">42</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_pt</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.utils.generate.get_dummy_2_taggers" title="Permalink to this definition">#</a></dt>
-<dd><p>Wrapper function of <code class="code docutils literal notranslate"><span class="pre">get_dummy_multiclass_scores</span></code> to generate classifier output
-for 2 taggers, in this case rnnip and dips as well as HadronConeExclTruthLabelID.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of dummy data, by default 10_000</p></li>
-<li><p><strong>shuffle</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True shuffles the dummy data, by default True</p></li>
-<li><p><strong>seed</strong> (<em>int</em><em>, </em><em>optional</em>) – Random seed for number generation (will count +10 for second tagger),
-by default 42</p></li>
-<li><p><strong>add_pt</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specify if pt column should be added as well, by default False</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>df_gen</strong> – Dataframe with columns
-[HadronConeExclTruthLabelID, rnnip_pu, rnnip_pc, rnnip_pb, dips_pu, dips_pc,
-dips_pb]</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>pandas.DataFrame</p>
-</dd>
-</dl>
 </dd></dl>
 
 </section>
@@ -497,7 +479,7 @@ dips_pb]</p>
   
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
 
 <footer class="bd-footer"><div class="bd-footer__inner container">
   

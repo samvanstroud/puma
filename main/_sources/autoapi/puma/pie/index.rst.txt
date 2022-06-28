@@ -1,0 +1,60 @@
+:py:mod:`puma.pie`
+==================
+
+.. py:module:: puma.pie
+
+.. autoapi-nested-parse::
+
+   Pie plot functions.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   puma.pie.PiePlot
+
+
+
+
+.. py:class:: PiePlot(wedge_sizes, colours: list = None, colour_scheme: str = None, labels: list = None, draw_legend: bool = False, mpl_pie_kwargs: dict = None, **kwargs)
+
+   Bases: :py:obj:`puma.plot_base.PlotBase`
+
+   Pie plot class
+
+   Initialise the pie plot
+
+   :param wedge_sizes: The size of the wedges. Will be translated into the fractions automatically.
+                       So they don't have to add up to 1 or 100. The fractional area of each
+                       wedge is given by x/sum(x).
+   :type wedge_sizes: 1D array like
+   :param colours: List of colours for the separate wedges. You have to specify as many
+                   colours as you have wedges. Instead, you can also specify a colour scheme
+                   with the `colour_scheme` argument, by default None
+   :type colours: list, optional
+   :param colour_scheme: Name of the colour schemes as defined in puma.utils.get_good_pie_colours,
+                         by default None
+   :type colour_scheme: str, optional
+   :param labels: A sequence of strings providing the labels for each wedge, by default None
+   :type labels: list, optional
+   :param draw_legend: If True, a legend will be drawn on the right side of the plot.
+                       If False, the labels will be drawn directly to the wedges. By default True
+   :type draw_legend: bool, optional
+   :param mpl_pie_kwargs: Keyword arguments that are handed to the matplotlib.pyplot.pie function.
+                          All arguments are allowed, except [`x`, `labels`, `colors`], by default None
+   :type mpl_pie_kwargs: dict, optional
+   :param \*\*kwargs: Keyword arguments from `puma.PlotObject`
+   :type \*\*kwargs: kwargs
+
+   .. py:method:: plot(self)
+
+      Plot the pie chart
+
+
+

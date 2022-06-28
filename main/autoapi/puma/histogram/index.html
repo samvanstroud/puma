@@ -300,6 +300,15 @@ function checkPageExistsAndRedirect(event) {
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../pie/index.html">
+   <code class="xref py py-mod docutils literal notranslate">
+    <span class="pre">
+     puma.pie
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../plot_base/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
@@ -390,11 +399,6 @@ function checkPageExistsAndRedirect(event) {
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#puma.histogram.HistogramPlot.plot">
          plot
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.histogram.HistogramPlot.plot_pie_chart">
-         plot_pie_chart
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
@@ -528,7 +532,7 @@ By default “step”</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="puma.histogram.HistogramPlot">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.histogram.</span></span><span class="sig-name descname"><span class="pre">HistogramPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins_range</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_vals</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_pie</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pie_colours</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pie_labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_width_in_ylabel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.histogram.HistogramPlot" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.histogram.</span></span><span class="sig-name descname"><span class="pre">HistogramPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins_range</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_vals</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_width_in_ylabel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.histogram.HistogramPlot" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../plot_base/index.html#puma.plot_base.PlotBase" title="puma.plot_base.PlotBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">puma.plot_base.PlotBase</span></code></a></p>
 <p>Histogram plot class</p>
 <p>histogram plot properties</p>
@@ -544,13 +548,8 @@ specified and bins is an integer, equal-width bins from bins_range[0] to
 bins_range[1] are used for the histogram (like in numpy.histogram).
 By default None</p></li>
 <li><p><strong>discrete_vals</strong> (<em>list</em><em>, </em><em>optional</em>) – List of values if a variable only has discrete values. If discrete_vals is
-specified only the bins containing these values are plotted. If a pie chart
-is plotted, discrete_vals is obligatory. By default None.</p></li>
-<li><p><strong>plot_pie</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to True if you would like to plot a pie chart instead of a histogram</p></li>
-<li><p><strong>pie_colours</strong> (<em>list</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – List of colours used for a pie chart or string providing the colour scheme.
-Possible colour schemes are ‘red’, ‘blue’, ‘green’ or ‘yellow’,
-by default None</p></li>
-<li><p><strong>pie_labels</strong> (<em>list</em><em>, </em><em>optional</em>) – List of labels used for a pie chart, by default None</p></li>
+specified only the bins containing these values are plotted.
+By default None.</p></li>
 <li><p><strong>norm</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specify if the histograms are normalised, this means that histograms are
 divided by the total numer of counts. Therefore, the sum of the bin counts
 is equal to one, but NOT the area under the curve, which would be
@@ -612,28 +611,6 @@ to the plot.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ValueError</strong> – If specified bins type is not supported.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="puma.histogram.HistogramPlot.plot_pie_chart">
-<span class="sig-name descname"><span class="pre">plot_pie_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.histogram.HistogramPlot.plot_pie_chart" title="Permalink to this definition">#</a></dt>
-<dd><p>Plotting Pie chart. Only variables with defined discrete values
-can be plotted. Only non-zero values are plotted.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>Patch</strong></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>matplotlib Patch object</p>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ValueError</strong> – If plot_pie is set to True but not the vertical_split</p></li>
-<li><p><strong>ValueError</strong> – If no discrete values of the variable are provided</p></li>
-<li><p><strong>ValueError</strong> – If specified bins type is not supported.</p></li>
-</ul>
 </dd>
 </dl>
 </dd></dl>

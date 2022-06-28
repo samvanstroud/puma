@@ -300,6 +300,15 @@ function checkPageExistsAndRedirect(event) {
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="pie/index.html">
+   <code class="xref py py-mod docutils literal notranslate">
+    <span class="pre">
+     puma.pie
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="plot_base/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
@@ -440,11 +449,6 @@ function checkPageExistsAndRedirect(event) {
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.HistogramPlot.plot_pie_chart">
-         plot_pie_chart
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#puma.HistogramPlot.get_discrete_values">
          get_discrete_values
         </a>
@@ -467,6 +471,18 @@ function checkPageExistsAndRedirect(event) {
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#puma.HistogramPlot.draw">
          draw
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#puma.PiePlot">
+       PiePlot
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.PiePlot.plot">
+         plot
         </a>
        </li>
       </ul>
@@ -1066,6 +1082,7 @@ function checkPageExistsAndRedirect(event) {
 <li class="toctree-l1"><a class="reference internal" href="fraction_scan/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.fraction_scan</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="histogram/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.histogram</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="metrics/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.metrics</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="pie/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.pie</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot_base/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.plot_base</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="roc/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.roc</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="var_vs_eff/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.var_vs_eff</span></code></a></li>
@@ -1094,25 +1111,28 @@ function checkPageExistsAndRedirect(event) {
 <tr class="row-even"><td><p><a class="reference internal" href="#puma.HistogramPlot" title="puma.HistogramPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HistogramPlot</span></code></a></p></td>
 <td><p>Histogram plot class</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.PlotBase" title="puma.PlotBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PlotBase</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.PiePlot" title="puma.PiePlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PiePlot</span></code></a></p></td>
+<td><p>Pie plot class</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.PlotBase" title="puma.PlotBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PlotBase</span></code></a></p></td>
 <td><p>Base class for plotting</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.PlotLineObject" title="puma.PlotLineObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PlotLineObject</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.PlotLineObject" title="puma.PlotLineObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PlotLineObject</span></code></a></p></td>
 <td><p>Base data class defining properties of a plot object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.PlotObject" title="puma.PlotObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PlotObject</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.PlotObject" title="puma.PlotObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PlotObject</span></code></a></p></td>
 <td><p>Data base class defining properties of a plot object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.Roc" title="puma.Roc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Roc</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.Roc" title="puma.Roc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Roc</span></code></a></p></td>
 <td><p>ROC class storing info about curve and allows to calculate ratio w.r.t other roc.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.RocPlot" title="puma.RocPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RocPlot</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.RocPlot" title="puma.RocPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RocPlot</span></code></a></p></td>
 <td><p>ROC plot class</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.VarVsEff" title="puma.VarVsEff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VarVsEff</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.VarVsEff" title="puma.VarVsEff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VarVsEff</span></code></a></p></td>
 <td><p>var_vs_eff class storing info about curve and allows to calculate ratio w.r.t other</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.VarVsEffPlot" title="puma.VarVsEffPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VarVsEffPlot</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.VarVsEffPlot" title="puma.VarVsEffPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VarVsEffPlot</span></code></a></p></td>
 <td><p>var_vs_eff plot class</p></td>
 </tr>
 </tbody>
@@ -1281,7 +1301,7 @@ By default “step”</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="puma.HistogramPlot">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.</span></span><span class="sig-name descname"><span class="pre">HistogramPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins_range</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_vals</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_pie</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pie_colours</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pie_labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_width_in_ylabel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.HistogramPlot" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.</span></span><span class="sig-name descname"><span class="pre">HistogramPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins_range</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discrete_vals</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_width_in_ylabel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.HistogramPlot" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="plot_base/index.html#puma.plot_base.PlotBase" title="puma.plot_base.PlotBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">puma.plot_base.PlotBase</span></code></a></p>
 <p>Histogram plot class</p>
 <p>histogram plot properties</p>
@@ -1297,13 +1317,8 @@ specified and bins is an integer, equal-width bins from bins_range[0] to
 bins_range[1] are used for the histogram (like in numpy.histogram).
 By default None</p></li>
 <li><p><strong>discrete_vals</strong> (<em>list</em><em>, </em><em>optional</em>) – List of values if a variable only has discrete values. If discrete_vals is
-specified only the bins containing these values are plotted. If a pie chart
-is plotted, discrete_vals is obligatory. By default None.</p></li>
-<li><p><strong>plot_pie</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to True if you would like to plot a pie chart instead of a histogram</p></li>
-<li><p><strong>pie_colours</strong> (<em>list</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – List of colours used for a pie chart or string providing the colour scheme.
-Possible colour schemes are ‘red’, ‘blue’, ‘green’ or ‘yellow’,
-by default None</p></li>
-<li><p><strong>pie_labels</strong> (<em>list</em><em>, </em><em>optional</em>) – List of labels used for a pie chart, by default None</p></li>
+specified only the bins containing these values are plotted.
+By default None.</p></li>
 <li><p><strong>norm</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specify if the histograms are normalised, this means that histograms are
 divided by the total numer of counts. Therefore, the sum of the bin counts
 is equal to one, but NOT the area under the curve, which would be
@@ -1365,28 +1380,6 @@ to the plot.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ValueError</strong> – If specified bins type is not supported.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="puma.HistogramPlot.plot_pie_chart">
-<span class="sig-name descname"><span class="pre">plot_pie_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.HistogramPlot.plot_pie_chart" title="Permalink to this definition">#</a></dt>
-<dd><p>Plotting Pie chart. Only variables with defined discrete values
-can be plotted. Only non-zero values are plotted.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>Patch</strong></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>matplotlib Patch object</p>
-</dd>
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ValueError</strong> – If plot_pie is set to True but not the vertical_split</p></li>
-<li><p><strong>ValueError</strong> – If no discrete values of the variable are provided</p></li>
-<li><p><strong>ValueError</strong> – If specified bins type is not supported.</p></li>
-</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -1470,6 +1463,40 @@ smaller than 0.01, scientific notation will be used.</p>
 ticks and tick labels, by default “ratio”</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="puma.PiePlot">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.</span></span><span class="sig-name descname"><span class="pre">PiePlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wedge_sizes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colours</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colour_scheme</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_legend</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mpl_pie_kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.PiePlot" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="plot_base/index.html#puma.plot_base.PlotBase" title="puma.plot_base.PlotBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">puma.plot_base.PlotBase</span></code></a></p>
+<p>Pie plot class</p>
+<p>Initialise the pie plot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wedge_sizes</strong> (<em>1D array like</em>) – The size of the wedges. Will be translated into the fractions automatically.
+So they don’t have to add up to 1 or 100. The fractional area of each
+wedge is given by x/sum(x).</p></li>
+<li><p><strong>colours</strong> (<em>list</em><em>, </em><em>optional</em>) – List of colours for the separate wedges. You have to specify as many
+colours as you have wedges. Instead, you can also specify a colour scheme
+with the <code class="code docutils literal notranslate"><span class="pre">colour_scheme</span></code> argument, by default None</p></li>
+<li><p><strong>colour_scheme</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the colour schemes as defined in puma.utils.get_good_pie_colours,
+by default None</p></li>
+<li><p><strong>labels</strong> (<em>list</em><em>, </em><em>optional</em>) – A sequence of strings providing the labels for each wedge, by default None</p></li>
+<li><p><strong>draw_legend</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, a legend will be drawn on the right side of the plot.
+If False, the labels will be drawn directly to the wedges. By default True</p></li>
+<li><p><strong>mpl_pie_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – Keyword arguments that are handed to the matplotlib.pyplot.pie function.
+All arguments are allowed, except [<code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">labels</span></code>, <code class="code docutils literal notranslate"><span class="pre">colors</span></code>], by default None</p></li>
+<li><p><strong>**kwargs</strong> (<em>kwargs</em>) – Keyword arguments from <code class="code docutils literal notranslate"><span class="pre">puma.PlotObject</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="puma.PiePlot.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.PiePlot.plot" title="Permalink to this definition">#</a></dt>
+<dd><p>Plot the pie chart</p>
 </dd></dl>
 
 </dd></dl>

@@ -260,38 +260,23 @@ function checkPageExistsAndRedirect(event) {
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.histogram_plot_TestCase">
-       histogram_plot_TestCase
+      <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.pie_plot_TestCase">
+       pie_plot_TestCase
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.setUp">
+        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.pie_plot_TestCase.setUp">
          setUp
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_bins_type">
-         test_invalid_bins_type
+        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.pie_plot_TestCase.test_plot_pie_chart_default_style">
+         test_plot_pie_chart_default_style
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_binwidth">
-         test_invalid_binwidth
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_discrete_vals">
-         test_no_discrete_vals
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_vertical_split">
-         test_no_vertical_split
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_plot_pie_chart">
-         test_plot_pie_chart
+        <a class="reference internal nav-link" href="#puma.tests.test_pie_chart.pie_plot_TestCase.test_plot_pie_chart_custom_style">
+         test_plot_pie_chart_custom_style
         </a>
        </li>
       </ul>
@@ -332,52 +317,35 @@ function checkPageExistsAndRedirect(event) {
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.tests.test_pie_chart.histogram_plot_TestCase" title="puma.tests.test_pie_chart.histogram_plot_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">histogram_plot_TestCase</span></code></a></p></td>
-<td><p>Test class for puma.histogram_plot</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.tests.test_pie_chart.pie_plot_TestCase" title="puma.tests.test_pie_chart.pie_plot_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pie_plot_TestCase</span></code></a></p></td>
+<td><p>Test class for puma.PiePlot</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py class">
-<dt class="sig sig-object py" id="puma.tests.test_pie_chart.histogram_plot_TestCase">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.tests.test_pie_chart.</span></span><span class="sig-name descname"><span class="pre">histogram_plot_TestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.histogram_plot_TestCase" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_pie_chart.pie_plot_TestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.tests.test_pie_chart.</span></span><span class="sig-name descname"><span class="pre">pie_plot_TestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.pie_plot_TestCase" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></p>
-<p>Test class for puma.histogram_plot</p>
+<p>Test class for puma.PiePlot</p>
 <p>Create an instance of the class that will use the named test
 method when executed. Raises a ValueError if the instance does
 not have a method with the specified name.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_pie_chart.histogram_plot_TestCase.setUp">
-<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.setUp" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_pie_chart.pie_plot_TestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.pie_plot_TestCase.setUp" title="Permalink to this definition">#</a></dt>
 <dd><p>Hook method for setting up the test fixture before exercising it.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_bins_type">
-<span class="sig-name descname"><span class="pre">test_invalid_bins_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_bins_type" title="Permalink to this definition">#</a></dt>
-<dd><p>check if ValueError is raised when using invalid type in <code class="code docutils literal notranslate"><span class="pre">bins</span></code> argument</p>
+<dt class="sig sig-object py" id="puma.tests.test_pie_chart.pie_plot_TestCase.test_plot_pie_chart_default_style">
+<span class="sig-name descname"><span class="pre">test_plot_pie_chart_default_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.pie_plot_TestCase.test_plot_pie_chart_default_style" title="Permalink to this definition">#</a></dt>
+<dd><p>check if pie chart is plotted correctly (using default style)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_binwidth">
-<span class="sig-name descname"><span class="pre">test_invalid_binwidth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_binwidth" title="Permalink to this definition">#</a></dt>
-<dd><p>check if ValueError is raised when using a bin width larger than 1</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_discrete_vals">
-<span class="sig-name descname"><span class="pre">test_no_discrete_vals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_discrete_vals" title="Permalink to this definition">#</a></dt>
-<dd><p>check if ValueError is raised when no discrete values are provided</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_vertical_split">
-<span class="sig-name descname"><span class="pre">test_no_vertical_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_vertical_split" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_pie_chart.histogram_plot_TestCase.test_plot_pie_chart">
-<span class="sig-name descname"><span class="pre">test_plot_pie_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.histogram_plot_TestCase.test_plot_pie_chart" title="Permalink to this definition">#</a></dt>
-<dd><p>check if plot chart is plotted correctly</p>
+<dt class="sig sig-object py" id="puma.tests.test_pie_chart.pie_plot_TestCase.test_plot_pie_chart_custom_style">
+<span class="sig-name descname"><span class="pre">test_plot_pie_chart_custom_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_pie_chart.pie_plot_TestCase.test_plot_pie_chart_custom_style" title="Permalink to this definition">#</a></dt>
+<dd><p>check if pie chart is plotted correctly (using default style)</p>
 </dd></dl>
 
 </dd></dl>

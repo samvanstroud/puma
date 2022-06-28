@@ -17,16 +17,16 @@ Classes
 
 .. autoapisummary::
 
-   puma.tests.test_pie_chart.histogram_plot_TestCase
+   puma.tests.test_pie_chart.pie_plot_TestCase
 
 
 
 
-.. py:class:: histogram_plot_TestCase(methodName='runTest')
+.. py:class:: pie_plot_TestCase(methodName='runTest')
 
    Bases: :py:obj:`unittest.TestCase`
 
-   Test class for puma.histogram_plot
+   Test class for puma.PiePlot
 
    Create an instance of the class that will use the named test
    method when executed. Raises a ValueError if the instance does
@@ -37,27 +37,14 @@ Classes
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_invalid_bins_type(self)
+   .. py:method:: test_plot_pie_chart_default_style(self)
 
-      check if ValueError is raised when using invalid type in `bins` argument
-
-
-   .. py:method:: test_invalid_binwidth(self)
-
-      check if ValueError is raised when using a bin width larger than 1
+      check if pie chart is plotted correctly (using default style)
 
 
-   .. py:method:: test_no_discrete_vals(self)
+   .. py:method:: test_plot_pie_chart_custom_style(self)
 
-      check if ValueError is raised when no discrete values are provided
-
-
-   .. py:method:: test_no_vertical_split(self)
-
-
-   .. py:method:: test_plot_pie_chart(self)
-
-      check if plot chart is plotted correctly
+      check if pie chart is plotted correctly (using default style)
 
 
 
