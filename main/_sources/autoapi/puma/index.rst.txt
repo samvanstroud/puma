@@ -64,7 +64,7 @@ Attributes
 
 
 .. py:data:: __version__
-   :annotation: = 0.1.3
+   :annotation: = 0.1.3dev
 
    
 
@@ -164,7 +164,7 @@ Attributes
                     histograms. Supported values are "bar", "barstacked", "step", "stepfilled".
                     By default "step"
    :type histtype: str, optional
-   :param \*\*kwargs: Keyword arguments passed to `puma.PlotLineObject`
+   :param \*\*kwargs: Keyword arguments passed to `puma.plot_base.PlotLineObject`
    :type \*\*kwargs: kwargs
 
    :raises ValueError: If input data is not of type np.ndarray or list
