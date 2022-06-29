@@ -308,7 +308,7 @@ value from numpy arange are used.</p>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">puma</span> <span class="kn">import</span> <span class="n">FractionScan</span><span class="p">,</span> <span class="n">FractionScanPlot</span>
+<span class="kn">from</span> <span class="nn">puma</span> <span class="kn">import</span> <span class="n">Line2D</span><span class="p">,</span> <span class="n">Line2DPlot</span>
 <span class="kn">from</span> <span class="nn">puma.metrics</span> <span class="kn">import</span> <span class="n">calc_eff</span>
 <span class="kn">from</span> <span class="nn">puma.utils</span> <span class="kn">import</span> <span class="n">get_dummy_2_taggers</span><span class="p">,</span> <span class="n">logger</span>
 
@@ -369,12 +369,12 @@ value from numpy arange are used.</p>
 <span class="c1"># You can give several plotting options to the plot itself</span>
 
 <span class="c1"># Now init a fraction scan plot</span>
-<span class="n">frac_plot</span> <span class="o">=</span> <span class="n">FractionScanPlot</span><span class="p">()</span>
+<span class="n">frac_plot</span> <span class="o">=</span> <span class="n">Line2DPlot</span><span class="p">()</span>
 
 <span class="c1"># Add our x- and y values as a new line</span>
 <span class="c1"># The colour and linestyle are optional here</span>
 <span class="n">frac_plot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
-    <span class="n">FractionScan</span><span class="p">(</span>
+    <span class="n">Line2D</span><span class="p">(</span>
         <span class="n">x_values</span><span class="o">=</span><span class="n">x_values</span><span class="p">,</span>
         <span class="n">y_values</span><span class="o">=</span><span class="n">y_values</span><span class="p">,</span>
         <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Tagger 1&quot;</span><span class="p">,</span>
@@ -389,7 +389,7 @@ value from numpy arange are used.</p>
 <span class="c1"># given values are the default values.</span>
 <span class="c1"># The is_marker bool tells the plot that this is a marker and not a line</span>
 <span class="n">frac_plot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
-    <span class="n">FractionScan</span><span class="p">(</span>
+    <span class="n">Line2D</span><span class="p">(</span>
         <span class="n">x_values</span><span class="o">=</span><span class="n">MARKER_X</span><span class="p">,</span>
         <span class="n">y_values</span><span class="o">=</span><span class="n">MARKER_Y</span><span class="p">,</span>
         <span class="n">colour</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>
@@ -407,7 +407,7 @@ value from numpy arange are used.</p>
 
 <span class="c1"># Draw and save the plot</span>
 <span class="n">frac_plot</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="n">frac_plot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;FractionScanPlot_test.png&quot;</span><span class="p">)</span>
+<span class="n">frac_plot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;FractionPlot_test.png&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

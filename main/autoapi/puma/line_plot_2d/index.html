@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>puma.fraction_scan &#8212; puma 0.1.3dev documentation</title>
+    <title>puma.line_plot_2d &#8212; puma 0.1.3dev documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -131,14 +131,14 @@
 
 <!-- NOTE: this JS must live here (not in our global JS file) because it relies
      on being processed by Jinja before it is run (specifically for replacing
-     variables autoapi/puma/fraction_scan/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
+     variables autoapi/puma/line_plot_2d/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
 -->
 
 <script type="text/javascript">
 // Check if corresponding page path exists in other version of docs
 // and, if so, go there instead of the homepage of the other docs version
 function checkPageExistsAndRedirect(event) {
-    const currentFilePath = "autoapi/puma/fraction_scan/index.html",
+    const currentFilePath = "autoapi/puma/line_plot_2d/index.html",
           tryUrl = event.target.getAttribute("href");
     let otherDocsHomepage = tryUrl.replace(currentFilePath, "");
     $.ajax({
@@ -159,7 +159,7 @@ function checkPageExistsAndRedirect(event) {
 // Populate the version switcher from the JSON config file
 (function () {
     $.getJSON("https://umami-hep.github.io/puma/main/_static/switcher.json", function(data, textStatus, jqXHR) {
-        const currentFilePath = "autoapi/puma/fraction_scan/index.html";
+        const currentFilePath = "autoapi/puma/line_plot_2d/index.html";
         let btn = document.getElementById("version_switcher_button");
         // Set empty strings by default so that these attributes exist and can be used in CSS selectors
         btn.dataset["activeVersionName"] = "";
@@ -272,20 +272,20 @@ function checkPageExistsAndRedirect(event) {
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   <code class="xref py py-mod docutils literal notranslate">
-    <span class="pre">
-     puma.fraction_scan
-    </span>
-   </code>
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../histogram/index.html">
    <code class="xref py py-mod docutils literal notranslate">
     <span class="pre">
      puma.histogram
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <code class="xref py py-mod docutils literal notranslate">
+    <span class="pre">
+     puma.line_plot_2d
     </span>
    </code>
   </a>
@@ -370,27 +370,27 @@ function checkPageExistsAndRedirect(event) {
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#puma.fraction_scan.FractionScan">
-       FractionScan
+      <a class="reference internal nav-link" href="#puma.line_plot_2d.Line2D">
+       Line2D
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#puma.fraction_scan.FractionScanPlot">
-       FractionScanPlot
+      <a class="reference internal nav-link" href="#puma.line_plot_2d.Line2DPlot">
+       Line2DPlot
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.fraction_scan.FractionScanPlot.add">
+        <a class="reference internal nav-link" href="#puma.line_plot_2d.Line2DPlot.add">
          add
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.fraction_scan.FractionScanPlot.plot">
+        <a class="reference internal nav-link" href="#puma.line_plot_2d.Line2DPlot.plot">
          plot
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.fraction_scan.FractionScanPlot.draw">
+        <a class="reference internal nav-link" href="#puma.line_plot_2d.Line2DPlot.draw">
          draw
         </a>
        </li>
@@ -419,9 +419,9 @@ function checkPageExistsAndRedirect(event) {
               
               <article class="bd-article" role="main">
                 
-  <section id="module-puma.fraction_scan">
-<span id="puma-fraction-scan"></span><h1><a class="reference internal" href="#module-puma.fraction_scan" title="puma.fraction_scan"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.fraction_scan</span></code></a><a class="headerlink" href="#module-puma.fraction_scan" title="Permalink to this headline">#</a></h1>
-<p>Fraction scan plot functions.</p>
+  <section id="module-puma.line_plot_2d">
+<span id="puma-line-plot-2d"></span><h1><a class="reference internal" href="#module-puma.line_plot_2d" title="puma.line_plot_2d"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.line_plot_2d</span></code></a><a class="headerlink" href="#module-puma.line_plot_2d" title="Permalink to this headline">#</a></h1>
+<p>Classes for 2D line plots.</p>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">#</a></h2>
 <section id="classes">
@@ -432,25 +432,25 @@ function checkPageExistsAndRedirect(event) {
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.fraction_scan.FractionScan" title="puma.fraction_scan.FractionScan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FractionScan</span></code></a></p></td>
-<td><p>FractionScan class storing info about the fractions.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.line_plot_2d.Line2D" title="puma.line_plot_2d.Line2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Line2D</span></code></a></p></td>
+<td><p>Line2D class storing info about the x and y values and style.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.fraction_scan.FractionScanPlot" title="puma.fraction_scan.FractionScanPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FractionScanPlot</span></code></a></p></td>
-<td><p>Fraction scan plot class</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.line_plot_2d.Line2DPlot" title="puma.line_plot_2d.Line2DPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Line2DPlot</span></code></a></p></td>
+<td><p>Line2DPlot plot class for basic x-y line plots.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py class">
-<dt class="sig sig-object py" id="puma.fraction_scan.FractionScan">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.fraction_scan.</span></span><span class="sig-name descname"><span class="pre">FractionScan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.fraction_scan.FractionScan" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.line_plot_2d.Line2D">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.line_plot_2d.</span></span><span class="sig-name descname"><span class="pre">Line2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.line_plot_2d.Line2D" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../plot_base/index.html#puma.plot_base.PlotLineObject" title="puma.plot_base.PlotLineObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">puma.plot_base.PlotLineObject</span></code></a></p>
-<p>FractionScan class storing info about the fractions.</p>
-<p>Initialise properties of fraction scan curve object.</p>
+<p>Line2D class storing info about the x and y values and style.</p>
+<p>Initialise properties of Line2D object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x_values</strong> (<em>np.ndarray</em>) – x values of the fraction scan curve</p></li>
-<li><p><strong>y_values</strong> (<em>np.ndarray</em>) – y values of the fraction scan curve</p></li>
+<li><p><strong>x_values</strong> (<em>np.ndarray</em>) – x values of the curve</p></li>
+<li><p><strong>y_values</strong> (<em>np.ndarray</em>) – y values of the curve</p></li>
 <li><p><strong>**kwargs</strong> (<em>kwargs</em>) – kwargs passed to <code class="code docutils literal notranslate"><span class="pre">PlotLineObject</span></code></p></li>
 </ul>
 </dd>
@@ -468,11 +468,11 @@ shapes.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="puma.fraction_scan.FractionScanPlot">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.fraction_scan.</span></span><span class="sig-name descname"><span class="pre">FractionScanPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.fraction_scan.FractionScanPlot" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.line_plot_2d.Line2DPlot">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.line_plot_2d.</span></span><span class="sig-name descname"><span class="pre">Line2DPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.line_plot_2d.Line2DPlot" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="../plot_base/index.html#puma.plot_base.PlotBase" title="puma.plot_base.PlotBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">puma.plot_base.PlotBase</span></code></a></p>
-<p>Fraction scan plot class</p>
-<p>Fraction scan plot properties</p>
+<p>Line2DPlot plot class for basic x-y line plots.</p>
+<p>Plot properties</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -482,14 +482,14 @@ shapes.</p></li>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.fraction_scan.FractionScanPlot.add">
-<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curve</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_marker</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.fraction_scan.FractionScanPlot.add" title="Permalink to this definition">#</a></dt>
-<dd><p>Adding FractionScan object to figure.</p>
+<dt class="sig sig-object py" id="puma.line_plot_2d.Line2DPlot.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curve</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_marker</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.line_plot_2d.Line2DPlot.add" title="Permalink to this definition">#</a></dt>
+<dd><p>Adding <code class="code docutils literal notranslate"><span class="pre">puma.Line2D</span></code> object to figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>curve</strong> (<a class="reference internal" href="#puma.fraction_scan.FractionScan" title="puma.fraction_scan.FractionScan"><em>FractionScan</em></a>) – Fraction scan curve</p></li>
-<li><p><strong>key</strong> (<em>str</em><em>, </em><em>optional</em>) – Unique identifier for FractionScan, by default None</p></li>
+<li><p><strong>curve</strong> (<em>puma.line_plot_2D.Line2D</em>) – Line2D object</p></li>
+<li><p><strong>key</strong> (<em>str</em><em>, </em><em>optional</em>) – Unique identifier for the curve, by default None</p></li>
 <li><p><strong>is_marker</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defines if this is a marker (True) or a line (False). By default False.</p></li>
 </ul>
 </dd>
@@ -500,8 +500,8 @@ shapes.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.fraction_scan.FractionScanPlot.plot">
-<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.fraction_scan.FractionScanPlot.plot" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.line_plot_2d.Line2DPlot.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.line_plot_2d.Line2DPlot.plot" title="Permalink to this definition">#</a></dt>
 <dd><p>Plotting curves. Plot objects are drawn in the same order as they
 were added to the plot.</p>
 <dl class="field-list simple">
@@ -512,14 +512,14 @@ were added to the plot.</p>
 <dd class="field-even"><p>matplotlib Line2D object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Line2D</p>
+<dd class="field-odd"><p><a class="reference internal" href="#puma.line_plot_2d.Line2D" title="puma.line_plot_2d.Line2D">Line2D</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.fraction_scan.FractionScanPlot.draw">
-<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.fraction_scan.FractionScanPlot.draw" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.line_plot_2d.Line2DPlot.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.line_plot_2d.Line2DPlot.draw" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw figure.</p>
 </dd></dl>
 

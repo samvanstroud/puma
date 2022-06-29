@@ -1,11 +1,11 @@
-:py:mod:`puma.fraction_scan`
-============================
+:py:mod:`puma.line_plot_2d`
+===========================
 
-.. py:module:: puma.fraction_scan
+.. py:module:: puma.line_plot_2d
 
 .. autoapi-nested-parse::
 
-   Fraction scan plot functions.
+   Classes for 2D line plots.
 
 
 
@@ -17,23 +17,23 @@ Classes
 
 .. autoapisummary::
 
-   puma.fraction_scan.FractionScan
-   puma.fraction_scan.FractionScanPlot
+   puma.line_plot_2d.Line2D
+   puma.line_plot_2d.Line2DPlot
 
 
 
 
-.. py:class:: FractionScan(x_values: numpy.ndarray, y_values: numpy.ndarray, **kwargs)
+.. py:class:: Line2D(x_values: numpy.ndarray, y_values: numpy.ndarray, **kwargs)
 
    Bases: :py:obj:`puma.plot_base.PlotLineObject`
 
-   FractionScan class storing info about the fractions.
+   Line2D class storing info about the x and y values and style.
 
-   Initialise properties of fraction scan curve object.
+   Initialise properties of Line2D object.
 
-   :param x_values: x values of the fraction scan curve
+   :param x_values: x values of the curve
    :type x_values: np.ndarray
-   :param y_values: y values of the fraction scan curve
+   :param y_values: y values of the curve
    :type y_values: np.ndarray
    :param \*\*kwargs: kwargs passed to `PlotLineObject`
    :type \*\*kwargs: kwargs
@@ -46,13 +46,13 @@ Classes
    :raises ValueError: If an invalid type was given for x_values
 
 
-.. py:class:: FractionScanPlot(logy: bool = False, **kwargs)
+.. py:class:: Line2DPlot(logy: bool = False, **kwargs)
 
    Bases: :py:obj:`puma.plot_base.PlotBase`
 
-   Fraction scan plot class
+   Line2DPlot plot class for basic x-y line plots.
 
-   Fraction scan plot properties
+   Plot properties
 
    :param logy: Decide, if the y-axis of the plot will be in log, by default False
    :type logy: bool, optional
@@ -61,11 +61,11 @@ Classes
 
    .. py:method:: add(self, curve: object, key: str = None, is_marker: bool = False)
 
-      Adding FractionScan object to figure.
+      Adding `puma.Line2D` object to figure.
 
-      :param curve: Fraction scan curve
-      :type curve: FractionScan
-      :param key: Unique identifier for FractionScan, by default None
+      :param curve: Line2D object
+      :type curve: puma.line_plot_2D.Line2D
+      :param key: Unique identifier for the curve, by default None
       :type key: str, optional
       :param is_marker: Defines if this is a marker (True) or a line (False). By default False.
       :type is_marker: bool, optional

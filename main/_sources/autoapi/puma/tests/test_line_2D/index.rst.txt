@@ -1,7 +1,7 @@
-:py:mod:`puma.tests.test_fraction_scan`
-=======================================
+:py:mod:`puma.tests.test_line_2D`
+=================================
 
-.. py:module:: puma.tests.test_fraction_scan
+.. py:module:: puma.tests.test_line_2D
 
 .. autoapi-nested-parse::
 
@@ -17,13 +17,13 @@ Classes
 
 .. autoapisummary::
 
-   puma.tests.test_fraction_scan.FractionScanTestCase
-   puma.tests.test_fraction_scan.TestCase
+   puma.tests.test_line_2D.Line2DTestCase
+   puma.tests.test_line_2D.TestCase
 
 
 
 
-.. py:class:: FractionScanTestCase(methodName='runTest')
+.. py:class:: Line2DTestCase(methodName='runTest')
 
    Bases: :py:obj:`unittest.TestCase`
 
@@ -35,7 +35,7 @@ Classes
 
    .. py:method:: test_wrong_inputs_xvalues(self)
 
-      test if providing wrong input type to FractionScan raises ValueError
+      test if providing wrong input type to Line2D raises ValueError
 
 
    .. py:method:: test_differnt_input_types(self)
@@ -58,7 +58,7 @@ Classes
 
    Bases: :py:obj:`unittest.TestCase`
 
-   Test class for puma.FractionScanPlot
+   Test class for puma.Line2DPlot
 
    Create an instance of the class that will use the named test
    method when executed. Raises a ValueError if the instance does
@@ -69,24 +69,24 @@ Classes
       Set up values needed.
 
 
-   .. py:method:: test_FractionScanPlot(self)
+   .. py:method:: test_Line2DPlot(self)
 
-      Test the basic functions of FractionScanPlot
-
-
-   .. py:method:: test_FractionScanPlot_grid_off(self)
-
-      Test the basic functions of FractionScanPlot
+      Test the basic functions of Line2DPlot
 
 
-   .. py:method:: test_FractionScanPlot_no_param_set(self)
+   .. py:method:: test_Line2DPlot_grid_off(self)
 
-      Test the basic functions of FractionScanPlot
+      Test the basic functions of Line2DPlot
 
 
-   .. py:method:: test_FractionScanPlot_double_key(self)
+   .. py:method:: test_Line2DPlot_no_param_set(self)
 
-      Test the basic functions of FractionScanPlot
+      Test the basic functions of Line2DPlot
+
+
+   .. py:method:: test_Line2DPlot_double_key(self)
+
+      Test the basic functions of Line2DPlot
 
 
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>puma.tests.test_fraction_scan &#8212; puma 0.1.3dev documentation</title>
+    <title>puma.tests.test_line_2D &#8212; puma 0.1.3dev documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -131,14 +131,14 @@
 
 <!-- NOTE: this JS must live here (not in our global JS file) because it relies
      on being processed by Jinja before it is run (specifically for replacing
-     variables autoapi/puma/tests/test_fraction_scan/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
+     variables autoapi/puma/tests/test_line_2D/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
 -->
 
 <script type="text/javascript">
 // Check if corresponding page path exists in other version of docs
 // and, if so, go there instead of the homepage of the other docs version
 function checkPageExistsAndRedirect(event) {
-    const currentFilePath = "autoapi/puma/tests/test_fraction_scan/index.html",
+    const currentFilePath = "autoapi/puma/tests/test_line_2D/index.html",
           tryUrl = event.target.getAttribute("href");
     let otherDocsHomepage = tryUrl.replace(currentFilePath, "");
     $.ajax({
@@ -159,7 +159,7 @@ function checkPageExistsAndRedirect(event) {
 // Populate the version switcher from the JSON config file
 (function () {
     $.getJSON("https://umami-hep.github.io/puma/main/_static/switcher.json", function(data, textStatus, jqXHR) {
-        const currentFilePath = "autoapi/puma/tests/test_fraction_scan/index.html";
+        const currentFilePath = "autoapi/puma/tests/test_line_2D/index.html";
         let btn = document.getElementById("version_switcher_button");
         // Set empty strings by default so that these attributes exist and can be used in CSS selectors
         btn.dataset["activeVersionName"] = "";
@@ -260,60 +260,60 @@ function checkPageExistsAndRedirect(event) {
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.FractionScanTestCase">
-       FractionScanTestCase
+      <a class="reference internal nav-link" href="#puma.tests.test_line_2D.Line2DTestCase">
+       Line2DTestCase
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_wrong_inputs_xvalues">
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.Line2DTestCase.test_wrong_inputs_xvalues">
          test_wrong_inputs_xvalues
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_differnt_input_types">
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.Line2DTestCase.test_differnt_input_types">
          test_differnt_input_types
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_empty_input">
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.Line2DTestCase.test_empty_input">
          test_empty_input
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_different_input_shapes">
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.Line2DTestCase.test_different_input_shapes">
          test_different_input_shapes
         </a>
        </li>
       </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.TestCase">
+      <a class="reference internal nav-link" href="#puma.tests.test_line_2D.TestCase">
        TestCase
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.TestCase.setUp">
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.TestCase.setUp">
          setUp
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot">
-         test_FractionScanPlot
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot">
+         test_Line2DPlot
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_grid_off">
-         test_FractionScanPlot_grid_off
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot_grid_off">
+         test_Line2DPlot_grid_off
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_no_param_set">
-         test_FractionScanPlot_no_param_set
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot_no_param_set">
+         test_Line2DPlot_no_param_set
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_double_key">
-         test_FractionScanPlot_double_key
+        <a class="reference internal nav-link" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot_double_key">
+         test_Line2DPlot_double_key
         </a>
        </li>
       </ul>
@@ -341,8 +341,8 @@ function checkPageExistsAndRedirect(event) {
               
               <article class="bd-article" role="main">
                 
-  <section id="module-puma.tests.test_fraction_scan">
-<span id="puma-tests-test-fraction-scan"></span><h1><a class="reference internal" href="#module-puma.tests.test_fraction_scan" title="puma.tests.test_fraction_scan"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.tests.test_fraction_scan</span></code></a><a class="headerlink" href="#module-puma.tests.test_fraction_scan" title="Permalink to this headline">#</a></h1>
+  <section id="module-puma.tests.test_line_2D">
+<span id="puma-tests-test-line-2d"></span><h1><a class="reference internal" href="#module-puma.tests.test_line_2D" title="puma.tests.test_line_2D"><code class="xref py py-mod docutils literal notranslate"><span class="pre">puma.tests.test_line_2D</span></code></a><a class="headerlink" href="#module-puma.tests.test_line_2D" title="Permalink to this headline">#</a></h1>
 <p>Unit test script for the functions in histogram.py</p>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">#</a></h2>
@@ -354,84 +354,84 @@ function checkPageExistsAndRedirect(event) {
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.tests.test_fraction_scan.FractionScanTestCase" title="puma.tests.test_fraction_scan.FractionScanTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FractionScanTestCase</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.tests.test_line_2D.Line2DTestCase" title="puma.tests.test_line_2D.Line2DTestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Line2DTestCase</span></code></a></p></td>
 <td><p>Test class for the puma.fraction_scan functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.tests.test_fraction_scan.TestCase" title="puma.tests.test_fraction_scan.TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestCase</span></code></a></p></td>
-<td><p>Test class for puma.FractionScanPlot</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.tests.test_line_2D.TestCase" title="puma.tests.test_line_2D.TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestCase</span></code></a></p></td>
+<td><p>Test class for puma.Line2DPlot</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py class">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.FractionScanTestCase">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.tests.test_fraction_scan.</span></span><span class="sig-name descname"><span class="pre">FractionScanTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.FractionScanTestCase" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.Line2DTestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.tests.test_line_2D.</span></span><span class="sig-name descname"><span class="pre">Line2DTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.Line2DTestCase" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></p>
 <p>Test class for the puma.fraction_scan functions.</p>
 <p>Create an instance of the class that will use the named test
 method when executed. Raises a ValueError if the instance does
 not have a method with the specified name.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.FractionScanTestCase.test_wrong_inputs_xvalues">
-<span class="sig-name descname"><span class="pre">test_wrong_inputs_xvalues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_wrong_inputs_xvalues" title="Permalink to this definition">#</a></dt>
-<dd><p>test if providing wrong input type to FractionScan raises ValueError</p>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.Line2DTestCase.test_wrong_inputs_xvalues">
+<span class="sig-name descname"><span class="pre">test_wrong_inputs_xvalues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.Line2DTestCase.test_wrong_inputs_xvalues" title="Permalink to this definition">#</a></dt>
+<dd><p>test if providing wrong input type to Line2D raises ValueError</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.FractionScanTestCase.test_differnt_input_types">
-<span class="sig-name descname"><span class="pre">test_differnt_input_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_differnt_input_types" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.Line2DTestCase.test_differnt_input_types">
+<span class="sig-name descname"><span class="pre">test_differnt_input_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.Line2DTestCase.test_differnt_input_types" title="Permalink to this definition">#</a></dt>
 <dd><p>test if providing different input types raises ValueError</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.FractionScanTestCase.test_empty_input">
-<span class="sig-name descname"><span class="pre">test_empty_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_empty_input" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.Line2DTestCase.test_empty_input">
+<span class="sig-name descname"><span class="pre">test_empty_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.Line2DTestCase.test_empty_input" title="Permalink to this definition">#</a></dt>
 <dd><p>test if ValueError is raised when one of the input values is zero</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.FractionScanTestCase.test_different_input_shapes">
-<span class="sig-name descname"><span class="pre">test_different_input_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.FractionScanTestCase.test_different_input_shapes" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.Line2DTestCase.test_different_input_shapes">
+<span class="sig-name descname"><span class="pre">test_different_input_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.Line2DTestCase.test_different_input_shapes" title="Permalink to this definition">#</a></dt>
 <dd><p>test if ValueError is raised when different lengths given</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.TestCase">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.tests.test_fraction_scan.</span></span><span class="sig-name descname"><span class="pre">TestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.TestCase" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.TestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.tests.test_line_2D.</span></span><span class="sig-name descname"><span class="pre">TestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.TestCase" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></p>
-<p>Test class for puma.FractionScanPlot</p>
+<p>Test class for puma.Line2DPlot</p>
 <p>Create an instance of the class that will use the named test
 method when executed. Raises a ValueError if the instance does
 not have a method with the specified name.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.TestCase.setUp">
-<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.TestCase.setUp" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.TestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.TestCase.setUp" title="Permalink to this definition">#</a></dt>
 <dd><p>Set up values needed.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot">
-<span class="sig-name descname"><span class="pre">test_FractionScanPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot" title="Permalink to this definition">#</a></dt>
-<dd><p>Test the basic functions of FractionScanPlot</p>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.TestCase.test_Line2DPlot">
+<span class="sig-name descname"><span class="pre">test_Line2DPlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot" title="Permalink to this definition">#</a></dt>
+<dd><p>Test the basic functions of Line2DPlot</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_grid_off">
-<span class="sig-name descname"><span class="pre">test_FractionScanPlot_grid_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_grid_off" title="Permalink to this definition">#</a></dt>
-<dd><p>Test the basic functions of FractionScanPlot</p>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.TestCase.test_Line2DPlot_grid_off">
+<span class="sig-name descname"><span class="pre">test_Line2DPlot_grid_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot_grid_off" title="Permalink to this definition">#</a></dt>
+<dd><p>Test the basic functions of Line2DPlot</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_no_param_set">
-<span class="sig-name descname"><span class="pre">test_FractionScanPlot_no_param_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_no_param_set" title="Permalink to this definition">#</a></dt>
-<dd><p>Test the basic functions of FractionScanPlot</p>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.TestCase.test_Line2DPlot_no_param_set">
+<span class="sig-name descname"><span class="pre">test_Line2DPlot_no_param_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot_no_param_set" title="Permalink to this definition">#</a></dt>
+<dd><p>Test the basic functions of Line2DPlot</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_double_key">
-<span class="sig-name descname"><span class="pre">test_FractionScanPlot_double_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_double_key" title="Permalink to this definition">#</a></dt>
-<dd><p>Test the basic functions of FractionScanPlot</p>
+<dt class="sig sig-object py" id="puma.tests.test_line_2D.TestCase.test_Line2DPlot_double_key">
+<span class="sig-name descname"><span class="pre">test_Line2DPlot_double_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_line_2D.TestCase.test_Line2DPlot_double_key" title="Permalink to this definition">#</a></dt>
+<dd><p>Test the basic functions of Line2DPlot</p>
 </dd></dl>
 
 </dd></dl>
