@@ -459,13 +459,15 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_log(self, force: bool = False)
+   .. py:method:: set_log(self, force_x: bool = False, force_y: bool = False)
 
       Set log scale of the axes. For the y-axis, only the main panel is
       set. For the x-axes (also from the ratio subpanels), all are changed.
 
-      :param force: Forcing log even if class variable is False, by default False
-      :type force: bool, optional
+      :param force_x: Forcing log on x-axis even if `logx` attribute is False, by default False
+      :type force_x: bool, optional
+      :param force_y: Forcing log on y-axis even if `logy` attribute is False, by default False
+      :type force_y: bool, optional
 
 
    .. py:method:: set_y_lim(self)
