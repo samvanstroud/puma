@@ -201,6 +201,9 @@ Attributes
    :param atlas_tag_outside: `outside` argument handed to atlasify. Decides if the ATLAS logo is plotted
                              outside of the plot (on top), by default False
    :type atlas_tag_outside: bool, optional
+   :param atlas_second_tag_distance: Distance between the `atlas_first_tag` and `atlas_second_tag` text in units
+                                     of line spacing, by default 0
+   :type atlas_second_tag_distance: float, optional
    :param plotting_done: Bool that indicates if plotting is done. Only then `atlasify()` can be called,
                          by default False
    :type plotting_done: bool
@@ -382,6 +385,11 @@ Attributes
 
    .. py:attribute:: atlas_tag_outside
       :annotation: :bool = False
+
+      
+
+   .. py:attribute:: atlas_second_tag_distance
+      :annotation: :float = 0
 
       
 
