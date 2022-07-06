@@ -752,6 +752,11 @@ function checkPageExistsAndRedirect(event) {
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.PlotObject.transparent">
+         transparent
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#puma.PlotObject.grid">
          grid
         </a>
@@ -1651,13 +1656,13 @@ If None then using global fontsize</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.PlotBase.savefig">
-<span class="sig-name descname"><span class="pre">savefig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transparent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.PlotBase.savefig" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">savefig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transparent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.PlotBase.savefig" title="Permalink to this definition">#</a></dt>
 <dd><p>Save plot to disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>plot_name</strong> (<em>str</em>) – File name of the plot</p></li>
-<li><p><strong>transparent</strong> (<em>bool</em><em>, </em><em>optional</em>) – If plot transparent, by default False</p></li>
+<li><p><strong>transparent</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specify if plot background is transparent, by default False</p></li>
 <li><p><strong>dpi</strong> (<em>int</em><em>, </em><em>optional</em>) – DPI for plotting, by default 400</p></li>
 <li><p><strong>**kwargs</strong> (<em>kwargs</em>) – Keyword arguments passed to <code class="code docutils literal notranslate"><span class="pre">matplotlib.figure.Figure.savefig()</span></code></p></li>
 </ul>
@@ -1843,7 +1848,8 @@ by default 1.3</p></li>
 <li><p><strong>vertical_split</strong> (<em>bool</em>) – Set to False if you would like to split the figure horizonally. If set to
 True the figure is split vertically (e.g for pie chart). By default False.</p></li>
 <li><p><strong>figsize</strong> (<em>(</em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>optional</em>) – Tuple of figure size <code class="code docutils literal notranslate"><span class="pre">(width,</span> <span class="pre">height)</span></code> in inches, by default (8, 6)</p></li>
-<li><p><strong>dpi</strong> (<em>int</em><em>, </em><em>optional</em>) – dpi used for plotting, by default 400</p></li>
+<li><p><strong>dpi</strong> (<em>int</em><em>, </em><em>optional</em>) – DPI used for plotting, by default 400</p></li>
+<li><p><strong>transparent</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specify if the background of the plot should be transparent, by default False</p></li>
 <li><p><strong>grid</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set the grid for the plots.</p></li>
 <li><p><strong>leg_fontsize</strong> (<em>int</em><em>, </em><em>optional</em>) – Fontsize of the legend, by default 10</p></li>
 <li><p><strong>leg_loc</strong> (<em>str</em><em>, </em><em>optional</em>) – Position of the legend in the plot, by default “upper right”</p></li>
@@ -1980,6 +1986,11 @@ by default False</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="puma.PlotObject.dpi">
 <span class="sig-name descname"><span class="pre">dpi</span></span><em class="property"> <span class="pre">:int</span> <span class="pre">=</span> <span class="pre">400</span></em><a class="headerlink" href="#puma.PlotObject.dpi" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="puma.PlotObject.transparent">
+<span class="sig-name descname"><span class="pre">transparent</span></span><em class="property"> <span class="pre">:bool</span> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#puma.PlotObject.transparent" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">

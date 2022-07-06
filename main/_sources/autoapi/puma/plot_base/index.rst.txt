@@ -170,8 +170,10 @@ Attributes
    :type vertical_split: bool
    :param figsize: Tuple of figure size `(width, height)` in inches, by default (8, 6)
    :type figsize: (float, float), optional
-   :param dpi: dpi used for plotting, by default 400
+   :param dpi: DPI used for plotting, by default 400
    :type dpi: int, optional
+   :param transparent: Specify if the background of the plot should be transparent, by default False
+   :type transparent: bool, optional
    :param grid: Set the grid for the plots.
    :type grid: bool, optional
    :param leg_fontsize: Fontsize of the legend, by default 10
@@ -320,6 +322,11 @@ Attributes
 
    .. py:attribute:: dpi
       :annotation: :int = 400
+
+      
+
+   .. py:attribute:: transparent
+      :annotation: :bool = False
 
       
 
@@ -530,13 +537,13 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: savefig(self, plot_name: str, transparent: bool = False, dpi: int = None, **kwargs)
+   .. py:method:: savefig(self, plot_name: str, transparent: bool = None, dpi: int = None, **kwargs)
 
       Save plot to disk.
 
       :param plot_name: File name of the plot
       :type plot_name: str
-      :param transparent: If plot transparent, by default False
+      :param transparent: Specify if plot background is transparent, by default False
       :type transparent: bool, optional
       :param dpi: DPI for plotting, by default 400
       :type dpi: int, optional
