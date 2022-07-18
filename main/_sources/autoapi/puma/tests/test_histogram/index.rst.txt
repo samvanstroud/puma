@@ -103,6 +103,11 @@ Classes
       3. adding bin width to ylabel works
 
 
+   .. py:method:: test_discrete_values(self)
+
+      check if discrete values are working properly
+
+
    .. py:method:: test_output_ratio(self)
 
       check with a plot if the ratio is the expected value
