@@ -18,6 +18,7 @@ Classes
 .. autoapisummary::
 
    puma.tests.test_metrics.separation_TestCase
+   puma.tests.test_metrics.calc_eff_and_rej_TestCase
    puma.tests.test_metrics.eff_err_TestCase
    puma.tests.test_metrics.rej_err_TestCase
 
@@ -68,6 +69,32 @@ Classes
    .. py:method:: test_bins_range(self)
 
       Test if bins_range is properly treated.
+
+
+
+.. py:class:: calc_eff_and_rej_TestCase(methodName='runTest')
+
+   Bases: :py:obj:`unittest.TestCase`
+
+   Test class for the puma.metrics functions.
+
+   Create an instance of the class that will use the named test
+   method when executed. Raises a ValueError if the instance does
+   not have a method with the specified name.
+
+   .. py:method:: setUp(self)
+
+      Hook method for setting up the test fixture before exercising it.
+
+
+   .. py:method:: test_float_target(self)
+
+      Test efficiency and cut value calculation for one target value
+
+
+   .. py:method:: test_array_target(self)
+
+      Test efficiency and cut value calculation for list of target efficiencies
 
 
 

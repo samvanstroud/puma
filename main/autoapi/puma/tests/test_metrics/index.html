@@ -302,6 +302,28 @@ function checkPageExistsAndRedirect(event) {
       </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase">
+       calc_eff_and_rej_TestCase
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase.setUp">
+         setUp
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase.test_float_target">
+         test_float_target
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase.test_array_target">
+         test_array_target
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#puma.tests.test_metrics.eff_err_TestCase">
        eff_err_TestCase
       </a>
@@ -404,10 +426,13 @@ function checkPageExistsAndRedirect(event) {
 <tr class="row-odd"><td><p><a class="reference internal" href="#puma.tests.test_metrics.separation_TestCase" title="puma.tests.test_metrics.separation_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separation_TestCase</span></code></a></p></td>
 <td><p>Test class for the puma.metrics.calc_separation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.tests.test_metrics.eff_err_TestCase" title="puma.tests.test_metrics.eff_err_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eff_err_TestCase</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase" title="puma.tests.test_metrics.calc_eff_and_rej_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calc_eff_and_rej_TestCase</span></code></a></p></td>
 <td><p>Test class for the puma.metrics functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.tests.test_metrics.rej_err_TestCase" title="puma.tests.test_metrics.rej_err_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rej_err_TestCase</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.tests.test_metrics.eff_err_TestCase" title="puma.tests.test_metrics.eff_err_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eff_err_TestCase</span></code></a></p></td>
+<td><p>Test class for the puma.metrics functions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.tests.test_metrics.rej_err_TestCase" title="puma.tests.test_metrics.rej_err_TestCase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rej_err_TestCase</span></code></a></p></td>
 <td><p>Test class for the puma.metrics functions.</p></td>
 </tr>
 </tbody>
@@ -461,6 +486,34 @@ if chosen such that they share one bin</p>
 <dt class="sig sig-object py" id="puma.tests.test_metrics.separation_TestCase.test_bins_range">
 <span class="sig-name descname"><span class="pre">test_bins_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_metrics.separation_TestCase.test_bins_range" title="Permalink to this definition">#</a></dt>
 <dd><p>Test if bins_range is properly treated.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="puma.tests.test_metrics.calc_eff_and_rej_TestCase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.tests.test_metrics.</span></span><span class="sig-name descname"><span class="pre">calc_eff_and_rej_TestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></p>
+<p>Test class for the puma.metrics functions.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="puma.tests.test_metrics.calc_eff_and_rej_TestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase.setUp" title="Permalink to this definition">#</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="puma.tests.test_metrics.calc_eff_and_rej_TestCase.test_float_target">
+<span class="sig-name descname"><span class="pre">test_float_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase.test_float_target" title="Permalink to this definition">#</a></dt>
+<dd><p>Test efficiency and cut value calculation for one target value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="puma.tests.test_metrics.calc_eff_and_rej_TestCase.test_array_target">
+<span class="sig-name descname"><span class="pre">test_array_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.tests.test_metrics.calc_eff_and_rej_TestCase.test_array_target" title="Permalink to this definition">#</a></dt>
+<dd><p>Test efficiency and cut value calculation for list of target efficiencies</p>
 </dd></dl>
 
 </dd></dl>
