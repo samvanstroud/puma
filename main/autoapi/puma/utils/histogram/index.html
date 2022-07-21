@@ -423,7 +423,7 @@ function checkPageExistsAndRedirect(event) {
 <tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.histogram.save_divide" title="puma.utils.histogram.save_divide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_divide</span></code></a>(numerator, denominator, default: float = 1.0)</p></td>
 <td><p>Division using numpy divide function returning default value in cases where</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.utils.histogram.hist_w_unc" title="puma.utils.histogram.hist_w_unc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist_w_unc</span></code></a>(arr, bins, bins_range=None, normed: bool = True)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.utils.histogram.hist_w_unc" title="puma.utils.histogram.hist_w_unc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist_w_unc</span></code></a>(arr, bins, bins_range=None, normed: bool = True, weights=None)</p></td>
 <td><p>Computes histogram and the associated statistical uncertainty.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.histogram.hist_ratio" title="puma.utils.histogram.hist_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist_ratio</span></code></a>(numerator, denominator, numerator_unc, denominator_unc, step: bool = True)</p></td>
@@ -455,16 +455,22 @@ denominator is 0.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="puma.utils.histogram.hist_w_unc">
-<span class="sig-prename descclassname"><span class="pre">puma.utils.histogram.</span></span><span class="sig-name descname"><span class="pre">hist_w_unc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.utils.histogram.hist_w_unc" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">puma.utils.histogram.</span></span><span class="sig-name descname"><span class="pre">hist_w_unc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.utils.histogram.hist_w_unc" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes histogram and the associated statistical uncertainty.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>arr</strong> (<em>array_like</em>) – Input data. The histogram is computed over the flattened array.</p></li>
-<li><p><strong>bins</strong> (<em>int</em><em> or </em><em>sequence of scalars</em><em> or </em><em>str</em>) – bins parameter from np.histogram</p></li>
-<li><p><strong>bins_range</strong> (<em>tuple</em><em>, </em><em>optional</em>) – range parameter from np.histogram</p></li>
+<li><p><strong>bins</strong> (<em>int</em><em> or </em><em>sequence of scalars</em><em> or </em><em>str</em>) – <code class="code docutils literal notranslate"><span class="pre">bins</span></code> parameter from <code class="code docutils literal notranslate"><span class="pre">np.histogram</span></code></p></li>
+<li><p><strong>bins_range</strong> (<em>tuple</em><em>, </em><em>optional</em>) – <code class="code docutils literal notranslate"><span class="pre">range</span></code> parameter from <code class="code docutils literal notranslate"><span class="pre">np.histogram</span></code>. This is ignored if <code class="code docutils literal notranslate"><span class="pre">bins</span></code> is array like,
+because then the entries of <code class="code docutils literal notranslate"><span class="pre">bins</span></code> are used as bin edges.</p></li>
 <li><p><strong>normed</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True (default) the calculated histogram is normalised to an integral
 of 1.</p></li>
+<li><p><strong>weights</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – Weights for the input data. Has to be an array of same length as the input
+data with a weight for each entry. If not specified, weight 1 will be given
+to each entry. The uncertainty of bins with weighted entries is
+sqrt(sum_i{w_i^2}) where w_i are the weights of the entries in this bin.
+By default None.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

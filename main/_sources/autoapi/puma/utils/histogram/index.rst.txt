@@ -40,19 +40,26 @@ Functions
    :rtype: array_like, float
 
 
-.. py:function:: hist_w_unc(arr, bins, bins_range=None, normed: bool = True)
+.. py:function:: hist_w_unc(arr, bins, bins_range=None, normed: bool = True, weights=None)
 
    Computes histogram and the associated statistical uncertainty.
 
    :param arr: Input data. The histogram is computed over the flattened array.
    :type arr: array_like
-   :param bins: bins parameter from np.histogram
+   :param bins: `bins` parameter from `np.histogram`
    :type bins: int or sequence of scalars or str
-   :param bins_range: range parameter from np.histogram
+   :param bins_range: `range` parameter from `np.histogram`. This is ignored if `bins` is array like,
+                      because then the entries of `bins` are used as bin edges.
    :type bins_range: tuple, optional
    :param normed: If True (default) the calculated histogram is normalised to an integral
                   of 1.
    :type normed: bool, optional
+   :param weights: Weights for the input data. Has to be an array of same length as the input
+                   data with a weight for each entry. If not specified, weight 1 will be given
+                   to each entry. The uncertainty of bins with weighted entries is
+                   sqrt(sum_i{w_i^2}) where w_i are the weights of the entries in this bin.
+                   By default None.
+   :type weights: np.ndarray, optional
 
    :returns: * **bin_edges** (*array of dtype float*) -- Return the bin edges (length(hist)+1)
              * **hist** (*numpy array*) -- The values of the histogram. If normed is true (default), returns the

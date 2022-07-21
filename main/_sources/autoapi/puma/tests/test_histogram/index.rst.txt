@@ -158,4 +158,9 @@ Classes
       flavour for the histogram.
 
 
+   .. py:method:: test_weights(self)
+
+      Output plot with weights
+
+
 

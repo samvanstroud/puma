@@ -1168,7 +1168,7 @@ function checkPageExistsAndRedirect(event) {
 
 <dl class="py class">
 <dt class="sig sig-object py" id="puma.Histogram">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.</span></span><span class="sig-name descname"><span class="pre">Histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flavour</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_flavour_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">histtype</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'step'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.Histogram" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">puma.</span></span><span class="sig-name descname"><span class="pre">Histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flavour</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_flavour_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">histtype</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'step'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.Histogram" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="plot_base/index.html#puma.plot_base.PlotLineObject" title="puma.plot_base.PlotLineObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">puma.plot_base.PlotLineObject</span></code></a></p>
 <p>Histogram class storing info about histogram and allows to calculate ratio w.r.t
 other histograms.</p>
@@ -1177,6 +1177,10 @@ other histograms.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>values</strong> (<em>np.ndarray</em>) – Input data for the histogram</p></li>
+<li><p><strong>weights</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – Weights for the input data. Has to be an array of same length as the input
+data with a weight for each entry. If not specified, weight 1 will be given
+to each entry. The uncertainties are calculated as the square root of the
+squared weights (for each bin separately). By default None.</p></li>
 <li><p><strong>ratio_group</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the ratio group this histogram is compared with. The ratio group
 allows you to compare different groups of histograms within one plot.
 By default None</p></li>
@@ -1194,7 +1198,10 @@ By default “step”</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If input data is not of type np.ndarray or list</p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If input data is not of type np.ndarray or list</p></li>
+<li><p><strong>ValueError</strong> – If weights are specified but have different length as the input values</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="py method">
