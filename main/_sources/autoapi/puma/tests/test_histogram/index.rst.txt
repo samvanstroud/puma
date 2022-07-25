@@ -58,6 +58,16 @@ Classes
       test if ratio is 1 for equal histograms (with norm)
 
 
+   .. py:method:: test_divide_wrong_bin_edges(self)
+
+      test if error is raised if bin edges don't match.
+
+
+   .. py:method:: test_multiple_references_wrong_flavour(self)
+
+      Tests if warning is raised with wrong flavour.
+
+
 
 .. py:class:: histogram_plot_TestCase(methodName='runTest')
 
@@ -93,6 +103,11 @@ Classes
 
       Tests if error is raised in case of non-unique reference histogram
       when flavoured histograms are used
+
+
+   .. py:method:: test_two_ratio_panels(self)
+
+      Tests if error is raised if more than 1 ratio panel is requested.
 
 
    .. py:method:: test_custom_range(self)
@@ -161,6 +176,11 @@ Classes
    .. py:method:: test_weights(self)
 
       Output plot with weights
+
+
+   .. py:method:: test_weights_wrong_shape(self)
+
+      Check if ValueError is raised if wieghts has
 
 
 
