@@ -382,8 +382,10 @@ function checkPageExistsAndRedirect(event) {
 <span class="n">plot_roc</span> <span class="o">=</span> <span class="n">RocPlot</span><span class="p">(</span>
     <span class="n">n_ratio_panels</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Background rejection&quot;</span><span class="p">,</span>
-    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;$b$-jets efficiency&quot;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;$b$-jet efficiency&quot;</span><span class="p">,</span>
     <span class="n">atlas_second_tag</span><span class="o">=</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">sqrt</span><span class="si">{s}</span><span class="s2">=13$ TeV, dummy jets </span><span class="se">\n</span><span class="s2">dummy sample, $f_</span><span class="si">{c}</span><span class="s2">=0.018$&quot;</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">6.5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+    <span class="n">y_scale</span><span class="o">=</span><span class="mf">1.4</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">plot_roc</span><span class="o">.</span><span class="n">add_roc</span><span class="p">(</span>
     <span class="n">Roc</span><span class="p">(</span>
@@ -428,13 +430,13 @@ function checkPageExistsAndRedirect(event) {
     <span class="p">),</span>
 <span class="p">)</span>
 <span class="c1"># setting which flavour rejection ratio is drawn in which ratio panel</span>
-<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_ratio_class</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;ujets&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light-flavour jets ratio&quot;</span><span class="p">)</span>
-<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_ratio_class</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;cjets&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c$-jets ratio&quot;</span><span class="p">)</span>
+<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_ratio_class</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;ujets&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light-jet ratio&quot;</span><span class="p">)</span>
+<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_ratio_class</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;cjets&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c$-jet ratio&quot;</span><span class="p">)</span>
 <span class="c1"># if you want to swap the ratios just uncomment the following 2 lines</span>
 <span class="c1"># plot_roc.set_ratio_class(2, &quot;ujets&quot;, label=&quot;light-flavour jets ratio&quot;)</span>
 <span class="c1"># plot_roc.set_ratio_class(1, &quot;cjets&quot;, label=&quot;c-jets ratio&quot;)</span>
-<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_leg_rej_labels</span><span class="p">(</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span> <span class="s2">&quot;Light-flavour jets rejection&quot;</span><span class="p">)</span>
-<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_leg_rej_labels</span><span class="p">(</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span> <span class="s2">&quot;$c$-jets rejection&quot;</span><span class="p">)</span>
+<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_leg_rej_labels</span><span class="p">(</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span> <span class="s2">&quot;Light-jet rejection&quot;</span><span class="p">)</span>
+<span class="n">plot_roc</span><span class="o">.</span><span class="n">set_leg_rej_labels</span><span class="p">(</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span> <span class="s2">&quot;$c$-jet rejection&quot;</span><span class="p">)</span>
 
 
 <span class="n">plot_roc</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
