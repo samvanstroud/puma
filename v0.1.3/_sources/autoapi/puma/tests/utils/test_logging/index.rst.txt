@@ -32,7 +32,7 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_wrong_input(self)
+   .. py:method:: test_wrong_input()
 
 
 

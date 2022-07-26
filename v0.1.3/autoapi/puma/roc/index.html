@@ -519,7 +519,7 @@ by default None</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.Roc.binomial_error">
-<span class="sig-name descname"><span class="pre">binomial_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_test</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#puma.roc.Roc.binomial_error" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">binomial_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_test</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#puma.roc.Roc.binomial_error" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate binomial error of roc curve.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -543,7 +543,7 @@ by default None</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.Roc.divide">
-<span class="sig-name descname"><span class="pre">divide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roc_comp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.Roc.divide" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">divide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roc_comp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.Roc.divide" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate ratio between the roc curve and another roc.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -567,7 +567,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.Roc.fct_inter">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fct_inter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.Roc.fct_inter" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fct_inter</span></span><a class="headerlink" href="#puma.roc.Roc.fct_inter" title="Permalink to this definition">#</a></dt>
 <dd><p>Interpolate the rejection function for better ratio calculation plotting etc.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -581,7 +581,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.Roc.non_zero_mask">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">non_zero_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.Roc.non_zero_mask" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">non_zero_mask</span></span><a class="headerlink" href="#puma.roc.Roc.non_zero_mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Masking points where rejection is 0 and no signal efficiency change present</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -595,7 +595,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.Roc.non_zero">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">non_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.Roc.non_zero" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">non_zero</span></span><a class="headerlink" href="#puma.roc.Roc.non_zero" title="Permalink to this definition">#</a></dt>
 <dd><p>Abstraction of <code class="code docutils literal notranslate"><span class="pre">non_zero_mask</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -623,7 +623,7 @@ interval of the two roc curves</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.add_roc">
-<span class="sig-name descname"><span class="pre">add_roc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roc_curve</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.add_roc" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">add_roc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roc_curve</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.add_roc" title="Permalink to this definition">#</a></dt>
 <dd><p>Adding puma.Roc object to figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -641,7 +641,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.set_roc_reference">
-<span class="sig-name descname"><span class="pre">set_roc_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.set_roc_reference" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_roc_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.set_roc_reference" title="Permalink to this definition">#</a></dt>
 <dd><p>Setting the reference roc curves used in the ratios</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -658,7 +658,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.set_leg_rej_labels">
-<span class="sig-name descname"><span class="pre">set_leg_rej_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.set_leg_rej_labels" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_leg_rej_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.set_leg_rej_labels" title="Permalink to this definition">#</a></dt>
 <dd><p>Set legend label for rejection class</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -672,7 +672,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.set_ratio_class">
-<span class="sig-name descname"><span class="pre">set_ratio_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_panel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.set_ratio_class" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_ratio_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio_panel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.set_ratio_class" title="Permalink to this definition">#</a></dt>
 <dd><p>Associate the rejection class to a ratio panel</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -690,7 +690,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.add_ratios">
-<span class="sig-name descname"><span class="pre">add_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.add_ratios" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">add_ratios</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.add_ratios" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculating ratios.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -704,7 +704,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.get_xlim_auto">
-<span class="sig-name descname"><span class="pre">get_xlim_auto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.get_xlim_auto" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_xlim_auto</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.get_xlim_auto" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns min and max efficiency values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -718,7 +718,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.plot_ratios">
-<span class="sig-name descname"><span class="pre">plot_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">matplotlib.pyplot.axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.plot_ratios" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">matplotlib.pyplot.axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rej_class</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.plot_ratios" title="Permalink to this definition">#</a></dt>
 <dd><p>Plotting ratio curves</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -732,7 +732,7 @@ interval of the two roc curves</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.make_split_legend">
-<span class="sig-name descname"><span class="pre">make_split_legend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.make_split_legend" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">make_split_legend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.make_split_legend" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw legend for the case of 2 ratios, splitting up legend into models and
 rejection class.</p>
 <dl class="field-list simple">
@@ -747,7 +747,7 @@ rejection class.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.draw">
-<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labelpad</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.draw" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labelpad</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.draw" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw plotting</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -759,7 +759,7 @@ ticks and tick labels, by default None</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.roc.RocPlot.plot_roc">
-<span class="sig-name descname"><span class="pre">plot_roc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">matplotlib.lines.Line2D</span></span></span><a class="headerlink" href="#puma.roc.RocPlot.plot_roc" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot_roc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">matplotlib.lines.Line2D</span></span></span><a class="headerlink" href="#puma.roc.RocPlot.plot_roc" title="Permalink to this definition">#</a></dt>
 <dd><p>Plotting roc curves</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

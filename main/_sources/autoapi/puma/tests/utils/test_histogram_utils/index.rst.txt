@@ -63,47 +63,47 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_hist_w_unc_zero_case(self)
+   .. py:method:: test_hist_w_unc_zero_case()
 
       Test what happens if empty array is provided as input.
 
 
-   .. py:method:: test_hist_w_unc_normed(self)
+   .. py:method:: test_hist_w_unc_normed()
 
       Test normalised case.
 
 
-   .. py:method:: test_hist_w_unc_not_normed(self)
+   .. py:method:: test_hist_w_unc_not_normed()
 
       Test not normalised case.
 
 
-   .. py:method:: test_histogram_weighted_normalised(self)
+   .. py:method:: test_histogram_weighted_normalised()
 
       Test weighted histogram (normalised).
 
 
-   .. py:method:: test_histogram_weighted_not_normalised(self)
+   .. py:method:: test_histogram_weighted_not_normalised()
 
       Test weighted histogram (not normalised).
 
 
-   .. py:method:: test_range_argument_ignored(self)
+   .. py:method:: test_range_argument_ignored()
 
       Test if the hist_range argument is ignored when bin_edges are provided.
 
 
-   .. py:method:: test_range_argument(self)
+   .. py:method:: test_range_argument()
 
       Test if the hist_range argument is used when bins is an integer.
 
 
-   .. py:method:: test_negative_weights(self)
+   .. py:method:: test_negative_weights()
 
       Test if negative weights are properly handled.
 
@@ -148,19 +148,19 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_zero_case(self)
+   .. py:method:: test_zero_case()
 
 
-   .. py:method:: test_ones_case(self)
+   .. py:method:: test_ones_case()
 
 
-   .. py:method:: test_half_case(self)
+   .. py:method:: test_half_case()
 
 
-   .. py:method:: test_denominator_float(self)
+   .. py:method:: test_denominator_float()
 
 
-   .. py:method:: test_numerator_float(self)
+   .. py:method:: test_numerator_float()
 
 
 
@@ -203,21 +203,21 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_hist_ratio(self)
+   .. py:method:: test_hist_ratio()
 
 
-   .. py:method:: test_hist_not_same_length_nominator_denominator(self)
+   .. py:method:: test_hist_not_same_length_nominator_denominator()
 
 
-   .. py:method:: test_hist_not_same_length_nomiantor_and_unc(self)
+   .. py:method:: test_hist_not_same_length_nomiantor_and_unc()
 
 
-   .. py:method:: test_hist_not_same_length_denomiantor_and_unc(self)
+   .. py:method:: test_hist_not_same_length_denomiantor_and_unc()
 
 
 

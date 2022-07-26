@@ -62,12 +62,12 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_size(self)
+   .. py:method:: test_size()
 
       Check that correct size is returned.
 
 
-   .. py:method:: test_range(self)
+   .. py:method:: test_range()
 
       Check that correct range of output is returned
 
@@ -112,17 +112,17 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_size(self)
+   .. py:method:: test_size()
 
       Check that correct size is returned.
 
 
-   .. py:method:: test_columns(self)
+   .. py:method:: test_columns()
 
       Check correct amount of columns.
 
 
-   .. py:method:: test_columns_pt(self)
+   .. py:method:: test_columns_pt()
 
       Check correct amount of columns when using pt as well.
 

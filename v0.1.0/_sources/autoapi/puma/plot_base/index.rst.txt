@@ -375,14 +375,14 @@ Attributes
 
       
 
-   .. py:method:: __post_init__(self)
+   .. py:method:: __post_init__()
 
       Check for allowed values.
 
       :raises ValueError: if n_ratio_panels not in [0, 1, 2]
 
 
-   .. py:method:: __check_figsize(self)
+   .. py:method:: __check_figsize()
 
       Check `figsize`
 
@@ -401,7 +401,7 @@ Attributes
    :param \*\*kwargs: kwargs from `plot_object`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: initialise_figure(self, sub_plot_index: int = 5)
+   .. py:method:: initialise_figure(sub_plot_index: int = 5)
 
       Initialising matplotlib.figure.Figure for different scenarios depending on how
       many ratio panels are requested.
@@ -411,7 +411,7 @@ Attributes
       :type sub_plot_index: int, optional
 
 
-   .. py:method:: draw_vlines(self, vlines_xvalues: list, vlines_label_list: list = None, vlines_line_height_list: list = None, same_height: bool = False, colour: str = '#920000', fontsize: int = 10)
+   .. py:method:: draw_vlines(vlines_xvalues: list, vlines_label_list: list = None, vlines_line_height_list: list = None, same_height: bool = False, colour: str = '#920000', fontsize: int = 10)
 
       Drawing working points in plot
 
@@ -433,7 +433,7 @@ Attributes
       :type fontsize: int, optional
 
 
-   .. py:method:: set_title(self, title: str = None, **kwargs)
+   .. py:method:: set_title(title: str = None, **kwargs)
 
       Set title of top panel.
 
@@ -444,7 +444,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_logy(self, force: bool = False)
+   .. py:method:: set_logy(force: bool = False)
 
       Set log scale of y-axis of main panel.
 
@@ -452,12 +452,12 @@ Attributes
       :type force: bool, optional
 
 
-   .. py:method:: set_y_lim(self)
+   .. py:method:: set_y_lim()
 
       Set limits of y-axis.
 
 
-   .. py:method:: set_ylabel(self, ax_mpl, label: str = None, align_right: bool = True, **kwargs)
+   .. py:method:: set_ylabel(ax_mpl, label: str = None, align_right: bool = True, **kwargs)
 
       Set y-axis label.
 
@@ -471,7 +471,7 @@ Attributes
       :param kwargs: kwargs passed to `matplotlib.axes.Axes.set_ylabel()`
 
 
-   .. py:method:: set_xlabel(self, label: str = None, **kwargs)
+   .. py:method:: set_xlabel(label: str = None, **kwargs)
 
       Set x-axis label.
 
@@ -481,7 +481,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_tick_params(self, labelsize: int = None, **kwargs)
+   .. py:method:: set_tick_params(labelsize: int = None, **kwargs)
 
       Set x-axis label.
 
@@ -492,7 +492,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_xlim(self, xmin: float = None, xmax: float = None, **kwargs)
+   .. py:method:: set_xlim(xmin: float = None, xmax: float = None, **kwargs)
 
       Set limits of x-axis
 
@@ -504,7 +504,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: savefig(self, plot_name: str, transparent: bool = False, dpi: int = None, **kwargs)
+   .. py:method:: savefig(plot_name: str, transparent: bool = False, dpi: int = None, **kwargs)
 
       Save plot to disk.
 
@@ -518,7 +518,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: tight_layout(self, **kwargs)
+   .. py:method:: tight_layout(**kwargs)
 
       abstract function of matplotlib.figure.Figure.tight_layout
 
@@ -526,7 +526,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: atlasify(self, use_tag: bool = True, force: bool = False)
+   .. py:method:: atlasify(use_tag: bool = True, force: bool = False)
 
       Apply ATLAS style to all axes using the atlasify package
 
@@ -537,7 +537,7 @@ Attributes
       :type force: bool, optional
 
 
-   .. py:method:: make_legend(self, handles: list, ax_mpl: matplotlib.axis, labels: list = None, **kwargs)
+   .. py:method:: make_legend(handles: list, ax_mpl: matplotlib.axis, labels: list = None, **kwargs)
 
       Drawing legend on axis.
 
@@ -552,7 +552,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_ratio_label(self, ratio_panel: int, label: str)
+   .. py:method:: set_ratio_label(ratio_panel: int, label: str)
 
       Associate the rejection class to a ratio panel
 
@@ -564,7 +564,7 @@ Attributes
       :raises ValueError: if requested ratio panels and given ratio_panel do not match.
 
 
-   .. py:method:: initialise_plot(self)
+   .. py:method:: initialise_plot()
 
       Calls other methods which are usually used when plotting
 

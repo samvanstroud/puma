@@ -50,7 +50,7 @@ Classes
 
    :raises ValueError: if `sig_eff` and `bkg_rej` have a different shape
 
-   .. py:method:: binomial_error(self, norm: bool = False, n_test: int = None) -> numpy.ndarray
+   .. py:method:: binomial_error(norm: bool = False, n_test: int = None) -> numpy.ndarray
 
       Calculate binomial error of roc curve.
 
@@ -66,7 +66,7 @@ Classes
       :raises ValueError: if no `n_test` was provided
 
 
-   .. py:method:: divide(self, roc_comp, inverse: bool = False)
+   .. py:method:: divide(roc_comp, inverse: bool = False)
 
       Calculate ratio between the roc curve and another roc.
 
@@ -82,7 +82,7 @@ Classes
                 * *np.array or None* -- ratio_err if `n_test` was provided to class
 
 
-   .. py:method:: fct_inter(self)
+   .. py:method:: fct_inter()
       :property:
 
       Interpolate the rejection function for better ratio calculation plotting etc.
@@ -91,7 +91,7 @@ Classes
       :rtype: pchip
 
 
-   .. py:method:: non_zero_mask(self)
+   .. py:method:: non_zero_mask()
       :property:
 
       Masking points where rejection is 0 and no signal efficiency change present
@@ -100,7 +100,7 @@ Classes
       :rtype: numpy.array
 
 
-   .. py:method:: non_zero(self)
+   .. py:method:: non_zero()
       :property:
 
       Abstraction of `non_zero_mask`
@@ -121,7 +121,7 @@ Classes
    :param \*\*kwargs: kwargs from `plot_base`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: add_roc(self, roc_curve: object, key: str = None, reference: bool = False)
+   .. py:method:: add_roc(roc_curve: object, key: str = None, reference: bool = False)
 
       Adding roc object to figure.
 
@@ -135,7 +135,7 @@ Classes
       :raises KeyError: if unique identifier key is used twice
 
 
-   .. py:method:: set_roc_reference(self, key: str, rej_class: str)
+   .. py:method:: set_roc_reference(key: str, rej_class: str)
 
       Setting the reference roc curves used in the ratios
 
@@ -147,7 +147,7 @@ Classes
       :raises ValueError: if more rejection classes are set than actual ratio panels available.
 
 
-   .. py:method:: set_leg_rej_labels(self, rej_class: str, label: str)
+   .. py:method:: set_leg_rej_labels(rej_class: str, label: str)
 
       Set legend label for rejection class
 
@@ -157,7 +157,7 @@ Classes
       :type label: str
 
 
-   .. py:method:: set_ratio_class(self, ratio_panel: int, rej_class: str, label: str)
+   .. py:method:: set_ratio_class(ratio_panel: int, rej_class: str, label: str)
 
       Associate the rejection class to a ratio panel
 
@@ -171,7 +171,7 @@ Classes
       :raises ValueError: if requested ratio panels and given ratio_panel do not match.
 
 
-   .. py:method:: add_ratios(self)
+   .. py:method:: add_ratios()
 
       Calculating ratios.
 
@@ -179,7 +179,7 @@ Classes
       :raises ValueError: if no ratio classes are set
 
 
-   .. py:method:: get_xlim_auto(self)
+   .. py:method:: get_xlim_auto()
 
       Returns min and max efficiency values
 
@@ -187,7 +187,7 @@ Classes
       :rtype: float
 
 
-   .. py:method:: plot_ratios(self, axis: matplotlib.pyplot.axis, rej_class: str)
+   .. py:method:: plot_ratios(axis: matplotlib.pyplot.axis, rej_class: str)
 
       Plotting ratio curves
 
@@ -197,7 +197,7 @@ Classes
       :type rej_class: str
 
 
-   .. py:method:: make_split_legend(self, handles)
+   .. py:method:: make_split_legend(handles)
 
       Draw legend for the case of 2 ratios, splitting up legend into models and
       rejection class.
@@ -208,7 +208,7 @@ Classes
       :raises ValueError: if not 2 ratios requested
 
 
-   .. py:method:: draw(self, labelpad: int = None)
+   .. py:method:: draw(labelpad: int = None)
 
       Draw plotting
 
@@ -217,7 +217,7 @@ Classes
       :type labelpad: int, optional
 
 
-   .. py:method:: plot_roc(self, **kwargs) -> matplotlib.lines.Line2D
+   .. py:method:: plot_roc(**kwargs) -> matplotlib.lines.Line2D
 
       Plotting roc curves
 

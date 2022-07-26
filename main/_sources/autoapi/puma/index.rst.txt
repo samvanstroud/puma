@@ -66,7 +66,7 @@ Attributes
 
 
 .. py:data:: __version__
-   :annotation: = 0.1.5dev
+   :annotation: = 0.1.6
 
    
 
@@ -109,7 +109,7 @@ Attributes
    :raises ValueError: If input data is not of type np.ndarray or list
    :raises ValueError: If weights are specified but have different length as the input values
 
-   .. py:method:: divide(self, other)
+   .. py:method:: divide(other)
 
       Calculate ratio between two class objects.
 
@@ -161,7 +161,7 @@ Attributes
 
    :raises ValueError: If n_ratio_panels > 1
 
-   .. py:method:: add(self, histogram: object, key: str = None, reference: bool = False)
+   .. py:method:: add(histogram: object, key: str = None, reference: bool = False)
 
       Adding histogram object to figure.
 
@@ -176,7 +176,7 @@ Attributes
       :raises KeyError: If unique identifier key is used twice
 
 
-   .. py:method:: set_reference(self, key: str)
+   .. py:method:: set_reference(key: str)
 
       Setting the reference histogram curves used in the ratios
 
@@ -184,7 +184,7 @@ Attributes
       :type key: str
 
 
-   .. py:method:: plot(self, **kwargs)
+   .. py:method:: plot(**kwargs)
 
       Plotting curves. This also generates the bins of the histograms that are
       added to the plot. Plot objects are drawn in the same order as they were added
@@ -199,7 +199,7 @@ Attributes
       :raises ValueError: If specified bins type is not supported.
 
 
-   .. py:method:: get_discrete_values(self, elem: object)
+   .. py:method:: get_discrete_values(elem: object)
 
       Get discrete values of a variable and adjust the
       bins accordingly
@@ -216,7 +216,7 @@ Attributes
           distinguished
 
 
-   .. py:method:: get_reference_histo(self, histo)
+   .. py:method:: get_reference_histo(histo)
 
       Get reference histogram from list of references
 
@@ -229,14 +229,14 @@ Attributes
       :raises ValueError: If no reference histo was found or multiple matches.
 
 
-   .. py:method:: plot_ratios(self)
+   .. py:method:: plot_ratios()
 
       Plotting ratio histograms.
 
       :raises ValueError: If no reference histogram is defined
 
 
-   .. py:method:: add_bin_width_to_ylabel(self)
+   .. py:method:: add_bin_width_to_ylabel()
 
       Adds the bin width to the ylabel of a histogram plot. If the bin with is
       smaller than 0.01, scientific notation will be used.
@@ -244,7 +244,7 @@ Attributes
       :raises ValueError: If plotting_done is False (therefore `bins` is not yet calculated)
 
 
-   .. py:method:: draw(self, labelpad: int = None)
+   .. py:method:: draw(labelpad: int = None)
 
       Draw figure.
 
@@ -290,7 +290,7 @@ Attributes
    :param \*\*kwargs: Keyword arguments from `puma.PlotObject`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: add(self, curve: object, key: str = None, is_marker: bool = False)
+   .. py:method:: add(curve: object, key: str = None, is_marker: bool = False)
 
       Adding `puma.Line2D` object to figure.
 
@@ -304,7 +304,7 @@ Attributes
       :raises KeyError: If unique identifier key is used twice
 
 
-   .. py:method:: plot(self, **kwargs)
+   .. py:method:: plot(**kwargs)
 
       Plotting curves. Plot objects are drawn in the same order as they
       were added to the plot.
@@ -316,7 +316,7 @@ Attributes
       :rtype: Line2D
 
 
-   .. py:method:: draw(self)
+   .. py:method:: draw()
 
       Draw figure.
 
@@ -352,7 +352,7 @@ Attributes
    :param \*\*kwargs: Keyword arguments from `puma.PlotObject`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: plot(self)
+   .. py:method:: plot()
 
       Plot the pie chart
 
@@ -369,7 +369,7 @@ Attributes
    :param \*\*kwargs: Keyword arguments from `puma.PlotObject`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: initialise_figure(self, sub_plot_index: int = 5)
+   .. py:method:: initialise_figure(sub_plot_index: int = 5)
 
       Initialising matplotlib.figure.Figure for different scenarios depending on how
       many ratio panels are requested.
@@ -379,7 +379,7 @@ Attributes
       :type sub_plot_index: int, optional
 
 
-   .. py:method:: draw_vlines(self, vlines_xvalues: list, vlines_label_list: list = None, vlines_line_height_list: list = None, same_height: bool = False, colour: str = '#000000', fontsize: int = 10)
+   .. py:method:: draw_vlines(vlines_xvalues: list, vlines_label_list: list = None, vlines_line_height_list: list = None, same_height: bool = False, colour: str = '#000000', fontsize: int = 10)
 
       Drawing working points in plot
 
@@ -401,7 +401,7 @@ Attributes
       :type fontsize: int, optional
 
 
-   .. py:method:: set_title(self, title: str = None, **kwargs)
+   .. py:method:: set_title(title: str = None, **kwargs)
 
       Set title of top panel.
 
@@ -412,7 +412,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_log(self, force_x: bool = False, force_y: bool = False)
+   .. py:method:: set_log(force_x: bool = False, force_y: bool = False)
 
       Set log scale of the axes. For the y-axis, only the main panel is
       set. For the x-axes (also from the ratio subpanels), all are changed.
@@ -423,12 +423,12 @@ Attributes
       :type force_y: bool, optional
 
 
-   .. py:method:: set_y_lim(self)
+   .. py:method:: set_y_lim()
 
       Set limits of y-axis.
 
 
-   .. py:method:: set_ylabel(self, ax_mpl, label: str = None, align_right: bool = True, **kwargs)
+   .. py:method:: set_ylabel(ax_mpl, label: str = None, align_right: bool = True, **kwargs)
 
       Set y-axis label.
 
@@ -442,7 +442,7 @@ Attributes
       :param kwargs: Keyword arguments passed to `matplotlib.axes.Axes.set_ylabel()`
 
 
-   .. py:method:: set_xlabel(self, label: str = None, **kwargs)
+   .. py:method:: set_xlabel(label: str = None, **kwargs)
 
       Set x-axis label.
 
@@ -452,7 +452,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_tick_params(self, labelsize: int = None, **kwargs)
+   .. py:method:: set_tick_params(labelsize: int = None, **kwargs)
 
       Set x-axis label.
 
@@ -463,7 +463,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_xlim(self, xmin: float = None, xmax: float = None, **kwargs)
+   .. py:method:: set_xlim(xmin: float = None, xmax: float = None, **kwargs)
 
       Set limits of x-axis
 
@@ -475,7 +475,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: savefig(self, plot_name: str, transparent: bool = None, dpi: int = None, **kwargs)
+   .. py:method:: savefig(plot_name: str, transparent: bool = None, dpi: int = None, **kwargs)
 
       Save plot to disk.
 
@@ -489,7 +489,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: tight_layout(self, **kwargs)
+   .. py:method:: tight_layout(**kwargs)
 
       abstract function of matplotlib.figure.Figure.tight_layout
 
@@ -497,7 +497,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: atlasify(self, use_tag: bool = True, force: bool = False)
+   .. py:method:: atlasify(use_tag: bool = True, force: bool = False)
 
       Apply ATLAS style to all axes using the atlasify package
 
@@ -508,7 +508,7 @@ Attributes
       :type force: bool, optional
 
 
-   .. py:method:: make_legend(self, handles: list, ax_mpl: matplotlib.axis, labels: list = None, **kwargs)
+   .. py:method:: make_legend(handles: list, ax_mpl: matplotlib.axis, labels: list = None, **kwargs)
 
       Drawing legend on axis.
 
@@ -523,7 +523,7 @@ Attributes
       :type \*\*kwargs: kwargs
 
 
-   .. py:method:: set_ratio_label(self, ratio_panel: int, label: str)
+   .. py:method:: set_ratio_label(ratio_panel: int, label: str)
 
       Associate the rejection class to a ratio panel
 
@@ -535,7 +535,7 @@ Attributes
       :raises ValueError: If requested ratio panels and given ratio_panel do not match.
 
 
-   .. py:method:: initialise_plot(self)
+   .. py:method:: initialise_plot()
 
       Calls other methods which are usually used when plotting
 
@@ -909,14 +909,14 @@ Attributes
 
       
 
-   .. py:method:: __post_init__(self)
+   .. py:method:: __post_init__()
 
       Check for allowed values.
 
       :raises ValueError: If n_ratio_panels not in [0, 1, 2]
 
 
-   .. py:method:: __check_figsize(self)
+   .. py:method:: __check_figsize()
 
       Check `figsize`
 
@@ -951,7 +951,7 @@ Attributes
 
    :raises ValueError: If `sig_eff` and `bkg_rej` have a different shape
 
-   .. py:method:: binomial_error(self, norm: bool = False, n_test: int = None) -> numpy.ndarray
+   .. py:method:: binomial_error(norm: bool = False, n_test: int = None) -> numpy.ndarray
 
       Calculate binomial error of roc curve.
 
@@ -967,7 +967,7 @@ Attributes
       :raises ValueError: If no `n_test` was provided
 
 
-   .. py:method:: divide(self, roc_comp, inverse: bool = False)
+   .. py:method:: divide(roc_comp, inverse: bool = False)
 
       Calculate ratio between the roc curve and another roc.
 
@@ -983,7 +983,7 @@ Attributes
                 * *np.array or None* -- Ratio_err if `n_test` was provided to class
 
 
-   .. py:method:: fct_inter(self)
+   .. py:method:: fct_inter()
       :property:
 
       Interpolate the rejection function for better ratio calculation plotting etc.
@@ -992,7 +992,7 @@ Attributes
       :rtype: pchip
 
 
-   .. py:method:: non_zero_mask(self)
+   .. py:method:: non_zero_mask()
       :property:
 
       Masking points where rejection is 0 and no signal efficiency change present
@@ -1001,7 +1001,7 @@ Attributes
       :rtype: numpy.array
 
 
-   .. py:method:: non_zero(self)
+   .. py:method:: non_zero()
       :property:
 
       Abstraction of `non_zero_mask`
@@ -1022,7 +1022,7 @@ Attributes
    :param \*\*kwargs: Keyword arguments from `puma.PlotObject`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: add_roc(self, roc_curve: object, key: str = None, reference: bool = False)
+   .. py:method:: add_roc(roc_curve: object, key: str = None, reference: bool = False)
 
       Adding puma.Roc object to figure.
 
@@ -1036,7 +1036,7 @@ Attributes
       :raises KeyError: If unique identifier key is used twice
 
 
-   .. py:method:: set_roc_reference(self, key: str, rej_class: str)
+   .. py:method:: set_roc_reference(key: str, rej_class: str)
 
       Setting the reference roc curves used in the ratios
 
@@ -1048,7 +1048,7 @@ Attributes
       :raises ValueError: If more rejection classes are set than actual ratio panels available.
 
 
-   .. py:method:: set_leg_rej_labels(self, rej_class: str, label: str)
+   .. py:method:: set_leg_rej_labels(rej_class: str, label: str)
 
       Set legend label for rejection class
 
@@ -1058,7 +1058,7 @@ Attributes
       :type label: str
 
 
-   .. py:method:: set_ratio_class(self, ratio_panel: int, rej_class: str, label: str)
+   .. py:method:: set_ratio_class(ratio_panel: int, rej_class: str, label: str)
 
       Associate the rejection class to a ratio panel
 
@@ -1072,7 +1072,7 @@ Attributes
       :raises ValueError: if requested ratio panels and given ratio_panel do not match.
 
 
-   .. py:method:: add_ratios(self)
+   .. py:method:: add_ratios()
 
       Calculating ratios.
 
@@ -1080,7 +1080,7 @@ Attributes
       :raises ValueError: If no ratio classes are set
 
 
-   .. py:method:: get_xlim_auto(self)
+   .. py:method:: get_xlim_auto()
 
       Returns min and max efficiency values
 
@@ -1088,7 +1088,7 @@ Attributes
       :rtype: float
 
 
-   .. py:method:: plot_ratios(self, axis: matplotlib.pyplot.axis, rej_class: str)
+   .. py:method:: plot_ratios(axis: matplotlib.pyplot.axis, rej_class: str)
 
       Plotting ratio curves
 
@@ -1098,7 +1098,7 @@ Attributes
       :type rej_class: str
 
 
-   .. py:method:: make_split_legend(self, handles)
+   .. py:method:: make_split_legend(handles)
 
       Draw legend for the case of 2 ratios, splitting up legend into models and
       rejection class.
@@ -1109,7 +1109,7 @@ Attributes
       :raises ValueError: If not 2 ratios requested
 
 
-   .. py:method:: draw(self, labelpad: int = None)
+   .. py:method:: draw(labelpad: int = None)
 
       Draw plotting
 
@@ -1118,7 +1118,7 @@ Attributes
       :type labelpad: int, optional
 
 
-   .. py:method:: plot_roc(self, **kwargs) -> matplotlib.lines.Line2D
+   .. py:method:: plot_roc(**kwargs) -> matplotlib.lines.Line2D
 
       Plotting roc curves
 
@@ -1167,7 +1167,7 @@ Attributes
 
    :raises ValueError: If provided options are not compatible with each other
 
-   .. py:method:: _set_bin_edges(self, bins)
+   .. py:method:: _set_bin_edges(bins)
 
       Calculate bin edges, centres and width and save them as class variables.
 
@@ -1178,18 +1178,18 @@ Attributes
       :type bins: int or sequence of scalars
 
 
-   .. py:method:: _apply_binning(self)
+   .. py:method:: _apply_binning()
 
       Get binned distributions for the signal and background.
 
 
-   .. py:method:: _get_disc_cuts(self)
+   .. py:method:: _get_disc_cuts()
 
       Retrieve cut values on discriminant. If `disc_cut` is not given, retrieve
       cut values from the working point.
 
 
-   .. py:method:: efficiency(self, arr: numpy.ndarray, cut: float)
+   .. py:method:: efficiency(arr: numpy.ndarray, cut: float)
 
       Calculate efficiency and the associated error.
 
@@ -1202,7 +1202,7 @@ Attributes
                 * *float* -- Efficiency error
 
 
-   .. py:method:: rejection(self, arr: numpy.ndarray, cut: float)
+   .. py:method:: rejection(arr: numpy.ndarray, cut: float)
 
       Calculate rejection and the associated error.
 
@@ -1215,7 +1215,7 @@ Attributes
                 * *float* -- Rejection error
 
 
-   .. py:method:: sig_eff(self)
+   .. py:method:: sig_eff()
       :property:
 
       Calculate signal efficiency per bin.
@@ -1224,7 +1224,7 @@ Attributes
                 * *np.ndarray* -- Efficiency_error
 
 
-   .. py:method:: bkg_eff(self)
+   .. py:method:: bkg_eff()
       :property:
 
       Calculate background efficiency per bin.
@@ -1233,7 +1233,7 @@ Attributes
                 * *np.ndarray* -- Efficiency_error
 
 
-   .. py:method:: sig_rej(self)
+   .. py:method:: sig_rej()
       :property:
 
       Calculate signal rejection per bin.
@@ -1242,7 +1242,7 @@ Attributes
                 * *np.ndarray* -- Rejection_error
 
 
-   .. py:method:: bkg_rej(self)
+   .. py:method:: bkg_rej()
       :property:
 
       Calculate background rejection per bin.
@@ -1251,12 +1251,12 @@ Attributes
                 * *np.ndarray* -- Rejection_error
 
 
-   .. py:method:: __eq__(self, other)
+   .. py:method:: __eq__(other)
 
       Return self==value.
 
 
-   .. py:method:: get(self, mode: str, inverse_cut: bool = False)
+   .. py:method:: get(mode: str, inverse_cut: bool = False)
 
       Wrapper around rejection and efficiency functions.
 
@@ -1272,7 +1272,7 @@ Attributes
       :raises ValueError: If mode not supported
 
 
-   .. py:method:: divide(self, other, mode: str, inverse: bool = False, inverse_cut: bool = False)
+   .. py:method:: divide(other, mode: str, inverse: bool = False, inverse_cut: bool = False)
 
       Calculate ratio between two class objects.
 
@@ -1313,7 +1313,7 @@ Attributes
 
    :raises ValueError: If incompatible mode given or more than 1 ratio panel requested
 
-   .. py:method:: add(self, curve: object, key: str = None, reference: bool = False)
+   .. py:method:: add(curve: object, key: str = None, reference: bool = False)
 
       Adding var_vs_eff object to figure.
 
@@ -1327,7 +1327,7 @@ Attributes
       :raises KeyError: If unique identifier key is used twice
 
 
-   .. py:method:: set_reference(self, key: str)
+   .. py:method:: set_reference(key: str)
 
       Setting the reference roc curves used in the ratios
 
@@ -1335,7 +1335,7 @@ Attributes
       :type key: str
 
 
-   .. py:method:: plot(self, **kwargs)
+   .. py:method:: plot(**kwargs)
 
       Plotting curves
 
@@ -1346,19 +1346,19 @@ Attributes
       :rtype: Line2D
 
 
-   .. py:method:: plot_ratios(self)
+   .. py:method:: plot_ratios()
 
       Plotting ratio curves.
 
       :raises ValueError: If no reference curve is defined
 
 
-   .. py:method:: set_grid(self)
+   .. py:method:: set_grid()
 
       Set gtid lines.
 
 
-   .. py:method:: set_inverse_cut(self, inverse_cut=True)
+   .. py:method:: set_inverse_cut(inverse_cut=True)
 
       Invert the discriminant cut, which will yield the efficiency or rejection
       of the jets not passing the working point.
@@ -1367,7 +1367,7 @@ Attributes
       :type inverse_cut: bool, optional
 
 
-   .. py:method:: draw_hline(self, y_val: float)
+   .. py:method:: draw_hline(y_val: float)
 
       Draw hline in top plot panel.
 
@@ -1375,7 +1375,7 @@ Attributes
       :type y_val: float
 
 
-   .. py:method:: draw(self, labelpad: int = None)
+   .. py:method:: draw(labelpad: int = None)
 
       Draw figure.
 

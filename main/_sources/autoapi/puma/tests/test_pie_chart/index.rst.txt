@@ -32,17 +32,17 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_plot_pie_chart_default_style(self)
+   .. py:method:: test_plot_pie_chart_default_style()
 
       check if pie chart is plotted correctly (using default style)
 
 
-   .. py:method:: test_plot_pie_chart_custom_style(self)
+   .. py:method:: test_plot_pie_chart_custom_style()
 
       check if pie chart is plotted correctly (using default style)
 

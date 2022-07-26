@@ -32,30 +32,30 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_invalid_bins_type(self)
+   .. py:method:: test_invalid_bins_type()
 
       check if ValueError is raised when using invalid type in `bins` argument
 
 
-   .. py:method:: test_invalid_binwidth(self)
+   .. py:method:: test_invalid_binwidth()
 
       check if ValueError is raised when using a bin width larger than 1
 
 
-   .. py:method:: test_no_discrete_vals(self)
+   .. py:method:: test_no_discrete_vals()
 
       check if ValueError is raised when no discrete values are provided
 
 
-   .. py:method:: test_no_vertical_split(self)
+   .. py:method:: test_no_vertical_split()
 
 
-   .. py:method:: test_plot_pie_chart(self)
+   .. py:method:: test_plot_pie_chart()
 
       check if plot chart is plotted correctly
 

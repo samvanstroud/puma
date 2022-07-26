@@ -34,38 +34,38 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Define a default (seeded) random number generator for all tests
 
 
-   .. py:method:: test_equal_datasets(self)
+   .. py:method:: test_equal_datasets()
 
       Separation of two equal datasets (=0)
 
 
-   .. py:method:: test_completely_separated(self)
+   .. py:method:: test_completely_separated()
 
       Separation of two completely separated distributions
 
 
-   .. py:method:: test_completely_separated_bad_binning(self)
+   .. py:method:: test_completely_separated_bad_binning()
 
       Separation of two completely separated distributions if the binning
       if chosen such that they share one bin
 
 
-   .. py:method:: test_half_separated(self)
+   .. py:method:: test_half_separated()
 
       Separation of 0.5
 
 
-   .. py:method:: test_return_bins(self)
+   .. py:method:: test_return_bins()
 
       Test if bins are correctly returned
 
 
-   .. py:method:: test_bins_range(self)
+   .. py:method:: test_bins_range()
 
       Test if bins_range is properly treated.
 
@@ -81,22 +81,22 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_zero_N_case(self)
+   .. py:method:: test_zero_N_case()
 
       Test eff_err function.
 
 
-   .. py:method:: test_negative_N_case(self)
+   .. py:method:: test_negative_N_case()
 
       Test eff_err function.
 
 
-   .. py:method:: test_one_case(self)
+   .. py:method:: test_one_case()
 
       Test eff_err function.
 
 
-   .. py:method:: test_example_case(self)
+   .. py:method:: test_example_case()
 
       Test eff_err function.
 
@@ -112,32 +112,32 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_zero_N_case(self)
+   .. py:method:: test_zero_N_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_negative_N_case(self)
+   .. py:method:: test_negative_N_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_one_case(self)
+   .. py:method:: test_one_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_zero_x_case(self)
+   .. py:method:: test_zero_x_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_example_case(self)
+   .. py:method:: test_example_case()
 
       Test rej_err function.
 

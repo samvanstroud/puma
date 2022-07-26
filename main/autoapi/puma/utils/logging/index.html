@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>puma.utils.logging &#8212; puma 0.1.5dev documentation</title>
+    <title>puma.utils.logging &#8212; puma 0.1.6 documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -62,7 +62,7 @@
   
   
   
-    <p class="title logo__title">puma 0.1.5dev documentation</p>
+    <p class="title logo__title">puma 0.1.6 documentation</p>
   
 </a>
     
@@ -121,7 +121,7 @@
       <div class="navbar-end-item">
         <div class="dropdown" id="version_switcher">
     <button type="button" class="btn btn-sm navbar-btn dropdown-toggle" id="version_switcher_button" data-toggle="dropdown">
-        main  <!-- this text may get changed later by javascript -->
+        v0.1.6  <!-- this text may get changed later by javascript -->
         <span class="caret"></span>
     </button>
     <div id="version_switcher_menu" class="dropdown-menu list-group-flush py-0" aria-labelledby="version_switcher_button">
@@ -131,7 +131,7 @@
 
 <!-- NOTE: this JS must live here (not in our global JS file) because it relies
      on being processed by Jinja before it is run (specifically for replacing
-     variables autoapi/puma/utils/logging/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
+     variables autoapi/puma/utils/logging/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'v0.1.6'}.
 -->
 
 <script type="text/javascript">
@@ -189,7 +189,7 @@ function checkPageExistsAndRedirect(event) {
             // this version, rather than using sphinx's  variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
-            if (entry.version == "main") {
+            if (entry.version == "v0.1.6") {
                 node.classList.add("active");
                 btn.innerText = btn.dataset["activeVersionName"] = entry.name;
                 btn.dataset["activeVersion"] = entry.version;
@@ -506,13 +506,13 @@ function checkPageExistsAndRedirect(event) {
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.logging.get_log_level" title="puma.utils.logging.get_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_log_level</span></code></a>(level: str)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.logging.get_log_level" title="puma.utils.logging.get_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_log_level</span></code></a>(level)</p></td>
 <td><p>Get logging levels with string key.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#puma.utils.logging.initialise_logger" title="puma.utils.logging.initialise_logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialise_logger</span></code></a>(log_level: str = None)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#puma.utils.logging.initialise_logger" title="puma.utils.logging.initialise_logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialise_logger</span></code></a>([log_level])</p></td>
 <td><p>Initialise.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.logging.set_log_level" title="puma.utils.logging.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a>(puma_logger, log_level: str)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.logging.set_log_level" title="puma.utils.logging.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_log_level</span></code></a>(puma_logger, log_level)</p></td>
 <td><p>Setting log level.</p></td>
 </tr>
 </tbody>
@@ -596,7 +596,7 @@ use one of %-formatting, <code class="xref py py-meth docutils literal notransla
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.utils.logging.CustomFormatter.format">
-<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.utils.logging.CustomFormatter.format" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.utils.logging.CustomFormatter.format" title="Permalink to this definition">#</a></dt>
 <dd><p>Format the specified record as text.</p>
 <p>The record’s attribute dictionary is used as the operand to a
 string formatting operation which yields the returned string.

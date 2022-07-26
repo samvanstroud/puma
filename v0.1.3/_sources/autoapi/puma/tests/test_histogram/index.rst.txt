@@ -33,27 +33,27 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_empty_histogram(self)
+   .. py:method:: test_empty_histogram()
 
       test if providing wrong input type to histogram raises ValueError
 
 
-   .. py:method:: test_divide_before_plotting(self)
+   .. py:method:: test_divide_before_plotting()
 
       test if ValueError is raised when dividing before plotting the histograms
 
 
-   .. py:method:: test_divide_after_plotting_no_norm(self)
+   .. py:method:: test_divide_after_plotting_no_norm()
 
       test if ratio is calculated correctly after plotting (without norm)
 
 
-   .. py:method:: test_divide_after_plotting_norm(self)
+   .. py:method:: test_divide_after_plotting_norm()
 
       test if ratio is calculated correctly after plotting (with norm)
 
 
-   .. py:method:: test_ratio_same_histogram(self)
+   .. py:method:: test_ratio_same_histogram()
 
       test if ratio is 1 for equal histograms (with norm)
 
@@ -69,33 +69,33 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_invalid_bins_type(self)
+   .. py:method:: test_invalid_bins_type()
 
       check if ValueError is raised when using invalid type in `bins` argument
 
 
-   .. py:method:: test_add_bin_width_to_ylabel(self)
+   .. py:method:: test_add_bin_width_to_ylabel()
 
       check if ValueError is raised when using invalid type in `bins` argument
 
 
-   .. py:method:: test_multiple_references_no_flavour(self)
+   .. py:method:: test_multiple_references_no_flavour()
 
       Tests if error is raised in case of non-unique reference histogram
 
 
-   .. py:method:: test_multiple_references_flavour(self)
+   .. py:method:: test_multiple_references_flavour()
 
       Tests if error is raised in case of non-unique reference histogram
       when flavoured histograms are used
 
 
-   .. py:method:: test_custom_range(self)
+   .. py:method:: test_custom_range()
 
       check if
       1. bins_range argument is used correctly
@@ -103,51 +103,51 @@ Classes
       3. adding bin width to ylabel works
 
 
-   .. py:method:: test_output_ratio(self)
+   .. py:method:: test_output_ratio()
 
       check with a plot if the ratio is the expected value
 
 
-   .. py:method:: test_output_empty_histogram_norm(self)
+   .. py:method:: test_output_empty_histogram_norm()
 
 
-   .. py:method:: test_output_empty_histogram_no_norm(self)
+   .. py:method:: test_output_empty_histogram_no_norm()
 
       Test if ratio is 1 for whole range if reference histogram is empty
 
 
-   .. py:method:: test_output_different_range_histogram(self)
+   .. py:method:: test_output_different_range_histogram()
 
       Test if ratio yields the expected values for case of different histogram
       ranges
 
 
-   .. py:method:: test_draw_vlines_histogram(self)
+   .. py:method:: test_draw_vlines_histogram()
 
       Test the drawing of vertical lines in the histogram.
 
 
-   .. py:method:: test_draw_vlines_histogram_custom_labels(self)
+   .. py:method:: test_draw_vlines_histogram_custom_labels()
 
       Test the drawing of vertical lines in the histogram.
 
 
-   .. py:method:: test_draw_vlines_histogram_same_height(self)
+   .. py:method:: test_draw_vlines_histogram_same_height()
 
       Test the drawing of vertical lines in the histogram.
 
 
-   .. py:method:: test_draw_vlines_histogram_custom_yheight(self)
+   .. py:method:: test_draw_vlines_histogram_custom_yheight()
 
       Test the drawing of vertical lines in the histogram.
 
 
-   .. py:method:: test_ratio_group_options(self)
+   .. py:method:: test_ratio_group_options()
 
       Test different combinations of using ratio groups.
 
 
-   .. py:method:: test_flavoured_labels(self)
+   .. py:method:: test_flavoured_labels()
 
       Test different combinations of specifying the label when also specifying a
       flavour for the histogram.

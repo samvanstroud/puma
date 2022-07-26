@@ -33,87 +33,87 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_var_vs_eff_init_wrong_sig_shape(self)
+   .. py:method:: test_var_vs_eff_init_wrong_sig_shape()
 
       Test var_vs_eff init.
 
 
-   .. py:method:: test_var_vs_eff_init_wrong_bkg_shape(self)
+   .. py:method:: test_var_vs_eff_init_wrong_bkg_shape()
 
       Test var_vs_eff init.
 
 
-   .. py:method:: test_var_vs_eff_init_fixed_eff_disc_cut(self)
+   .. py:method:: test_var_vs_eff_init_fixed_eff_disc_cut()
 
       Test var_vs_eff init.
 
 
-   .. py:method:: test_var_vs_eff_init_fixed_eff_no_wp(self)
+   .. py:method:: test_var_vs_eff_init_fixed_eff_no_wp()
 
       Test var_vs_eff init.
 
 
-   .. py:method:: test_var_vs_eff_init_disc_cut_wp(self)
+   .. py:method:: test_var_vs_eff_init_disc_cut_wp()
 
       Test var_vs_eff init.
 
 
-   .. py:method:: test_var_vs_eff_init_no_disc_cut_no_wp(self)
+   .. py:method:: test_var_vs_eff_init_no_disc_cut_no_wp()
 
       Test var_vs_eff init.
 
 
-   .. py:method:: test_var_vs_eff_init_disc_cut_wrong_shape(self)
+   .. py:method:: test_var_vs_eff_init_disc_cut_wrong_shape()
 
       Test var_vs_eff init.
 
 
-   .. py:method:: test_var_vs_eff_set_bin_edges_list(self)
+   .. py:method:: test_var_vs_eff_set_bin_edges_list()
 
       Test var_vs_eff _set_bin_edges.
 
 
-   .. py:method:: test_var_vs_eff_set_bin_edges_only_signal(self)
+   .. py:method:: test_var_vs_eff_set_bin_edges_only_signal()
 
       Test var_vs_eff _set_bin_edges.
 
 
-   .. py:method:: test_var_vs_eff_set_bin_edges(self)
+   .. py:method:: test_var_vs_eff_set_bin_edges()
 
       Test var_vs_eff _set_bin_edges.
 
 
-   .. py:method:: test_var_vs_eff_fixed_eff_sig_eff(self)
+   .. py:method:: test_var_vs_eff_fixed_eff_sig_eff()
 
       Test var_vs_eff sig_eff.
 
 
-   .. py:method:: test_var_vs_eff_fixed_eff_sig_rej(self)
+   .. py:method:: test_var_vs_eff_fixed_eff_sig_rej()
 
       Test var_vs_eff sig_rej.
 
 
-   .. py:method:: test_var_vs_eff_one_bin(self)
+   .. py:method:: test_var_vs_eff_one_bin()
 
       Test var_vs_eff.
 
 
-   .. py:method:: test_var_vs_eff_divide_same(self)
+   .. py:method:: test_var_vs_eff_divide_same()
 
       Test var_vs_eff divide.
 
 
-   .. py:method:: test_var_vs_eff_divide_wrong_mode(self)
+   .. py:method:: test_var_vs_eff_divide_wrong_mode()
 
       Test var_vs_eff divide.
 
 
-   .. py:method:: test_var_vs_eff_divide_different_binning(self)
+   .. py:method:: test_var_vs_eff_divide_different_binning()
 
       Test var_vs_eff divide.
 
@@ -129,15 +129,15 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_output_plot_fixed_eff_bin_bkg_rejection(self)
+   .. py:method:: test_output_plot_fixed_eff_bin_bkg_rejection()
 
 
-   .. py:method:: test_output_plot_fixed_eff_bin_bkg_efficiency(self)
+   .. py:method:: test_output_plot_fixed_eff_bin_bkg_efficiency()
 
 
 

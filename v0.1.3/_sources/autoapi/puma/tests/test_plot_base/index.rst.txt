@@ -32,22 +32,22 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_only_one_input_figsize(self)
+   .. py:method:: test_only_one_input_figsize()
 
 
-   .. py:method:: test_only_tuple_three_inputs_figsize(self)
+   .. py:method:: test_only_tuple_three_inputs_figsize()
 
 
-   .. py:method:: test_tuple_input_figsize(self)
+   .. py:method:: test_tuple_input_figsize()
 
 
-   .. py:method:: test_list_input_figsize(self)
+   .. py:method:: test_list_input_figsize()
 
 
-   .. py:method:: test_list_input_wrong_len_figsize(self)
+   .. py:method:: test_list_input_wrong_len_figsize()
 
 
-   .. py:method:: test_wrong_n_ratio_panels(self)
+   .. py:method:: test_wrong_n_ratio_panels()
 
 
 

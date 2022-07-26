@@ -60,7 +60,7 @@ Classes
 
    :raises ValueError: if provided options are not compatible with each other
 
-   .. py:method:: _set_bin_edges(self, bins)
+   .. py:method:: _set_bin_edges(bins)
 
       Calculate bin edges, centres and width and save them as class variables.
 
@@ -71,18 +71,18 @@ Classes
       :type bins: int or sequence of scalars
 
 
-   .. py:method:: _apply_binning(self)
+   .. py:method:: _apply_binning()
 
       Get binned distributions for the signal and background.
 
 
-   .. py:method:: _get_disc_cuts(self)
+   .. py:method:: _get_disc_cuts()
 
       Retrieve cut values on discriminant. If `disc_cut` is not given, retrieve
       cut values from the working point.
 
 
-   .. py:method:: efficiency(self, arr: numpy.ndarray, cut: float)
+   .. py:method:: efficiency(arr: numpy.ndarray, cut: float)
 
       Calculate efficiency and the associated error.
 
@@ -95,7 +95,7 @@ Classes
                 * *float* -- efficiency error
 
 
-   .. py:method:: rejection(self, arr: numpy.ndarray, cut: float)
+   .. py:method:: rejection(arr: numpy.ndarray, cut: float)
 
       Calculate rejection and the associated error.
 
@@ -108,7 +108,7 @@ Classes
                 * *float* -- rejection error
 
 
-   .. py:method:: sig_eff(self)
+   .. py:method:: sig_eff()
       :property:
 
       Calculate signal efficiency per bin.
@@ -117,7 +117,7 @@ Classes
                 * *np.ndarray* -- efficiency_error
 
 
-   .. py:method:: bkg_eff(self)
+   .. py:method:: bkg_eff()
       :property:
 
       Calculate background efficiency per bin.
@@ -126,7 +126,7 @@ Classes
                 * *np.ndarray* -- efficiency_error
 
 
-   .. py:method:: sig_rej(self)
+   .. py:method:: sig_rej()
       :property:
 
       Calculate signal rejection per bin.
@@ -135,7 +135,7 @@ Classes
                 * *np.ndarray* -- rejection_error
 
 
-   .. py:method:: bkg_rej(self)
+   .. py:method:: bkg_rej()
       :property:
 
       Calculate background rejection per bin.
@@ -144,12 +144,12 @@ Classes
                 * *np.ndarray* -- rejection_error
 
 
-   .. py:method:: __eq__(self, other)
+   .. py:method:: __eq__(other)
 
       Return self==value.
 
 
-   .. py:method:: get(self, mode: str, inverse_cut: bool = False)
+   .. py:method:: get(mode: str, inverse_cut: bool = False)
 
       Wrapper around rejection and efficiency functions.
 
@@ -165,7 +165,7 @@ Classes
       :raises ValueError: if mode not supported
 
 
-   .. py:method:: divide(self, other, mode: str, inverse: bool = False, inverse_cut: bool = False)
+   .. py:method:: divide(other, mode: str, inverse: bool = False, inverse_cut: bool = False)
 
       Calculate ratio between two class objects.
 
@@ -206,7 +206,7 @@ Classes
 
    :raises ValueError: if incompatible mode given or more than 1 ratio panel requested
 
-   .. py:method:: add(self, curve: object, key: str = None, reference: bool = False)
+   .. py:method:: add(curve: object, key: str = None, reference: bool = False)
 
       Adding var_vs_eff object to figure.
 
@@ -220,7 +220,7 @@ Classes
       :raises KeyError: if unique identifier key is used twice
 
 
-   .. py:method:: set_reference(self, key: str)
+   .. py:method:: set_reference(key: str)
 
       Setting the reference roc curves used in the ratios
 
@@ -228,7 +228,7 @@ Classes
       :type key: str
 
 
-   .. py:method:: plot(self, **kwargs)
+   .. py:method:: plot(**kwargs)
 
       Plotting curves
 
@@ -240,19 +240,19 @@ Classes
       :param Line2D: matplotlib Line2D object
 
 
-   .. py:method:: plot_ratios(self)
+   .. py:method:: plot_ratios()
 
       Plotting ratio curves.
 
       :raises ValueError: if no reference curve is defined
 
 
-   .. py:method:: set_grid(self)
+   .. py:method:: set_grid()
 
       Set gtid lines.
 
 
-   .. py:method:: set_inverse_cut(self, inverse_cut=True)
+   .. py:method:: set_inverse_cut(inverse_cut=True)
 
       Invert the discriminant cut, which will yield the efficiency or rejection
       of the jets not passing the working point.
@@ -261,7 +261,7 @@ Classes
       :type inverse_cut: bool, optional
 
 
-   .. py:method:: draw_hline(self, y_val: float)
+   .. py:method:: draw_hline(y_val: float)
 
       Draw hline in top plot panel.
 
@@ -269,7 +269,7 @@ Classes
       :type y_val: float
 
 
-   .. py:method:: draw(self, labelpad: int = None)
+   .. py:method:: draw(labelpad: int = None)
 
       Draw figure.
 

@@ -555,7 +555,7 @@ in each bin, by default False</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff._set_bin_edges">
-<span class="sig-name descname"><span class="pre">_set_bin_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff._set_bin_edges" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">_set_bin_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff._set_bin_edges" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate bin edges, centres and width and save them as class variables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -569,20 +569,20 @@ widths.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff._apply_binning">
-<span class="sig-name descname"><span class="pre">_apply_binning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff._apply_binning" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">_apply_binning</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff._apply_binning" title="Permalink to this definition">#</a></dt>
 <dd><p>Get binned distributions for the signal and background.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff._get_disc_cuts">
-<span class="sig-name descname"><span class="pre">_get_disc_cuts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff._get_disc_cuts" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">_get_disc_cuts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff._get_disc_cuts" title="Permalink to this definition">#</a></dt>
 <dd><p>Retrieve cut values on discriminant. If <code class="code docutils literal notranslate"><span class="pre">disc_cut</span></code> is not given, retrieve
 cut values from the working point.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.efficiency">
-<span class="sig-name descname"><span class="pre">efficiency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.efficiency" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">efficiency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.efficiency" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate efficiency and the associated error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -603,7 +603,7 @@ cut values from the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.rejection">
-<span class="sig-name descname"><span class="pre">rejection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.rejection" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">rejection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.rejection" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate rejection and the associated error.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -624,7 +624,7 @@ cut values from the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.sig_eff">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sig_eff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.sig_eff" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sig_eff</span></span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.sig_eff" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate signal efficiency per bin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -639,7 +639,7 @@ cut values from the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.bkg_eff">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bkg_eff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.bkg_eff" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bkg_eff</span></span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.bkg_eff" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate background efficiency per bin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -654,7 +654,7 @@ cut values from the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.sig_rej">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sig_rej</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.sig_rej" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sig_rej</span></span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.sig_rej" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate signal rejection per bin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -669,7 +669,7 @@ cut values from the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.bkg_rej">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bkg_rej</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.bkg_rej" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bkg_rej</span></span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.bkg_rej" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate background rejection per bin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -684,13 +684,13 @@ cut values from the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.__eq__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.__eq__" title="Permalink to this definition">#</a></dt>
 <dd><p>Return self==value.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.get" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.get" title="Permalink to this definition">#</a></dt>
 <dd><p>Wrapper around rejection and efficiency functions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -715,7 +715,7 @@ of the jets not passing the working point, by default False</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEff.divide">
-<span class="sig-name descname"><span class="pre">divide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.divide" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">divide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_cut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEff.divide" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate ratio between two class objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -766,7 +766,7 @@ of the jets not passing the working point, by default False</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.add">
-<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curve</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.add" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.add" title="Permalink to this definition">#</a></dt>
 <dd><p>Adding var_vs_eff object to figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -784,7 +784,7 @@ of the jets not passing the working point, by default False</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.set_reference">
-<span class="sig-name descname"><span class="pre">set_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.set_reference" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.set_reference" title="Permalink to this definition">#</a></dt>
 <dd><p>Setting the reference roc curves used in the ratios</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -795,7 +795,7 @@ of the jets not passing the working point, by default False</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.plot">
-<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.plot" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.plot" title="Permalink to this definition">#</a></dt>
 <dd><p>Plotting curves</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -812,7 +812,7 @@ of the jets not passing the working point, by default False</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.plot_ratios">
-<span class="sig-name descname"><span class="pre">plot_ratios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.plot_ratios" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot_ratios</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.plot_ratios" title="Permalink to this definition">#</a></dt>
 <dd><p>Plotting ratio curves.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -823,13 +823,13 @@ of the jets not passing the working point, by default False</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.set_grid">
-<span class="sig-name descname"><span class="pre">set_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.set_grid" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.set_grid" title="Permalink to this definition">#</a></dt>
 <dd><p>Set gtid lines.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.set_inverse_cut">
-<span class="sig-name descname"><span class="pre">set_inverse_cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.set_inverse_cut" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_inverse_cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inverse_cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.set_inverse_cut" title="Permalink to this definition">#</a></dt>
 <dd><p>Invert the discriminant cut, which will yield the efficiency or rejection
 of the jets not passing the working point.</p>
 <dl class="field-list simple">
@@ -841,7 +841,7 @@ of the jets not passing the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.draw_hline">
-<span class="sig-name descname"><span class="pre">draw_hline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_val</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.draw_hline" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">draw_hline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_val</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.draw_hline" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw hline in top plot panel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -852,7 +852,7 @@ of the jets not passing the working point.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="puma.var_vs_eff.VarVsEffPlot.draw">
-<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labelpad</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.draw" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labelpad</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.var_vs_eff.VarVsEffPlot.draw" title="Permalink to this definition">#</a></dt>
 <dd><p>Draw figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

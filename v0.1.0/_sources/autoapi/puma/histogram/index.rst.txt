@@ -48,7 +48,7 @@ Classes
 
    :raises ValueError: If input data is not of type np.ndarray or list
 
-   .. py:method:: divide(self, other)
+   .. py:method:: divide(other)
 
       Calculate ratio between two class objects.
 
@@ -108,7 +108,7 @@ Classes
 
    :raises ValueError: If n_ratio_panels > 1
 
-   .. py:method:: add(self, curve: object, key: str = None, reference: bool = False)
+   .. py:method:: add(curve: object, key: str = None, reference: bool = False)
 
       Adding histogram object to figure.
 
@@ -123,7 +123,7 @@ Classes
       :raises KeyError: If unique identifier key is used twice
 
 
-   .. py:method:: set_reference(self, key: str)
+   .. py:method:: set_reference(key: str)
 
       Setting the reference histogram curves used in the ratios
 
@@ -131,7 +131,7 @@ Classes
       :type key: str
 
 
-   .. py:method:: plot(self, **kwargs)
+   .. py:method:: plot(**kwargs)
 
       Plotting curves. This also generates the bins of the histograms that are
       added to the plot. Plot objects are drawn in the same order as they were added
@@ -146,7 +146,7 @@ Classes
       :raises ValueError: If specified bins type is not supported.
 
 
-   .. py:method:: plot_pie_chart(self)
+   .. py:method:: plot_pie_chart()
 
       Plotting Pie chart. Only variables with defined discrete values
       can be plotted. Only non-zero values are plotted.
@@ -159,7 +159,7 @@ Classes
       :raises ValueError: If specified bins type is not supported.
 
 
-   .. py:method:: get_discrete_values(self, elem: object)
+   .. py:method:: get_discrete_values(elem: object)
 
       Get discrete values of a variable and adjust the
       bins accordingly
@@ -176,7 +176,7 @@ Classes
           distinguished
 
 
-   .. py:method:: get_reference_histo(self, histo)
+   .. py:method:: get_reference_histo(histo)
 
       Get reference histogram from list of references
 
@@ -189,14 +189,14 @@ Classes
       :raises ValueError: If no reference histo was found or multiple matches.
 
 
-   .. py:method:: plot_ratios(self)
+   .. py:method:: plot_ratios()
 
       Plotting ratio histograms.
 
       :raises ValueError: If no reference histogram is defined
 
 
-   .. py:method:: add_bin_width_to_ylabel(self)
+   .. py:method:: add_bin_width_to_ylabel()
 
       Adds the bin width to the ylabel of a histogram plot. If the bin with is
       smaller than 0.01, scientific notation will be used.
@@ -204,7 +204,7 @@ Classes
       :raises ValueError: If plotting_done is False (therefore `bins` is not yet calculated)
 
 
-   .. py:method:: draw(self, labelpad: int = None)
+   .. py:method:: draw(labelpad: int = None)
 
       Draw figure.
 

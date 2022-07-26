@@ -52,7 +52,7 @@ Classes
    :param \*\*kwargs: Keyword arguments from `puma.PlotObject`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: plot(self)
+   .. py:method:: plot()
 
       Plot the pie chart
 

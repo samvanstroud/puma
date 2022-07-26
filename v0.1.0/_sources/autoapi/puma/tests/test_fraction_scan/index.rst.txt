@@ -33,22 +33,22 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_wrong_inputs_xvalues(self)
+   .. py:method:: test_wrong_inputs_xvalues()
 
       test if providing wrong input type to FractionScan raises ValueError
 
 
-   .. py:method:: test_differnt_input_types(self)
+   .. py:method:: test_differnt_input_types()
 
       test if providing different input types raises ValueError
 
 
-   .. py:method:: test_empty_input(self)
+   .. py:method:: test_empty_input()
 
       test if ValueError is raised when one of the input values is zero
 
 
-   .. py:method:: test_different_input_shapes(self)
+   .. py:method:: test_different_input_shapes()
 
       test if ValueError is raised when different lengths given
 
@@ -64,27 +64,27 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Set up values needed.
 
 
-   .. py:method:: test_FractionScanPlot(self)
+   .. py:method:: test_FractionScanPlot()
 
       Test the basic functions of FractionScanPlot
 
 
-   .. py:method:: test_FractionScanPlot_grid_off(self)
+   .. py:method:: test_FractionScanPlot_grid_off()
 
       Test the basic functions of FractionScanPlot
 
 
-   .. py:method:: test_FractionScanPlot_no_param_set(self)
+   .. py:method:: test_FractionScanPlot_no_param_set()
 
       Test the basic functions of FractionScanPlot
 
 
-   .. py:method:: test_FractionScanPlot_double_key(self)
+   .. py:method:: test_FractionScanPlot_double_key()
 
       Test the basic functions of FractionScanPlot
 

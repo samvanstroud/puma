@@ -60,7 +60,7 @@ Classes
    :param \*\*kwargs: kwargs from `plot_base`
    :type \*\*kwargs: kwargs
 
-   .. py:method:: add(self, curve: object, key: str = None, is_marker: bool = False)
+   .. py:method:: add(curve: object, key: str = None, is_marker: bool = False)
 
       Adding FractionScan object to figure.
 
@@ -75,7 +75,7 @@ Classes
       :raises KeyError: If unique identifier key is used twice
 
 
-   .. py:method:: plot(self, **kwargs)
+   .. py:method:: plot(**kwargs)
 
       Plotting curves. Plot objects are drawn in the same order as they
       were added to the plot.
@@ -87,7 +87,7 @@ Classes
       :rtype: Line2D
 
 
-   .. py:method:: draw(self)
+   .. py:method:: draw()
 
       Draw figure.
 

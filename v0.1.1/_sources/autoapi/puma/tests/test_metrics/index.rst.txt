@@ -33,22 +33,22 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: test_zero_N_case(self)
+   .. py:method:: test_zero_N_case()
 
       Test eff_err function.
 
 
-   .. py:method:: test_negative_N_case(self)
+   .. py:method:: test_negative_N_case()
 
       Test eff_err function.
 
 
-   .. py:method:: test_one_case(self)
+   .. py:method:: test_one_case()
 
       Test eff_err function.
 
 
-   .. py:method:: test_example_case(self)
+   .. py:method:: test_example_case()
 
       Test eff_err function.
 
@@ -64,32 +64,32 @@ Classes
    method when executed. Raises a ValueError if the instance does
    not have a method with the specified name.
 
-   .. py:method:: setUp(self)
+   .. py:method:: setUp()
 
       Hook method for setting up the test fixture before exercising it.
 
 
-   .. py:method:: test_zero_N_case(self)
+   .. py:method:: test_zero_N_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_negative_N_case(self)
+   .. py:method:: test_negative_N_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_one_case(self)
+   .. py:method:: test_one_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_zero_x_case(self)
+   .. py:method:: test_zero_x_case()
 
       Test rej_err function.
 
 
-   .. py:method:: test_example_case(self)
+   .. py:method:: test_example_case()
 
       Test rej_err function.
 
