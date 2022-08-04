@@ -442,6 +442,11 @@ function checkPageExistsAndRedirect(event) {
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.roc.RocPlot.set_leg_rej_loc">
+         set_leg_rej_loc
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#puma.roc.RocPlot.make_split_legend">
          make_split_legend
         </a>
@@ -734,6 +739,28 @@ interval of the two roc curves</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>axis</strong> (<em>plt.axis</em>) – matplotlib axis object</p></li>
 <li><p><strong>rej_class</strong> (<em>str</em>) – Rejection class</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="puma.roc.RocPlot.set_leg_rej_loc">
+<span class="sig-name descname"><span class="pre">set_leg_rej_loc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.roc.RocPlot.set_leg_rej_loc" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the position of the rejection class legend. Only if 2 ratio panels are
+defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>option</strong> (<em>str</em>) – <dl class="simple">
+<dt>Defines where to place the legend for rejection class. Accepts all options</dt><dd><p>from <code class="code docutils literal notranslate"><span class="pre">matplotlib.axes.Axes.legend</span></code> as well as the option <code class="code docutils literal notranslate"><span class="pre">ratio_legend</span></code>,
+which adds the legend into the ratio panels</p>
+</dd>
+</dl>
+<p>Raises</p>
+</p></li>
+<li><p><strong>------</strong> – </p></li>
+<li><p><strong>ValueError</strong> – If not 2 ratios requested</p></li>
 </ul>
 </dd>
 </dl>

@@ -197,6 +197,21 @@ Classes
       :type rej_class: str
 
 
+   .. py:method:: set_leg_rej_loc(option: str)
+
+      Set the position of the rejection class legend. Only if 2 ratio panels are
+      defined.
+
+      :param option:    Defines where to place the legend for rejection class. Accepts all options
+                        from `matplotlib.axes.Axes.legend` as well as the option `ratio_legend`,
+                        which adds the legend into the ratio panels
+
+                     Raises
+      :type option: str
+      :param ------:
+      :param ValueError: If not 2 ratios requested
+
+
    .. py:method:: make_split_legend(handles)
 
       Draw legend for the case of 2 ratios, splitting up legend into models and

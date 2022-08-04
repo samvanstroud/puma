@@ -127,9 +127,12 @@ Attributes
    :raises KeyError: If colour_scheme is not in ["blue", "red", "green", "yellow", None]
 
 
-.. py:function:: get_good_colours()
+.. py:function:: get_good_colours(colour_scheme=None)
 
    List of colours adequate for plotting
+
+   :param colour_scheme: colour scheme for line plots, by default None
+   :type colour_scheme: string, optional
 
    :returns: list with colours
    :rtype: list

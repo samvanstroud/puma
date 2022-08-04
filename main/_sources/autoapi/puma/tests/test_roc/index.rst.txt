@@ -166,6 +166,16 @@ Classes
       Hook method for setting up the test fixture before exercising it.
 
 
+   .. py:method:: test_set_leg_rej_loc_1_ratio()
+
+      Test set_leg_rej_loc with one ratio panel.
+
+
+   .. py:method:: test_set_leg_rej_loc_2_ratio()
+
+      Test set_leg_rej_loc with one ratio panel.
+
+
    .. py:method:: test_output_two_curves_one_ratio()
 
       Test with two curves of same flavour, one ratio panel
@@ -179,6 +189,11 @@ Classes
    .. py:method:: test_output_four_curves_two_ratio()
 
       Test with two curves for each flavour, two ratio panels
+
+
+   .. py:method:: test_output_ratio_legend_four_curves_two_ratio()
+
+      Test with two curves for each flavour, two ratio panels, using ratio legend.
 
 
    .. py:method:: test_output_four_curves_two_ratio_uncertainties()
