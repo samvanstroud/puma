@@ -176,6 +176,11 @@ Classes
       Test set_leg_rej_loc with one ratio panel.
 
 
+   .. py:method:: test_output_two_curves_no_ratio()
+
+      Test with two curves of same flavour, without ratio panel
+
+
    .. py:method:: test_output_two_curves_one_ratio()
 
       Test with two curves of same flavour, one ratio panel
