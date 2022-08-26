@@ -35,6 +35,7 @@ Functions
    puma.utils.set_xaxis_ticklabels_invisible
    puma.utils.get_good_pie_colours
    puma.utils.get_good_colours
+   puma.utils.get_good_linestyles
 
 
 
@@ -136,6 +137,21 @@ Attributes
 
    :returns: list with colours
    :rtype: list
+
+
+.. py:function:: get_good_linestyles(names=None)
+
+   Returns a list of good linestyles
+
+   :param names: List or string of the name(s) of the linestyle(s) you want to retrieve, e.g.
+                 "densely dotted" or ["solid", "dashdot", "densely dashed"], by default None
+   :type names: list or str, optional
+
+   :returns: List of good linestyles. Either the specified selection or the whole list in
+             the predefined order.
+   :rtype: list
+
+   :raises ValueError: If `names` is not a str or list.
 
 
 .. py:data:: global_config

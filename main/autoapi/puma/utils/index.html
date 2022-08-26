@@ -415,6 +415,11 @@ function checkPageExistsAndRedirect(event) {
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#puma.utils.get_good_linestyles">
+       get_good_linestyles
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#puma.utils.global_config">
        global_config
       </a>
@@ -482,6 +487,9 @@ function checkPageExistsAndRedirect(event) {
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#puma.utils.get_good_colours" title="puma.utils.get_good_colours"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_good_colours</span></code></a>([colour_scheme])</p></td>
 <td><p>List of colours adequate for plotting</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#puma.utils.get_good_linestyles" title="puma.utils.get_good_linestyles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_good_linestyles</span></code></a>([names])</p></td>
+<td><p>Returns a list of good linestyles</p></td>
 </tr>
 </tbody>
 </table>
@@ -620,6 +628,28 @@ or blue, red, green or yellow to use a specific colour scheme</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="puma.utils.get_good_linestyles">
+<span class="sig-prename descclassname"><span class="pre">puma.utils.</span></span><span class="sig-name descname"><span class="pre">get_good_linestyles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.utils.get_good_linestyles" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns a list of good linestyles</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>names</strong> (<em>list</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – List or string of the name(s) of the linestyle(s) you want to retrieve, e.g.
+“densely dotted” or [“solid”, “dashdot”, “densely dashed”], by default None</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of good linestyles. Either the specified selection or the whole list in
+the predefined order.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If <code class="code docutils literal notranslate"><span class="pre">names</span></code> is not a str or list.</p>
 </dd>
 </dl>
 </dd></dl>

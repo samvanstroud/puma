@@ -1,0 +1,56 @@
+:py:mod:`puma.tests.utils.test_utils`
+=====================================
+
+.. py:module:: puma.tests.utils.test_utils
+
+.. autoapi-nested-parse::
+
+   Unit test script for the functions in utils/__init__.py
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   puma.tests.utils.test_utils.Linestyles_TestCase
+
+
+
+
+.. py:class:: Linestyles_TestCase(methodName='runTest')
+
+   Bases: :py:obj:`unittest.TestCase`
+
+   Test class for the linestyle management of puma.
+
+   Create an instance of the class that will use the named test
+   method when executed. Raises a ValueError if the instance does
+   not have a method with the specified name.
+
+   .. py:method:: setUp()
+
+      Hook method for setting up the test fixture before exercising it.
+
+
+   .. py:method:: test_raise_value_error()
+
+      Test if ValueError is raised for wrong argument type.
+
+
+   .. py:method:: test_get_good_linestyles()
+
+      Test if the default linestyles obtained are the correct ones.
+
+
+   .. py:method:: test_linestyles_accepted_by_mpl()
+
+      Test if all the linestyles from get_good_linestyles() are accepted by
+      matplotlib.
+
+
+
