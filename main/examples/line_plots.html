@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Pie charts &#8212; puma 0.1.7dev documentation</title>
+    <title>Line plots &#8212; puma 0.1.7dev documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -36,8 +36,8 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Line plots" href="line_plots.html" />
-    <link rel="prev" title="Fraction Scan Plots" href="fraction_scan.html" />
+    <link rel="next" title="Develop" href="../dev_guidelines/index.html" />
+    <link rel="prev" title="Pie charts" href="pie_charts.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="None">
   </head>
@@ -133,14 +133,14 @@
 
 <!-- NOTE: this JS must live here (not in our global JS file) because it relies
      on being processed by Jinja before it is run (specifically for replacing
-     variables examples/pie_charts and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
+     variables examples/line_plots and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
 -->
 
 <script type="text/javascript">
 // Check if corresponding page path exists in other version of docs
 // and, if so, go there instead of the homepage of the other docs version
 function checkPageExistsAndRedirect(event) {
-    const currentFilePath = "examples/pie_charts.html",
+    const currentFilePath = "examples/line_plots.html",
           tryUrl = event.target.getAttribute("href");
     let otherDocsHomepage = tryUrl.replace(currentFilePath, "");
     $.ajax({
@@ -161,7 +161,7 @@ function checkPageExistsAndRedirect(event) {
 // Populate the version switcher from the JSON config file
 (function () {
     $.getJSON("https://umami-hep.github.io/puma/main/_static/switcher.json", function(data, textStatus, jqXHR) {
-        const currentFilePath = "examples/pie_charts.html";
+        const currentFilePath = "examples/line_plots.html";
         let btn = document.getElementById("version_switcher_button");
         // Set empty strings by default so that these attributes exist and can be used in CSS selectors
         btn.dataset["activeVersionName"] = "";
@@ -254,13 +254,13 @@ function checkPageExistsAndRedirect(event) {
    Fraction Scan Plots
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pie_charts.html">
    Pie charts
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="line_plots.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Line plots
   </a>
  </li>
@@ -302,63 +302,33 @@ function checkPageExistsAndRedirect(event) {
               
               <article class="bd-article" role="main">
                 
-  <section id="pie-charts">
-<h1>Pie charts<a class="headerlink" href="#pie-charts" title="Permalink to this headline">#</a></h1>
-<p>In the following a small example how to plot a pie chart with the <code class="docutils literal notranslate"><span class="pre">puma</span></code> API.</p>
-<p>To set up the inputs for the plots, have a look <a class="reference internal" href="index.html"><span class="doc std std-doc">here</span></a>.</p>
-<p>Then we can start the actual plotting part:</p>
-<img src=https://github.com/umami-hep/puma/raw/examples-material/pie_example_1.png width=500>
-<img src=https://github.com/umami-hep/puma/raw/examples-material/pie_example_2.png width=500>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Example plotting script for the puma.PiePlot class&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">puma.pie</span> <span class="kn">import</span> <span class="n">PiePlot</span>
-<span class="kn">from</span> <span class="nn">puma.utils</span> <span class="kn">import</span> <span class="n">global_config</span>
+  <section id="line-plots">
+<h1>Line plots<a class="headerlink" href="#line-plots" title="Permalink to this headline">#</a></h1>
+<p>This is an example on how you can create basic line plots with <code class="docutils literal notranslate"><span class="pre">puma</span></code>.
+Of course, this can be easily done with matplotlib directly, but by using <code class="docutils literal notranslate"><span class="pre">puma</span></code> you
+get the ATLAS tag and all the functionality <code class="docutils literal notranslate"><span class="pre">puma.PlotObject</span></code> supports.</p>
+<img src=https://github.com/umami-hep/puma/raw/examples-material/line_plot_example.png width=500>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Example for a basic line plot with puma&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">puma</span> <span class="kn">import</span> <span class="n">Line2DPlot</span><span class="p">,</span> <span class="n">Line2D</span>
 
-<span class="n">HadrTruthLabel_fracs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200_000</span><span class="p">,</span> <span class="mi">34_000</span><span class="p">,</span> <span class="mi">150_000</span><span class="p">,</span> <span class="mi">5_000</span><span class="p">]</span>
-<span class="n">HadrTruthLabel_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Light-flavour jets&quot;</span><span class="p">,</span> <span class="s2">&quot;$c$-jets&quot;</span><span class="p">,</span> <span class="s2">&quot;$b$-jets&quot;</span><span class="p">,</span> <span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">tau$-jets&quot;</span><span class="p">]</span>
+<span class="c1"># This is just some dummy data to make the plot look reasonable</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">training_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">epochs</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">epochs</span><span class="p">))</span> <span class="o">+</span> <span class="mf">0.8</span>
+<span class="n">validation_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">epochs</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">epochs</span><span class="p">))</span> <span class="o">+</span> <span class="mf">0.85</span>
 
-<span class="c1"># Basic example with default values only</span>
-<span class="n">example_plot_1</span> <span class="o">=</span> <span class="n">PiePlot</span><span class="p">(</span>
-    <span class="n">wedge_sizes</span><span class="o">=</span><span class="n">HadrTruthLabel_fracs</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="n">HadrTruthLabel_labels</span><span class="p">,</span>
-    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span>
-    <span class="n">draw_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="c1"># Initialise the plot</span>
+<span class="n">line_plot</span> <span class="o">=</span> <span class="n">Line2DPlot</span><span class="p">(</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Epoch&quot;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Loss&quot;</span><span class="p">,</span>
+    <span class="n">atlas_second_tag</span><span class="o">=</span><span class="s2">&quot;This is an example of a basic line plot&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">example_plot_1</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;pie_example_1.png&quot;</span><span class="p">)</span>
 
-
-<span class="c1"># Another example with some styling</span>
-
-<span class="c1"># Get the flavour colours from the global config</span>
-<span class="n">flav_cat</span> <span class="o">=</span> <span class="n">global_config</span><span class="p">[</span><span class="s2">&quot;flavour_categories&quot;</span><span class="p">]</span>
-<span class="n">colours</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;ujets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;cjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;bjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;taujets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-<span class="p">]</span>
-
-<span class="n">example_plot_2</span> <span class="o">=</span> <span class="n">PiePlot</span><span class="p">(</span>
-    <span class="n">wedge_sizes</span><span class="o">=</span><span class="n">HadrTruthLabel_fracs</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="n">HadrTruthLabel_labels</span><span class="p">,</span>
-    <span class="n">draw_legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">colours</span><span class="o">=</span><span class="n">colours</span><span class="p">,</span>
-    <span class="c1"># have a look at the possible kwargs for matplotlib.pyplot.pie here:</span>
-    <span class="c1"># https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html</span>
-    <span class="n">mpl_pie_kwargs</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;explode&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
-        <span class="s2">&quot;shadow&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-        <span class="s2">&quot;startangle&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
-        <span class="s2">&quot;textprops&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>
-        <span class="s2">&quot;radius&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;wedgeprops&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">),</span>
-        <span class="s2">&quot;pctdistance&quot;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="c1"># kwargs passed to puma.PlotObject</span>
-    <span class="n">atlas_second_tag</span><span class="o">=</span><span class="s2">&quot;Dummy flavour fractions&quot;</span><span class="p">,</span>
-    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span>
-    <span class="n">y_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">example_plot_2</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;pie_example_2.png&quot;</span><span class="p">)</span>
+<span class="c1"># Add and draw the lines</span>
+<span class="n">line_plot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Line2D</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">training_loss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Training loss&quot;</span><span class="p">))</span>
+<span class="n">line_plot</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Line2D</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">validation_loss</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Validation loss&quot;</span><span class="p">))</span>
+<span class="n">line_plot</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">line_plot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;line_plot_example.png&quot;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -371,17 +341,17 @@ function checkPageExistsAndRedirect(event) {
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="fraction_scan.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="pie_charts.html" title="previous page">
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Fraction Scan Plots</p>
+          <p class="prev-next-title">Pie charts</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="line_plots.html" title="next page">
+  <a class='right-next' id="next-link" href="../dev_guidelines/index.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Line plots</p>
+      <p class="prev-next-title">Develop</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>
