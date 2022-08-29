@@ -582,6 +582,11 @@ function checkPageExistsAndRedirect(event) {
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.plot_base.PlotObject.leg_linestyle_loc">
+         leg_linestyle_loc
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#puma.plot_base.PlotObject.leg_ncol">
          leg_ncol
         </a>
@@ -721,6 +726,11 @@ function checkPageExistsAndRedirect(event) {
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#puma.plot_base.PlotBase.make_legend">
          make_legend
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#puma.plot_base.PlotBase.make_linestyle_legend">
+         make_linestyle_legend
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
@@ -917,6 +927,7 @@ True the figure is split vertically (e.g for pie chart). By default False.</p></
 <li><p><strong>leg_fontsize</strong> (<em>int</em><em>, </em><em>optional</em>) – Fontsize of the legend, by default 10</p></li>
 <li><p><strong>leg_loc</strong> (<em>str</em><em>, </em><em>optional</em>) – Position of the legend in the plot, by default “upper right”</p></li>
 <li><p><strong>leg_ncol</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of legend columns, by default 1</p></li>
+<li><p><strong>leg_linestyle_loc</strong> (<em>str</em><em>, </em><em>optional</em>) – Position of the linestyle legend in the plot, by default “upper center”</p></li>
 <li><p><strong>apply_atlas_style</strong> (<em>bool</em><em>, </em><em>optional</em>) – Apply ATLAS style for matplotlib, by default True</p></li>
 <li><p><strong>use_atlas_tag</strong> (<em>bool</em><em>, </em><em>optional</em>) – Use the ATLAS Tag in the plots, by default True</p></li>
 <li><p><strong>atlas_first_tag</strong> (<em>str</em><em>, </em><em>optional</em>) – First row of the ATLAS tag (i.e. the first row is “ATLAS &lt;atlas_first_tag&gt;”),
@@ -1069,6 +1080,11 @@ by default False</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="puma.plot_base.PlotObject.leg_loc">
 <span class="sig-name descname"><span class="pre">leg_loc</span></span><em class="property"> <span class="pre">:str</span> <span class="pre">=</span> <span class="pre">upper</span> <span class="pre">right</span></em><a class="headerlink" href="#puma.plot_base.PlotObject.leg_loc" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="puma.plot_base.PlotObject.leg_linestyle_loc">
+<span class="sig-name descname"><span class="pre">leg_linestyle_loc</span></span><em class="property"> <span class="pre">:str</span> <span class="pre">=</span> <span class="pre">upper</span> <span class="pre">center</span></em><a class="headerlink" href="#puma.plot_base.PlotObject.leg_linestyle_loc" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1352,6 +1368,25 @@ If True, the tag will be put on as well, by default True</p></li>
 <li><p><strong>labels</strong> (<em>list</em><em>, </em><em>optional</em>) – Plot labels. If None, the labels are extracted from the <code class="code docutils literal notranslate"><span class="pre">handles</span></code>.
 By default None</p></li>
 <li><p><strong>**kwargs</strong> (<em>kwargs</em>) – Keyword arguments which can be passed to matplotlib axis</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="puma.plot_base.PlotBase.make_linestyle_legend">
+<span class="sig-name descname"><span class="pre">make_linestyle_legend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">linestyles</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bbox_to_anchor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_for_legend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#puma.plot_base.PlotBase.make_linestyle_legend" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a legend to indicate what different linestyles correspond to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>linestyles</strong> (<em>list</em>) – List of the linestyles to draw in the legend</p></li>
+<li><p><strong>labels</strong> (<em>list</em>) – List of the corresponding labels. Has to be in the same order as the
+linestyles</p></li>
+<li><p><strong>loc</strong> (<em>str</em><em>, </em><em>optional</em>) – Location of the legend (matplotlib supported locations), by default None</p></li>
+<li><p><strong>bbox_to_anchor</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Allows to specify the precise position of this legend. Either a 2-tuple
+(x, y) or a 4-tuple (x, y, width, height), by default None</p></li>
+<li><p><strong>axis_for_legend</strong> (<em>matplotlib.Axes.axis</em><em>, </em><em>optional</em>) – Axis on which to draw the legend, by default None</p></li>
 </ul>
 </dd>
 </dl>

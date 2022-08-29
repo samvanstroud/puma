@@ -23,6 +23,19 @@ Classes
 
 
 
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   puma.tests.test_histogram.flav_cat
+
+
+.. py:data:: flav_cat
+   
+
+   
+
 .. py:class:: histogram_TestCase(methodName='runTest')
 
    Bases: :py:obj:`unittest.TestCase`
@@ -162,7 +175,7 @@ Classes
       Test the drawing of vertical lines in the histogram.
 
 
-   .. py:method:: test_ratio_group_options()
+   .. py:method:: test_ratio_group_argument()
 
       Test different combinations of using ratio groups.
 

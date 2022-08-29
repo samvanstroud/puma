@@ -337,7 +337,7 @@ function checkPageExistsAndRedirect(event) {
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">from</span> <span class="nn">puma</span> <span class="kn">import</span> <span class="n">Histogram</span><span class="p">,</span> <span class="n">HistogramPlot</span>
-<span class="kn">from</span> <span class="nn">puma.utils</span> <span class="kn">import</span> <span class="n">get_dummy_2_taggers</span><span class="p">,</span> <span class="n">global_config</span>
+<span class="kn">from</span> <span class="nn">puma.utils</span> <span class="kn">import</span> <span class="n">get_dummy_2_taggers</span><span class="p">,</span> <span class="n">get_good_linestyles</span><span class="p">,</span> <span class="n">global_config</span>
 
 <span class="c1"># The line below generates dummy data which is similar to a NN output</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">get_dummy_2_taggers</span><span class="p">()</span>
@@ -357,57 +357,19 @@ function checkPageExistsAndRedirect(event) {
 <span class="n">is_b</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;HadronConeExclTruthLabelID&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span>
 
 <span class="n">flav_cat</span> <span class="o">=</span> <span class="n">global_config</span><span class="p">[</span><span class="s2">&quot;flavour_categories&quot;</span><span class="p">]</span>
-
-<span class="n">hist_dips_light</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">is_light</span><span class="p">][</span><span class="s2">&quot;disc_dips&quot;</span><span class="p">],</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light-flavour jets DIPS&quot;</span><span class="p">,</span>
-    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;ujets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">hist_dips_c</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">is_c</span><span class="p">][</span><span class="s2">&quot;disc_dips&quot;</span><span class="p">],</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c$-jets DIPS&quot;</span><span class="p">,</span>
-    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;cjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">hist_dips_b</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">is_b</span><span class="p">][</span><span class="s2">&quot;disc_dips&quot;</span><span class="p">],</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$b$-jets DIPS&quot;</span><span class="p">,</span>
-    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;bjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">hist_rnnip_light</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">is_light</span><span class="p">][</span><span class="s2">&quot;disc_rnnip&quot;</span><span class="p">],</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light-flavour jets RNNIP&quot;</span><span class="p">,</span>
-    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;ujets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span>
-    <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">hist_rnnip_c</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">is_c</span><span class="p">][</span><span class="s2">&quot;disc_rnnip&quot;</span><span class="p">],</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c$-jets RNNIP&quot;</span><span class="p">,</span>
-    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;cjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span>
-    <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">hist_rnnip_b</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">is_b</span><span class="p">][</span><span class="s2">&quot;disc_rnnip&quot;</span><span class="p">],</span>
-    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$b$-jets RNNIP&quot;</span><span class="p">,</span>
-    <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;bjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
-    <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span>
-    <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">,</span>
-<span class="p">)</span>
+<span class="n">taggers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;dips&quot;</span><span class="p">,</span> <span class="s2">&quot;rnnip&quot;</span><span class="p">]</span>
+<span class="n">linestyles</span> <span class="o">=</span> <span class="n">get_good_linestyles</span><span class="p">()[:</span><span class="mi">2</span><span class="p">]</span>
 
 <span class="c1"># Initialise histogram plot</span>
 <span class="n">plot_histo</span> <span class="o">=</span> <span class="n">HistogramPlot</span><span class="p">(</span>
     <span class="n">n_ratio_panels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Normalised number of jets&quot;</span><span class="p">,</span>
     <span class="n">ylabel_ratio_1</span><span class="o">=</span><span class="s2">&quot;Ratio to DIPS&quot;</span><span class="p">,</span>
-    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;$b$-jets discriminant&quot;</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;$b$-jet discriminant&quot;</span><span class="p">,</span>
     <span class="n">logy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">leg_ncol</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">6.8</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-    <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+    <span class="n">leg_ncol</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">),</span>
+    <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
     <span class="n">y_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
     <span class="n">ymax_ratio_1</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
     <span class="n">ymin_ratio_1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
@@ -415,14 +377,50 @@ function checkPageExistsAndRedirect(event) {
 <span class="p">)</span>
 
 <span class="c1"># Add the histograms</span>
-<span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">hist_dips_light</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">hist_dips_c</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">hist_dips_b</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">hist_rnnip_light</span><span class="p">)</span>
-<span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">hist_rnnip_c</span><span class="p">)</span>
-<span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">hist_rnnip_b</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tagger</span><span class="p">,</span> <span class="n">linestyle</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">taggers</span><span class="p">,</span> <span class="n">linestyles</span><span class="p">):</span>
+
+    <span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="n">Histogram</span><span class="p">(</span>
+            <span class="n">df</span><span class="p">[</span><span class="n">is_light</span><span class="p">][</span><span class="sa">f</span><span class="s2">&quot;disc_</span><span class="si">{</span><span class="n">tagger</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+            <span class="c1"># Only specify the label for the case of the &quot;DIPS&quot; light-jets, since we</span>
+            <span class="c1"># want to hide the legend entry for &quot;RNNIP&quot; light-jets as it has the same</span>
+            <span class="c1"># linecolour. Instead, we specify a &quot;linestyle legend&quot; further down in the</span>
+            <span class="c1"># script</span>
+            <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light-flavour jets&quot;</span> <span class="k">if</span> <span class="n">tagger</span> <span class="o">==</span> <span class="s2">&quot;dips&quot;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;ujets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
+            <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;ujets&quot;</span><span class="p">,</span>
+            <span class="n">linestyle</span><span class="o">=</span><span class="n">linestyle</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">reference</span><span class="o">=</span><span class="n">tagger</span> <span class="o">==</span> <span class="s2">&quot;dips&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="n">Histogram</span><span class="p">(</span>
+            <span class="n">df</span><span class="p">[</span><span class="n">is_c</span><span class="p">][</span><span class="sa">f</span><span class="s2">&quot;disc_</span><span class="si">{</span><span class="n">tagger</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+            <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c$-jets&quot;</span> <span class="k">if</span> <span class="n">tagger</span> <span class="o">==</span> <span class="s2">&quot;dips&quot;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;cjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
+            <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;cjets&quot;</span><span class="p">,</span>
+            <span class="n">linestyle</span><span class="o">=</span><span class="n">linestyle</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">reference</span><span class="o">=</span><span class="n">tagger</span> <span class="o">==</span> <span class="s2">&quot;dips&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">plot_histo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="n">Histogram</span><span class="p">(</span>
+            <span class="n">df</span><span class="p">[</span><span class="n">is_b</span><span class="p">][</span><span class="sa">f</span><span class="s2">&quot;disc_</span><span class="si">{</span><span class="n">tagger</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+            <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$b$-jets&quot;</span> <span class="k">if</span> <span class="n">tagger</span> <span class="o">==</span> <span class="s2">&quot;dips&quot;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">colour</span><span class="o">=</span><span class="n">flav_cat</span><span class="p">[</span><span class="s2">&quot;bjets&quot;</span><span class="p">][</span><span class="s2">&quot;colour&quot;</span><span class="p">],</span>
+            <span class="n">ratio_group</span><span class="o">=</span><span class="s2">&quot;bjets&quot;</span><span class="p">,</span>
+            <span class="n">linestyle</span><span class="o">=</span><span class="n">linestyle</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">reference</span><span class="o">=</span><span class="n">tagger</span> <span class="o">==</span> <span class="s2">&quot;dips&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
 
 <span class="n">plot_histo</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="c1"># The lines below create a legend for the linestyles (i.e. solid lines -&gt; DIPS, dashed</span>
+<span class="c1"># lines -&gt; RNNIP here). The &quot;bbox_to_anchor&quot; argument specifies where to place the</span>
+<span class="c1"># linestyle legend</span>
+<span class="n">plot_histo</span><span class="o">.</span><span class="n">make_linestyle_legend</span><span class="p">(</span>
+    <span class="n">linestyles</span><span class="o">=</span><span class="n">linestyles</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;DIPS&quot;</span><span class="p">,</span> <span class="s2">&quot;RNNIP&quot;</span><span class="p">],</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.55</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
 <span class="n">plot_histo</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;histogram_discriminant.png&quot;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
