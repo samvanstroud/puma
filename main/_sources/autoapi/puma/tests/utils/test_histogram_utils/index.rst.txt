@@ -108,6 +108,16 @@ Classes
       Test if negative weights are properly handled.
 
 
+   .. py:method:: test_inf_treatment()
+
+      Test if infinity values are treated as expected.
+
+
+   .. py:method:: test_nan_check()
+
+      Test if the warning with number of nan values is raised in hist_w_unc
+
+
 
 .. py:class:: save_divide_TestCase(methodName='runTest')
 
