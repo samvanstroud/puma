@@ -64,7 +64,7 @@
   
   
   
-    <p class="title logo__title">puma 0.1.8 documentation</p>
+    <p class="title logo__title">puma documentation</p>
   
 </a>
     
@@ -99,6 +99,12 @@
 </li>
 
 <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../autoapi/index.html">
   API Reference
  </a>
@@ -123,7 +129,7 @@
       <div class="navbar-end-item">
         <div class="dropdown" id="version_switcher">
     <button type="button" class="btn btn-sm navbar-btn dropdown-toggle" id="version_switcher_button" data-toggle="dropdown">
-        v0.1.8  <!-- this text may get changed later by javascript -->
+        main  <!-- this text may get changed later by javascript -->
         <span class="caret"></span>
     </button>
     <div id="version_switcher_menu" class="dropdown-menu list-group-flush py-0" aria-labelledby="version_switcher_button">
@@ -133,7 +139,7 @@
 
 <!-- NOTE: this JS must live here (not in our global JS file) because it relies
      on being processed by Jinja before it is run (specifically for replacing
-     variables dev_guidelines/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'v0.1.8'}.
+     variables dev_guidelines/index and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'main'}.
 -->
 
 <script type="text/javascript">
@@ -191,7 +197,7 @@ function checkPageExistsAndRedirect(event) {
             // this version, rather than using sphinx's  variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
-            if (entry.version == "v0.1.8") {
+            if (entry.version == "main") {
                 node.classList.add("active");
                 btn.innerText = btn.dataset["activeVersionName"] = entry.name;
                 btn.dataset["activeVersion"] = entry.version;
@@ -304,8 +310,8 @@ helpful when working on the <code class="code docutils literal notranslate"><spa
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docs_development.html">Docs development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="docs_development.html#downloading-the-artifact-of-a-dev-version-of-the-docs">Downloading the artifact of a dev version of the docs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs_development.html#adding-a-new-version-tag-to-the-docs">Adding a new version/tag to the docs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs_development.html#downloading-the-artifact-of-a-dev-version-of-the-docs">Downloading the artifact of a dev version of the docs</a></li>
 </ul>
 </li>
 </ul>
