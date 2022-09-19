@@ -68,6 +68,11 @@ Classes
       Hook method for setting up the test fixture before exercising it.
 
 
+   .. py:method:: test_under_overflow_values()
+
+      Test behaviour for under- and overflow values
+
+
    .. py:method:: test_hist_w_unc_zero_case()
 
       Test what happens if empty array is provided as input.

@@ -311,6 +311,11 @@ function checkPageExistsAndRedirect(event) {
    Weighted histograms
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#underflow-overflow-bins">
+   Underflow/overflow bins
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -551,6 +556,37 @@ An example is given below:</p>
 <span class="p">)</span>
 <span class="n">hist_plot</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 <span class="n">hist_plot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;histogram_weighted.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="underflow-overflow-bins">
+<h2>Underflow/overflow bins<a class="headerlink" href="#underflow-overflow-bins" title="Permalink to this headline">#</a></h2>
+<p>Underflow and overflow bins are disabled by default, but can be activated using the
+<code class="docutils literal notranslate"><span class="pre">underoverflow</span></code> attribute of <code class="docutils literal notranslate"><span class="pre">puma.HistogramPlot</span></code>.
+Below an example of the same Gaussian distribution plotted with and without
+underflow/overflow bins.</p>
+<img src=https://github.com/umami-hep/puma/raw/examples-material/hist_without_underoverflow.png width=500>
+<img src=https://github.com/umami-hep/puma/raw/examples-material/hist_with_underoverflow.png width=500>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Example script that demonstrates under/overflow bins&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">puma</span> <span class="kn">import</span> <span class="n">Histogram</span><span class="p">,</span> <span class="n">HistogramPlot</span>
+
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">vals</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10_000</span><span class="p">)</span>
+
+<span class="n">plot_without</span> <span class="o">=</span> <span class="n">HistogramPlot</span><span class="p">(</span><span class="n">bins_range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">plot_without</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Without underflow/overflow bins&quot;</span>
+<span class="n">plot_without</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Histogram</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Gaussian($</span><span class="se">\\</span><span class="s2">mu=0$, $</span><span class="se">\\</span><span class="s2">sigma=1$)&quot;</span><span class="p">))</span>
+<span class="n">plot_without</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">plot_without</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;hist_without_underoverflow.png&quot;</span><span class="p">)</span>
+
+<span class="n">plot_with</span> <span class="o">=</span> <span class="n">HistogramPlot</span><span class="p">(</span><span class="n">bins_range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">underoverflow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plot_with</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;With underflow/overflow bins&quot;</span>
+<span class="n">plot_with</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Histogram</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Gaussian($</span><span class="se">\\</span><span class="s2">mu=0$, $</span><span class="se">\\</span><span class="s2">sigma=1$)&quot;</span><span class="p">))</span>
+<span class="n">plot_with</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">plot_with</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;hist_with_underoverflow.png&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

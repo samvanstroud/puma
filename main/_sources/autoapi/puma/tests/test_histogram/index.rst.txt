@@ -196,4 +196,9 @@ Attributes
       Check if ValueError is raised if wieghts has
 
 
+   .. py:method:: test_underoverflow_bin()
+
+      Test if under/overflow bins work as expected
+
+
 

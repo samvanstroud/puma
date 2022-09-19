@@ -78,7 +78,7 @@ Classes
 
 
 
-.. py:class:: HistogramPlot(bins=40, bins_range: tuple = None, discrete_vals: list = None, norm: bool = True, logy: bool = False, bin_width_in_ylabel: bool = False, **kwargs)
+.. py:class:: HistogramPlot(bins=40, bins_range: tuple = None, discrete_vals: list = None, norm: bool = True, logy: bool = False, bin_width_in_ylabel: bool = False, underoverflow: bool = False, **kwargs)
 
    Bases: :py:obj:`puma.plot_base.PlotBase`
 
@@ -109,6 +109,8 @@ Classes
    :type logy: bool, optional
    :param bin_width_in_ylabel: Specify if the bin width should be added to the ylabel, by default False
    :type bin_width_in_ylabel: bool, optional
+   :param underoverflow: Option to include under- and overflow values in outermost bins.
+   :type underoverflow: bool, optional
    :param \*\*kwargs: Keyword arguments from `puma.PlotObject`
    :type \*\*kwargs: kwargs
 
