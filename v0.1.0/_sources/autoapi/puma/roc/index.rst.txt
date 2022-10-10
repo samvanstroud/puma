@@ -50,6 +50,27 @@ Classes
 
    :raises ValueError: if `sig_eff` and `bkg_rej` have a different shape
 
+   .. py:property:: fct_inter
+
+      Interpolate the rejection function for better ratio calculation plotting etc.
+
+      :returns: interpolation function
+      :rtype: pchip
+
+   .. py:property:: non_zero_mask
+
+      Masking points where rejection is 0 and no signal efficiency change present
+
+      :returns: masked indices
+      :rtype: numpy.array
+
+   .. py:property:: non_zero
+
+      Abstraction of `non_zero_mask`
+
+      :returns: * *numpy.array* -- masked signal efficiency
+                * *numpy.array* -- masked background rejection
+
    .. py:method:: binomial_error(norm: bool = False, n_test: int = None) -> numpy.ndarray
 
       Calculate binomial error of roc curve.
@@ -80,33 +101,6 @@ Classes
                   interval of the two roc curves
                 * *np.array* -- ratio
                 * *np.array or None* -- ratio_err if `n_test` was provided to class
-
-
-   .. py:method:: fct_inter()
-      :property:
-
-      Interpolate the rejection function for better ratio calculation plotting etc.
-
-      :returns: interpolation function
-      :rtype: pchip
-
-
-   .. py:method:: non_zero_mask()
-      :property:
-
-      Masking points where rejection is 0 and no signal efficiency change present
-
-      :returns: masked indices
-      :rtype: numpy.array
-
-
-   .. py:method:: non_zero()
-      :property:
-
-      Abstraction of `non_zero_mask`
-
-      :returns: * *numpy.array* -- masked signal efficiency
-                * *numpy.array* -- masked background rejection
 
 
 

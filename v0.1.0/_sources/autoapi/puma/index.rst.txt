@@ -889,6 +889,27 @@ Attributes
 
    :raises ValueError: if `sig_eff` and `bkg_rej` have a different shape
 
+   .. py:property:: fct_inter
+
+      Interpolate the rejection function for better ratio calculation plotting etc.
+
+      :returns: interpolation function
+      :rtype: pchip
+
+   .. py:property:: non_zero_mask
+
+      Masking points where rejection is 0 and no signal efficiency change present
+
+      :returns: masked indices
+      :rtype: numpy.array
+
+   .. py:property:: non_zero
+
+      Abstraction of `non_zero_mask`
+
+      :returns: * *numpy.array* -- masked signal efficiency
+                * *numpy.array* -- masked background rejection
+
    .. py:method:: binomial_error(norm: bool = False, n_test: int = None) -> numpy.ndarray
 
       Calculate binomial error of roc curve.
@@ -919,33 +940,6 @@ Attributes
                   interval of the two roc curves
                 * *np.array* -- ratio
                 * *np.array or None* -- ratio_err if `n_test` was provided to class
-
-
-   .. py:method:: fct_inter()
-      :property:
-
-      Interpolate the rejection function for better ratio calculation plotting etc.
-
-      :returns: interpolation function
-      :rtype: pchip
-
-
-   .. py:method:: non_zero_mask()
-      :property:
-
-      Masking points where rejection is 0 and no signal efficiency change present
-
-      :returns: masked indices
-      :rtype: numpy.array
-
-
-   .. py:method:: non_zero()
-      :property:
-
-      Abstraction of `non_zero_mask`
-
-      :returns: * *numpy.array* -- masked signal efficiency
-                * *numpy.array* -- masked background rejection
 
 
 
@@ -1105,6 +1099,34 @@ Attributes
 
    :raises ValueError: if provided options are not compatible with each other
 
+   .. py:property:: sig_eff
+
+      Calculate signal efficiency per bin.
+
+      :returns: * *np.ndarray* -- efficiency
+                * *np.ndarray* -- efficiency_error
+
+   .. py:property:: bkg_eff
+
+      Calculate background efficiency per bin.
+
+      :returns: * *np.ndarray* -- efficiency
+                * *np.ndarray* -- efficiency_error
+
+   .. py:property:: sig_rej
+
+      Calculate signal rejection per bin.
+
+      :returns: * *np.ndarray* -- rejection
+                * *np.ndarray* -- rejection_error
+
+   .. py:property:: bkg_rej
+
+      Calculate background rejection per bin.
+
+      :returns: * *np.ndarray* -- rejection
+                * *np.ndarray* -- rejection_error
+
    .. py:method:: _set_bin_edges(bins)
 
       Calculate bin edges, centres and width and save them as class variables.
@@ -1151,42 +1173,6 @@ Attributes
 
       :returns: * *float* -- rejection
                 * *float* -- rejection error
-
-
-   .. py:method:: sig_eff()
-      :property:
-
-      Calculate signal efficiency per bin.
-
-      :returns: * *np.ndarray* -- efficiency
-                * *np.ndarray* -- efficiency_error
-
-
-   .. py:method:: bkg_eff()
-      :property:
-
-      Calculate background efficiency per bin.
-
-      :returns: * *np.ndarray* -- efficiency
-                * *np.ndarray* -- efficiency_error
-
-
-   .. py:method:: sig_rej()
-      :property:
-
-      Calculate signal rejection per bin.
-
-      :returns: * *np.ndarray* -- rejection
-                * *np.ndarray* -- rejection_error
-
-
-   .. py:method:: bkg_rej()
-      :property:
-
-      Calculate background rejection per bin.
-
-      :returns: * *np.ndarray* -- rejection
-                * *np.ndarray* -- rejection_error
 
 
    .. py:method:: __eq__(other)

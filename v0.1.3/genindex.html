@@ -1,54 +1,85 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index &#8212; puma 0.1.3 documentation</title>
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+  <script>
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
 
-
+  
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="_static/vendor/fontawesome/6.1.2/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
-
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://umami-hep.github.io/puma/main/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.1.3';
+        </script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
       
-
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
     </div>
+  </div>
 
-    
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
-
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
   <div id="navbar-start">
     
     
@@ -56,9 +87,15 @@
 
 
 <a class="navbar-brand logo" href="index.html">
+
   
   
   
+  
+  
+  
+  
+
   
   
     <p class="title logo__title">puma documentation</p>
@@ -67,146 +104,93 @@
     
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
-  </button>
-
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div class="col-lg-9 navbar-header-items">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="index.html">
-  Quickstart
- </a>
-</li>
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Quickstart
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="examples/index.html">
-  Examples
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="examples/index.html">
+                        Examples
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="dev_guidelines/index.html">
-  Develop
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dev_guidelines/index.html">
+                        Develop
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="autoapi/index.html">
-  API Reference
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="autoapi/index.html">
+                        API Reference
+                    </a>
+                </li>
+                
 
-    
-    <li class="nav-item">
-        <a class="nav-link nav-external" href="https://github.com/umami-hep/puma/blob/main/changelog.md">Changelog<i class="fas fa-external-link-alt"></i></a>
-    </li>
-    
-</ul>
+            <li class="nav-item">
+                <a class="nav-link nav-external" href="https://github.com/umami-hep/puma/blob/main/changelog.md">Changelog<i class="fa-solid fa-up-right-from-square"></i></a>
+            </li>
+    </ul>
+</nav>
       </div>
       
     </div>
 
     <div id="navbar-end">
+      <div class="navbar-end-item navbar-end__search-button-container">
+        
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+      </div>
       
       <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
 </span>
       </div>
       
       <div class="navbar-end-item">
-        <div class="dropdown" id="version_switcher">
-    <button type="button" class="btn btn-sm navbar-btn dropdown-toggle" id="version_switcher_button" data-toggle="dropdown">
+        <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-toggle="dropdown">
         v0.1.3  <!-- this text may get changed later by javascript -->
         <span class="caret"></span>
     </button>
-    <div id="version_switcher_menu" class="dropdown-menu list-group-flush py-0" aria-labelledby="version_switcher_button">
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
     <!-- dropdown will be populated by javascript on page load -->
     </div>
 </div>
-
-<!-- NOTE: this JS must live here (not in our global JS file) because it relies
-     on being processed by Jinja before it is run (specifically for replacing
-     variables genindex and {'json_url': 'https://umami-hep.github.io/puma/main/_static/switcher.json', 'version_match': 'v0.1.3'}.
--->
-
-<script type="text/javascript">
-// Check if corresponding page path exists in other version of docs
-// and, if so, go there instead of the homepage of the other docs version
-function checkPageExistsAndRedirect(event) {
-    const currentFilePath = "genindex.html",
-          tryUrl = event.target.getAttribute("href");
-    let otherDocsHomepage = tryUrl.replace(currentFilePath, "");
-    $.ajax({
-        type: 'HEAD',
-        url: tryUrl,
-        // if the page exists, go there
-        success: function() {
-            location.href = tryUrl;
-        }
-    }).fail(function() {
-        location.href = otherDocsHomepage;
-    });
-    // this prevents the browser from following the href of the clicked node
-    // (which is fine because this function takes care of redirecting)
-    return false;
-}
-
-// Populate the version switcher from the JSON config file
-(function () {
-    $.getJSON("https://umami-hep.github.io/puma/main/_static/switcher.json", function(data, textStatus, jqXHR) {
-        const currentFilePath = "genindex.html";
-        let btn = document.getElementById("version_switcher_button");
-        // Set empty strings by default so that these attributes exist and can be used in CSS selectors
-        btn.dataset["activeVersionName"] = "";
-        btn.dataset["activeVersion"] = "";
-        // create links to the corresponding page in the other docs versions
-        $.each(data, function(index, entry) {
-            // if no custom name specified (e.g., "latest"), use version string
-            if (!("name" in entry)) {
-                entry.name = entry.version;
-            }
-            // create the node
-            const node = document.createElement("a");
-            node.setAttribute("class", "list-group-item list-group-item-action py-1");
-            node.textContent = `${entry.name}`;
-            node.setAttribute("href", `${entry.url}${currentFilePath}`);
-            // on click, AJAX calls will check if the linked page exists before
-            // trying to redirect, and if not, will redirect to the homepage
-            // for that version of the docs.
-            node.onclick = checkPageExistsAndRedirect;
-            // Add dataset values for the version and name in case people want
-            // to apply CSS styling based on this information.
-            node.dataset["versionName"] = entry.name;
-            node.dataset["version"] = entry.version;
-
-            $("#version_switcher_menu").append(node);
-            // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's  variable.
-            // also highlight the dropdown entry for the currently-viewed
-            // version's entry
-            if (entry.version == "v0.1.3") {
-                node.classList.add("active");
-                btn.innerText = btn.dataset["activeVersionName"] = entry.name;
-                btn.dataset["activeVersion"] = entry.version;
-            }
-        });
-    });
-})();
-</script>
       </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/umami-hep/puma" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/umami-hep/puma" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -214,44 +198,147 @@ function checkPageExistsAndRedirect(event) {
       
     </div>
   </div>
-</div>
-    </nav>
-    
-
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
-          
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
-    
-  </div>
-</nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
 
 
-          
-
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
   
+  <div class="search-button-container--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+  </div>
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
 </div>
+  </nav>
+  
 
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
-              
-              <article class="bd-article" role="main">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Quickstart
+                    </a>
+                </li>
                 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="examples/index.html">
+                        Examples
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="dev_guidelines/index.html">
+                        Develop
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="autoapi/index.html">
+                        API Reference
+                    </a>
+                </li>
+                
+
+            <li class="nav-item">
+                <a class="nav-link nav-external" href="https://github.com/umami-hep/puma/blob/main/changelog.md">Changelog<i class="fa-solid fa-up-right-from-square"></i></a>
+            </li>
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-toggle="dropdown">
+        v0.1.3  <!-- this text may get changed later by javascript -->
+        <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+</div>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/umami-hep/puma" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+      </div>
+      <main class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
 
 <h1 id="index">Index</h1>
 
@@ -434,7 +521,7 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/roc/index.html#puma.roc.Roc.binomial_error">(puma.roc.Roc method)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.bkg_eff">bkg_eff() (puma.var_vs_eff.VarVsEff property)</a>
+      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.bkg_eff">bkg_eff (puma.var_vs_eff.VarVsEff property)</a>
 
       <ul>
         <li><a href="autoapi/puma/index.html#puma.VarVsEff.bkg_eff">(puma.VarVsEff property)</a>
@@ -442,7 +529,7 @@ function checkPageExistsAndRedirect(event) {
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.bkg_rej">bkg_rej() (puma.var_vs_eff.VarVsEff property)</a>
+      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.bkg_rej">bkg_rej (puma.var_vs_eff.VarVsEff property)</a>
 
       <ul>
         <li><a href="autoapi/puma/index.html#puma.VarVsEff.bkg_rej">(puma.VarVsEff property)</a>
@@ -548,8 +635,6 @@ function checkPageExistsAndRedirect(event) {
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/metrics/index.html#puma.metrics.eff_err">eff_err() (in module puma.metrics)</a>
 </li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.eff_err_TestCase">eff_err_TestCase (class in puma.tests.test_metrics)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.efficiency">efficiency() (puma.var_vs_eff.VarVsEff method)</a>
@@ -564,7 +649,7 @@ function checkPageExistsAndRedirect(event) {
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/puma/index.html#puma.Roc.fct_inter">fct_inter() (puma.Roc property)</a>
+      <li><a href="autoapi/puma/index.html#puma.Roc.fct_inter">fct_inter (puma.Roc property)</a>
 
       <ul>
         <li><a href="autoapi/puma/roc/index.html#puma.roc.Roc.fct_inter">(puma.roc.Roc property)</a>
@@ -600,8 +685,6 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/fraction_scan/index.html#puma.fraction_scan.FractionScanPlot">(class in puma.fraction_scan)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.FractionScanTestCase">FractionScanTestCase (class in puma.tests.test_fraction_scan)</a>
-</li>
   </ul></td>
 </tr></table>
 
@@ -639,8 +722,6 @@ function checkPageExistsAndRedirect(event) {
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/utils/logging/index.html#puma.utils.logging.get_log_level">get_log_level() (in module puma.utils.logging)</a>
-</li>
-      <li><a href="autoapi/puma/tests/utils/test_logging/index.html#puma.tests.utils.test_logging.get_log_level_TestCase">get_log_level_TestCase (class in puma.tests.utils.test_logging)</a>
 </li>
       <li><a href="autoapi/puma/histogram/index.html#puma.histogram.HistogramPlot.get_reference_histo">get_reference_histo() (puma.histogram.HistogramPlot method)</a>
 
@@ -684,14 +765,6 @@ function checkPageExistsAndRedirect(event) {
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase">histogram_plot_TestCase (class in puma.tests.test_histogram)</a>
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_pie_chart/index.html#puma.tests.test_pie_chart.histogram_plot_TestCase">(class in puma.tests.test_pie_chart)</a>
-</li>
-      </ul></li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_TestCase">histogram_TestCase (class in puma.tests.test_histogram)</a>
-</li>
       <li><a href="autoapi/puma/index.html#puma.HistogramPlot">HistogramPlot (class in puma)</a>
 
       <ul>
@@ -848,22 +921,6 @@ function checkPageExistsAndRedirect(event) {
 </li>
         <li><a href="autoapi/puma/roc/index.html#module-puma.roc">puma.roc</a>
 </li>
-        <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#module-puma.tests.test_fraction_scan">puma.tests.test_fraction_scan</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_histogram/index.html#module-puma.tests.test_histogram">puma.tests.test_histogram</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#module-puma.tests.test_metrics">puma.tests.test_metrics</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_pie_chart/index.html#module-puma.tests.test_pie_chart">puma.tests.test_pie_chart</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_plot_base/index.html#module-puma.tests.test_plot_base">puma.tests.test_plot_base</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_roc/index.html#module-puma.tests.test_roc">puma.tests.test_roc</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#module-puma.tests.test_var_vs_eff">puma.tests.test_var_vs_eff</a>
-</li>
-        <li><a href="autoapi/puma/tests/utils/test_logging/index.html#module-puma.tests.utils.test_logging">puma.tests.utils.test_logging</a>
-</li>
         <li><a href="autoapi/puma/utils/index.html#module-puma.utils">puma.utils</a>
 </li>
         <li><a href="autoapi/puma/utils/generate/index.html#module-puma.utils.generate">puma.utils.generate</a>
@@ -887,7 +944,7 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/index.html#puma.PlotObject.n_ratio_panels">(puma.PlotObject attribute)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/index.html#puma.Roc.non_zero">non_zero() (puma.Roc property)</a>
+      <li><a href="autoapi/puma/index.html#puma.Roc.non_zero">non_zero (puma.Roc property)</a>
 
       <ul>
         <li><a href="autoapi/puma/roc/index.html#puma.roc.Roc.non_zero">(puma.roc.Roc property)</a>
@@ -895,7 +952,7 @@ function checkPageExistsAndRedirect(event) {
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/puma/index.html#puma.Roc.non_zero_mask">non_zero_mask() (puma.Roc property)</a>
+      <li><a href="autoapi/puma/index.html#puma.Roc.non_zero_mask">non_zero_mask (puma.Roc property)</a>
 
       <ul>
         <li><a href="autoapi/puma/roc/index.html#puma.roc.Roc.non_zero_mask">(puma.roc.Roc property)</a>
@@ -921,8 +978,6 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/index.html#puma.VarVsEffPlot.plot">(puma.VarVsEffPlot method)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/tests/test_plot_base/index.html#puma.tests.test_plot_base.plot_object_TestCase">plot_object_TestCase (class in puma.tests.test_plot_base)</a>
-</li>
       <li><a href="autoapi/puma/histogram/index.html#puma.histogram.HistogramPlot.plot_pie_chart">plot_pie_chart() (puma.histogram.HistogramPlot method)</a>
 
       <ul>
@@ -973,6 +1028,8 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/index.html#puma.PlotObject.plotting_done">(puma.PlotObject attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     puma
 
@@ -994,8 +1051,6 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/histogram/index.html#module-puma.histogram">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     puma.metrics
 
@@ -1015,62 +1070,6 @@ function checkPageExistsAndRedirect(event) {
 
       <ul>
         <li><a href="autoapi/puma/roc/index.html#module-puma.roc">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.test_fraction_scan
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#module-puma.tests.test_fraction_scan">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.test_histogram
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_histogram/index.html#module-puma.tests.test_histogram">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.test_metrics
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#module-puma.tests.test_metrics">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.test_pie_chart
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_pie_chart/index.html#module-puma.tests.test_pie_chart">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.test_plot_base
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_plot_base/index.html#module-puma.tests.test_plot_base">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.test_roc
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_roc/index.html#module-puma.tests.test_roc">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.test_var_vs_eff
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#module-puma.tests.test_var_vs_eff">module</a>
-</li>
-      </ul></li>
-      <li>
-    puma.tests.utils.test_logging
-
-      <ul>
-        <li><a href="autoapi/puma/tests/utils/test_logging/index.html#module-puma.tests.utils.test_logging">module</a>
 </li>
       </ul></li>
       <li>
@@ -1118,30 +1117,22 @@ function checkPageExistsAndRedirect(event) {
 </li>
       <li><a href="autoapi/puma/metrics/index.html#puma.metrics.rej_err">rej_err() (in module puma.metrics)</a>
 </li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.rej_err_TestCase">rej_err_TestCase (class in puma.tests.test_metrics)</a>
-</li>
       <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.rejection">rejection() (puma.var_vs_eff.VarVsEff method)</a>
 
       <ul>
         <li><a href="autoapi/puma/index.html#puma.VarVsEff.rejection">(puma.VarVsEff method)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/utils/logging/index.html#puma.utils.logging.CustomFormatter.reset">reset (puma.utils.logging.CustomFormatter attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autoapi/puma/utils/logging/index.html#puma.utils.logging.CustomFormatter.reset">reset (puma.utils.logging.CustomFormatter attribute)</a>
+</li>
       <li><a href="autoapi/puma/index.html#puma.Roc">Roc (class in puma)</a>
 
       <ul>
         <li><a href="autoapi/puma/roc/index.html#puma.roc.Roc">(class in puma.roc)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase">roc_mask_TestCase (class in puma.tests.test_roc)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_output_TestCase">roc_output_TestCase (class in puma.tests.test_roc)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase">roc_TestCase (class in puma.tests.test_roc)</a>
-</li>
       <li><a href="autoapi/puma/index.html#puma.RocPlot">RocPlot (class in puma)</a>
 
       <ul>
@@ -1162,8 +1153,6 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/index.html#puma.PlotBase.savefig">(puma.PlotBase method)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase">separation_TestCase (class in puma.tests.test_metrics)</a>
-</li>
       <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEffPlot.set_grid">set_grid() (puma.var_vs_eff.VarVsEffPlot method)</a>
 
       <ul>
@@ -1216,6 +1205,8 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/index.html#puma.VarVsEffPlot.set_reference">(puma.VarVsEffPlot method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/roc/index.html#puma.roc.RocPlot.set_roc_reference">set_roc_reference() (puma.roc.RocPlot method)</a>
 
       <ul>
@@ -1228,8 +1219,6 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/index.html#puma.PlotBase.set_tick_params">(puma.PlotBase method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/plot_base/index.html#puma.plot_base.PlotBase.set_title">set_title() (puma.plot_base.PlotBase method)</a>
 
       <ul>
@@ -1262,35 +1251,13 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="autoapi/puma/index.html#puma.PlotBase.set_ylabel">(puma.PlotBase method)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.TestCase.setUp">setUp() (puma.tests.test_fraction_scan.TestCase method)</a>
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.setUp">(puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.rej_err_TestCase.setUp">(puma.tests.test_metrics.rej_err_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase.setUp">(puma.tests.test_metrics.separation_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_pie_chart/index.html#puma.tests.test_pie_chart.histogram_plot_TestCase.setUp">(puma.tests.test_pie_chart.histogram_plot_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.setUp">(puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_output_TestCase.setUp">(puma.tests.test_roc.roc_output_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.setUp">(puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_output_TestCase.setUp">(puma.tests.test_var_vs_eff.var_vs_eff_output_TestCase method)</a>
-</li>
-        <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.setUp">(puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      </ul></li>
-      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.sig_eff">sig_eff() (puma.var_vs_eff.VarVsEff property)</a>
+      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.sig_eff">sig_eff (puma.var_vs_eff.VarVsEff property)</a>
 
       <ul>
         <li><a href="autoapi/puma/index.html#puma.VarVsEff.sig_eff">(puma.VarVsEff property)</a>
 </li>
       </ul></li>
-      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.sig_rej">sig_rej() (puma.var_vs_eff.VarVsEff property)</a>
+      <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff.sig_rej">sig_rej (puma.var_vs_eff.VarVsEff property)</a>
 
       <ul>
         <li><a href="autoapi/puma/index.html#puma.VarVsEff.sig_rej">(puma.VarVsEff property)</a>
@@ -1302,218 +1269,14 @@ function checkPageExistsAndRedirect(event) {
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_add_bin_width_to_ylabel">test_add_bin_width_to_ylabel() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_binomial_error_example">test_binomial_error_example() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_binomial_error_example_norm">test_binomial_error_example_norm() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_binomial_error_example_pass_ntest">test_binomial_error_example_pass_ntest() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_binomial_error_no_ntest">test_binomial_error_no_ntest() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_binomial_error_only_zeros">test_binomial_error_only_zeros() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase.test_bins_range">test_bins_range() (puma.tests.test_metrics.separation_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase.test_completely_separated">test_completely_separated() (puma.tests.test_metrics.separation_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase.test_completely_separated_bad_binning">test_completely_separated_bad_binning() (puma.tests.test_metrics.separation_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_custom_range">test_custom_range() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.FractionScanTestCase.test_different_input_shapes">test_different_input_shapes() (puma.tests.test_fraction_scan.FractionScanTestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.FractionScanTestCase.test_differnt_input_types">test_differnt_input_types() (puma.tests.test_fraction_scan.FractionScanTestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_TestCase.test_divide_after_plotting_no_norm">test_divide_after_plotting_no_norm() (puma.tests.test_histogram.histogram_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_TestCase.test_divide_after_plotting_norm">test_divide_after_plotting_norm() (puma.tests.test_histogram.histogram_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_TestCase.test_divide_before_plotting">test_divide_before_plotting() (puma.tests.test_histogram.histogram_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_draw_vlines_histogram">test_draw_vlines_histogram() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_draw_vlines_histogram_custom_labels">test_draw_vlines_histogram_custom_labels() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_draw_vlines_histogram_custom_yheight">test_draw_vlines_histogram_custom_yheight() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_draw_vlines_histogram_same_height">test_draw_vlines_histogram_same_height() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_TestCase.test_empty_histogram">test_empty_histogram() (puma.tests.test_histogram.histogram_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.FractionScanTestCase.test_empty_input">test_empty_input() (puma.tests.test_fraction_scan.FractionScanTestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase.test_equal_datasets">test_equal_datasets() (puma.tests.test_metrics.separation_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.eff_err_TestCase.test_example_case">test_example_case() (puma.tests.test_metrics.eff_err_TestCase method)</a>
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.rej_err_TestCase.test_example_case">(puma.tests.test_metrics.rej_err_TestCase method)</a>
-</li>
-      </ul></li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_fct_inter">test_fct_inter() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_flavoured_labels">test_flavoured_labels() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot">test_FractionScanPlot() (puma.tests.test_fraction_scan.TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_double_key">test_FractionScanPlot_double_key() (puma.tests.test_fraction_scan.TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_grid_off">test_FractionScanPlot_grid_off() (puma.tests.test_fraction_scan.TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.TestCase.test_FractionScanPlot_no_param_set">test_FractionScanPlot_no_param_set() (puma.tests.test_fraction_scan.TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase.test_half_separated">test_half_separated() (puma.tests.test_metrics.separation_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_invalid_bins_type">test_invalid_bins_type() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_pie_chart/index.html#puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_bins_type">(puma.tests.test_pie_chart.histogram_plot_TestCase method)</a>
-</li>
-      </ul></li>
-      <li><a href="autoapi/puma/tests/test_pie_chart/index.html#puma.tests.test_pie_chart.histogram_plot_TestCase.test_invalid_binwidth">test_invalid_binwidth() (puma.tests.test_pie_chart.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_plot_base/index.html#puma.tests.test_plot_base.plot_object_TestCase.test_list_input_figsize">test_list_input_figsize() (puma.tests.test_plot_base.plot_object_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_plot_base/index.html#puma.tests.test_plot_base.plot_object_TestCase.test_list_input_wrong_len_figsize">test_list_input_wrong_len_figsize() (puma.tests.test_plot_base.plot_object_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_multiple_references_flavour">test_multiple_references_flavour() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_multiple_references_no_flavour">test_multiple_references_no_flavour() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.eff_err_TestCase.test_negative_N_case">test_negative_N_case() (puma.tests.test_metrics.eff_err_TestCase method)</a>
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.rej_err_TestCase.test_negative_N_case">(puma.tests.test_metrics.rej_err_TestCase method)</a>
-</li>
-      </ul></li>
-      <li><a href="autoapi/puma/tests/test_pie_chart/index.html#puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_discrete_vals">test_no_discrete_vals() (puma.tests.test_pie_chart.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_pie_chart/index.html#puma.tests.test_pie_chart.histogram_plot_TestCase.test_no_vertical_split">test_no_vertical_split() (puma.tests.test_pie_chart.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero">test_non_zero() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero_mask">test_non_zero_mask() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero_mask_xmax">test_non_zero_mask_xmax() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero_mask_xmin">test_non_zero_mask_xmin() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero_mask_xmin_xmax">test_non_zero_mask_xmin_xmax() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero_xmax">test_non_zero_xmax() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero_xmin">test_non_zero_xmin() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_mask_TestCase.test_non_zero_xmin_xmax">test_non_zero_xmin_xmax() (puma.tests.test_roc.roc_mask_TestCase method)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.eff_err_TestCase.test_one_case">test_one_case() (puma.tests.test_metrics.eff_err_TestCase method)</a>
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.rej_err_TestCase.test_one_case">(puma.tests.test_metrics.rej_err_TestCase method)</a>
-</li>
-      </ul></li>
-      <li><a href="autoapi/puma/tests/test_plot_base/index.html#puma.tests.test_plot_base.plot_object_TestCase.test_only_one_input_figsize">test_only_one_input_figsize() (puma.tests.test_plot_base.plot_object_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_plot_base/index.html#puma.tests.test_plot_base.plot_object_TestCase.test_only_tuple_three_inputs_figsize">test_only_tuple_three_inputs_figsize() (puma.tests.test_plot_base.plot_object_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_output_different_range_histogram">test_output_different_range_histogram() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_output_empty_histogram_no_norm">test_output_empty_histogram_no_norm() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_output_empty_histogram_norm">test_output_empty_histogram_norm() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_output_TestCase.test_output_four_curves_two_ratio">test_output_four_curves_two_ratio() (puma.tests.test_roc.roc_output_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_output_TestCase.test_output_four_curves_two_ratio_uncertainties">test_output_four_curves_two_ratio_uncertainties() (puma.tests.test_roc.roc_output_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_output_TestCase.test_output_plot_fixed_eff_bin_bkg_efficiency">test_output_plot_fixed_eff_bin_bkg_efficiency() (puma.tests.test_var_vs_eff.var_vs_eff_output_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_output_TestCase.test_output_plot_fixed_eff_bin_bkg_rejection">test_output_plot_fixed_eff_bin_bkg_rejection() (puma.tests.test_var_vs_eff.var_vs_eff_output_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_output_ratio">test_output_ratio() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_output_TestCase.test_output_two_curves_one_ratio">test_output_two_curves_one_ratio() (puma.tests.test_roc.roc_output_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_output_TestCase.test_output_two_curves_one_ratio_uncertainties">test_output_two_curves_one_ratio_uncertainties() (puma.tests.test_roc.roc_output_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_pie_chart/index.html#puma.tests.test_pie_chart.histogram_plot_TestCase.test_plot_pie_chart">test_plot_pie_chart() (puma.tests.test_pie_chart.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_ratio_different_sig_interval">test_ratio_different_sig_interval() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_ratio_factor_two">test_ratio_factor_two() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_ratio_factor_two_inverse">test_ratio_factor_two_inverse() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_plot_TestCase.test_ratio_group_options">test_ratio_group_options() (puma.tests.test_histogram.histogram_plot_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_histogram/index.html#puma.tests.test_histogram.histogram_TestCase.test_ratio_same_histogram">test_ratio_same_histogram() (puma.tests.test_histogram.histogram_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_ratio_same_object">test_ratio_same_object() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.separation_TestCase.test_return_bins">test_return_bins() (puma.tests.test_metrics.separation_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_roc/index.html#puma.tests.test_roc.roc_TestCase.test_roc_init">test_roc_init() (puma.tests.test_roc.roc_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_plot_base/index.html#puma.tests.test_plot_base.plot_object_TestCase.test_tuple_input_figsize">test_tuple_input_figsize() (puma.tests.test_plot_base.plot_object_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_divide_different_binning">test_var_vs_eff_divide_different_binning() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_divide_same">test_var_vs_eff_divide_same() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_divide_wrong_mode">test_var_vs_eff_divide_wrong_mode() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_fixed_eff_sig_eff">test_var_vs_eff_fixed_eff_sig_eff() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_fixed_eff_sig_rej">test_var_vs_eff_fixed_eff_sig_rej() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_init_disc_cut_wp">test_var_vs_eff_init_disc_cut_wp() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_init_disc_cut_wrong_shape">test_var_vs_eff_init_disc_cut_wrong_shape() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_init_fixed_eff_disc_cut">test_var_vs_eff_init_fixed_eff_disc_cut() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_init_fixed_eff_no_wp">test_var_vs_eff_init_fixed_eff_no_wp() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_init_no_disc_cut_no_wp">test_var_vs_eff_init_no_disc_cut_no_wp() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_init_wrong_bkg_shape">test_var_vs_eff_init_wrong_bkg_shape() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_init_wrong_sig_shape">test_var_vs_eff_init_wrong_sig_shape() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_one_bin">test_var_vs_eff_one_bin() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_set_bin_edges">test_var_vs_eff_set_bin_edges() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_set_bin_edges_list">test_var_vs_eff_set_bin_edges_list() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase.test_var_vs_eff_set_bin_edges_only_signal">test_var_vs_eff_set_bin_edges_only_signal() (puma.tests.test_var_vs_eff.var_vs_eff_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/utils/test_logging/index.html#puma.tests.utils.test_logging.get_log_level_TestCase.test_wrong_input">test_wrong_input() (puma.tests.utils.test_logging.get_log_level_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.FractionScanTestCase.test_wrong_inputs_xvalues">test_wrong_inputs_xvalues() (puma.tests.test_fraction_scan.FractionScanTestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_plot_base/index.html#puma.tests.test_plot_base.plot_object_TestCase.test_wrong_n_ratio_panels">test_wrong_n_ratio_panels() (puma.tests.test_plot_base.plot_object_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.eff_err_TestCase.test_zero_N_case">test_zero_N_case() (puma.tests.test_metrics.eff_err_TestCase method)</a>
-
-      <ul>
-        <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.rej_err_TestCase.test_zero_N_case">(puma.tests.test_metrics.rej_err_TestCase method)</a>
-</li>
-      </ul></li>
-      <li><a href="autoapi/puma/tests/test_metrics/index.html#puma.tests.test_metrics.rej_err_TestCase.test_zero_x_case">test_zero_x_case() (puma.tests.test_metrics.rej_err_TestCase method)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_fraction_scan/index.html#puma.tests.test_fraction_scan.TestCase">TestCase (class in puma.tests.test_fraction_scan)</a>
-</li>
       <li><a href="autoapi/puma/plot_base/index.html#puma.plot_base.PlotBase.tight_layout">tight_layout() (puma.plot_base.PlotBase method)</a>
 
       <ul>
         <li><a href="autoapi/puma/index.html#puma.PlotBase.tight_layout">(puma.PlotBase method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/plot_base/index.html#puma.plot_base.PlotObject.title">title (puma.plot_base.PlotObject attribute)</a>
 
       <ul>
@@ -1538,24 +1301,20 @@ function checkPageExistsAndRedirect(event) {
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_output_TestCase">var_vs_eff_output_TestCase (class in puma.tests.test_var_vs_eff)</a>
-</li>
-      <li><a href="autoapi/puma/tests/test_var_vs_eff/index.html#puma.tests.test_var_vs_eff.var_vs_eff_TestCase">var_vs_eff_TestCase (class in puma.tests.test_var_vs_eff)</a>
-</li>
       <li><a href="autoapi/puma/index.html#puma.VarVsEff">VarVsEff (class in puma)</a>
 
       <ul>
         <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEff">(class in puma.var_vs_eff)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/index.html#puma.VarVsEffPlot">VarVsEffPlot (class in puma)</a>
 
       <ul>
         <li><a href="autoapi/puma/var_vs_eff/index.html#puma.var_vs_eff.VarVsEffPlot">(class in puma.var_vs_eff)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autoapi/puma/plot_base/index.html#puma.plot_base.PlotObject.vertical_split">vertical_split (puma.plot_base.PlotObject attribute)</a>
 
       <ul>
@@ -1671,41 +1430,75 @@ function checkPageExistsAndRedirect(event) {
 
 
 
-              </article>
-              
-
-              
-              <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-              </footer>
-              
+            </footer>
+            
           </div>
           
-      </div>
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
     </div>
+  </div>
 
   
-  
+    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
 
-<footer class="bd-footer"><div class="bd-footer__inner container">
+  <footer class="bd-footer"><div class="bd-footer__inner container">
   
   <div class="footer-item">
-    <p class="copyright">
+    
+<p class="copyright">
+
     &copy; Copyright 2022, puma developers.<br>
+
 </p>
+
   </div>
   
   <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.2.3.<br>
 </p>
+
   </div>
   
 </div>
-</footer>
+  </footer>
   </body>
 </html>

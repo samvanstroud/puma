@@ -60,6 +60,34 @@ Classes
 
    :raises ValueError: if provided options are not compatible with each other
 
+   .. py:property:: sig_eff
+
+      Calculate signal efficiency per bin.
+
+      :returns: * *np.ndarray* -- efficiency
+                * *np.ndarray* -- efficiency_error
+
+   .. py:property:: bkg_eff
+
+      Calculate background efficiency per bin.
+
+      :returns: * *np.ndarray* -- efficiency
+                * *np.ndarray* -- efficiency_error
+
+   .. py:property:: sig_rej
+
+      Calculate signal rejection per bin.
+
+      :returns: * *np.ndarray* -- rejection
+                * *np.ndarray* -- rejection_error
+
+   .. py:property:: bkg_rej
+
+      Calculate background rejection per bin.
+
+      :returns: * *np.ndarray* -- rejection
+                * *np.ndarray* -- rejection_error
+
    .. py:method:: _set_bin_edges(bins)
 
       Calculate bin edges, centres and width and save them as class variables.
@@ -106,42 +134,6 @@ Classes
 
       :returns: * *float* -- rejection
                 * *float* -- rejection error
-
-
-   .. py:method:: sig_eff()
-      :property:
-
-      Calculate signal efficiency per bin.
-
-      :returns: * *np.ndarray* -- efficiency
-                * *np.ndarray* -- efficiency_error
-
-
-   .. py:method:: bkg_eff()
-      :property:
-
-      Calculate background efficiency per bin.
-
-      :returns: * *np.ndarray* -- efficiency
-                * *np.ndarray* -- efficiency_error
-
-
-   .. py:method:: sig_rej()
-      :property:
-
-      Calculate signal rejection per bin.
-
-      :returns: * *np.ndarray* -- rejection
-                * *np.ndarray* -- rejection_error
-
-
-   .. py:method:: bkg_rej()
-      :property:
-
-      Calculate background rejection per bin.
-
-      :returns: * *np.ndarray* -- rejection
-                * *np.ndarray* -- rejection_error
 
 
    .. py:method:: __eq__(other)
