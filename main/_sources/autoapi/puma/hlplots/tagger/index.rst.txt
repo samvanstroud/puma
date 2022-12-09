@@ -1,0 +1,101 @@
+:py:mod:`puma.hlplots.tagger`
+=============================
+
+.. py:module:: puma.hlplots.tagger
+
+.. autoapi-nested-parse::
+
+   Tagger module for high level API.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   puma.hlplots.tagger.Tagger
+
+
+
+
+.. py:class:: Tagger(model_name: str, template: dict = None)
+
+   Class storing tagger results.
+
+   Init Tagger class.
+
+   :param model_name: Name of the model, also correspondinng to the pre-fix of the tagger
+                      variables.
+   :type model_name: str
+   :param template: Template dictionary which keys are directly set as class variables
+   :type template: dict
+
+   .. py:property:: n_jets_light
+
+      Retrieve number of light jets.
+
+      :returns: number of light jets
+      :rtype: int
+
+   .. py:property:: n_jets_c
+
+      Retrieve number of c jets.
+
+      :returns: number of c jets
+      :rtype: int
+
+   .. py:property:: n_jets_b
+
+      Retrieve number of b jets.
+
+      :returns: number of b jets
+      :rtype: int
+
+   .. py:method:: extract_tagger_scores(source: object, source_type: str = 'data_frame', key: str = None)
+
+      Extract tagger scores from data frame or file.
+
+      :param source: pd.DataFrame or file path to h5 file containing pd.DataFrame or structured
+                     numpy array
+      :type source: object
+      :param source_type: Indicates from which source scores should be extracted. Possible options are
+                          `data_frame` when passing a pd.DataFrame, `data_frame_path` when passing a
+                          file path to a h5 file with a pd.DataFrame or `numpy_structured` when
+                          passing a file path to a h5 file with a structured numpy array,
+                          by default "data_frame"
+      :type source_type: str, optional
+      :param key: Key within h5 file, needs to be provided when using the `source_type`
+                  `data_frame_path` or `numpy_structured`, by default None
+      :type key: str, optional
+
+      :raises ValueError: if source_type is wrongly specified
+
+
+   .. py:method:: _init_from_template(template)
+
+
+   .. py:method:: calc_disc_b() -> numpy.ndarray
+
+      Calculate b-tagging discriminant
+
+      :returns: b-tagging discriminant
+      :rtype: np.ndarray
+
+      :raises ValueError: if f_c parameter is not specified for tagger
+
+
+   .. py:method:: calc_disc_c() -> numpy.ndarray
+
+      Calculate c-tagging discriminant
+
+      :returns: c-tagging discriminant
+      :rtype: np.ndarray
+
+      :raises ValueError: if f_b parameter is not specified for tagger
+
+
+

@@ -1,0 +1,189 @@
+:py:mod:`puma.hlplots`
+======================
+
+.. py:module:: puma.hlplots
+
+.. autoapi-nested-parse::
+
+   High level plotting API within puma, to avoid code duplication.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   results/index.rst
+   tagger/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   puma.hlplots.Results
+   puma.hlplots.Tagger
+
+
+
+
+.. py:class:: Results
+
+   Stores all results of the different taggers.
+
+   .. py:method:: add(tagger)
+
+      Add tagger to class.
+
+      :param tagger: Instance of the puma.hlplots.Tagger class, containing tagger information.
+      :type tagger: puma.hlplots.Tagger
+
+      :raises KeyError: if model name duplicated
+
+
+   .. py:method:: get(model_name: str)
+
+      Retrieve tagger info.
+
+      :param model_name: name of model
+      :type model_name: str
+
+      :returns: Tagger class with info about tagger
+      :rtype: Tagger
+
+
+   .. py:method:: plot_rocs(plot_name: str, signal_class: str = 'bjets', args_roc_plot: dict = None)
+
+      Plots rocs
+
+      :param plot_name: roc plot object
+      :type plot_name: puma.RocPlot
+      :param signal_class: signal class to plot Roc with, wither `bjets` or `cjets`, by default `bjets`
+      :type signal_class: str, optional
+      :param args_roc_plot: key word arguments being passed to `RocPlot`
+      :type args_roc_plot: dict, optional
+
+      :raises ValueError: if specified signal class is invalid
+
+
+   .. py:method:: plot_var_perf(plot_name: str, xlabel: str = '$p_{T}$ [GeV]', signal_class: str = 'bjets', h_line: float = None, **kwargs)
+
+      Variable vs efficiency/rejection plot.
+
+      :param plot_name: plot name base
+      :type plot_name: str
+      :param xlabel: _description_, by default "$p_{T}$ [GeV]"
+      :type xlabel: regexp, optional
+      :param signal_class: takes either `bjets` or `cjets` as signal class, by default "bjets"
+      :type signal_class: str, optional
+      :param h_line: draws a horizonatal line in the signal efficiency plot
+      :type h_line: float, optional
+      :param \*\*kwargs: key word arguments for `puma.VarVsEff`
+      :type \*\*kwargs: kwargs
+
+      :raises ValueError: if specified signal class is invalid
+
+
+   .. py:method:: plot_discs(plot_name: str, exclude_tagger: list = None, xlabel: str = None, signal_class: str = 'bjets', **kwargs)
+
+      Plots discriminant
+
+
+      :param plot_name: Name of the plot.
+      :type plot_name: _type_
+      :param exclude_tagger: List of taggers to be excluded from this plot, by default None
+      :type exclude_tagger: list, optional
+      :param xlabel: x-axis label, by default "$D_{b}$"
+      :type xlabel: str, optional
+      :param signal_class: Signal class which can be either "bjets" or "cjets", by default "bjets"
+      :type signal_class: str, optional
+      :param \*\*kwargs: key word arguments for `puma.HistogramPlot`
+      :type \*\*kwargs: kwargs
+
+      :raises ValueError: if specified signal class is invalid
+
+
+
+.. py:class:: Tagger(model_name: str, template: dict = None)
+
+   Class storing tagger results.
+
+   Init Tagger class.
+
+   :param model_name: Name of the model, also correspondinng to the pre-fix of the tagger
+                      variables.
+   :type model_name: str
+   :param template: Template dictionary which keys are directly set as class variables
+   :type template: dict
+
+   .. py:property:: n_jets_light
+
+      Retrieve number of light jets.
+
+      :returns: number of light jets
+      :rtype: int
+
+   .. py:property:: n_jets_c
+
+      Retrieve number of c jets.
+
+      :returns: number of c jets
+      :rtype: int
+
+   .. py:property:: n_jets_b
+
+      Retrieve number of b jets.
+
+      :returns: number of b jets
+      :rtype: int
+
+   .. py:method:: extract_tagger_scores(source: object, source_type: str = 'data_frame', key: str = None)
+
+      Extract tagger scores from data frame or file.
+
+      :param source: pd.DataFrame or file path to h5 file containing pd.DataFrame or structured
+                     numpy array
+      :type source: object
+      :param source_type: Indicates from which source scores should be extracted. Possible options are
+                          `data_frame` when passing a pd.DataFrame, `data_frame_path` when passing a
+                          file path to a h5 file with a pd.DataFrame or `numpy_structured` when
+                          passing a file path to a h5 file with a structured numpy array,
+                          by default "data_frame"
+      :type source_type: str, optional
+      :param key: Key within h5 file, needs to be provided when using the `source_type`
+                  `data_frame_path` or `numpy_structured`, by default None
+      :type key: str, optional
+
+      :raises ValueError: if source_type is wrongly specified
+
+
+   .. py:method:: _init_from_template(template)
+
+
+   .. py:method:: calc_disc_b() -> numpy.ndarray
+
+      Calculate b-tagging discriminant
+
+      :returns: b-tagging discriminant
+      :rtype: np.ndarray
+
+      :raises ValueError: if f_c parameter is not specified for tagger
+
+
+   .. py:method:: calc_disc_c() -> numpy.ndarray
+
+      Calculate c-tagging discriminant
+
+      :returns: c-tagging discriminant
+      :rtype: np.ndarray
+
+      :raises ValueError: if f_b parameter is not specified for tagger
+
+
+

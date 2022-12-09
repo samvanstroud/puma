@@ -1,0 +1,101 @@
+:py:mod:`puma.hlplots.results`
+==============================
+
+.. py:module:: puma.hlplots.results
+
+.. autoapi-nested-parse::
+
+   Results module for high level API.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   puma.hlplots.results.Results
+
+
+
+
+.. py:class:: Results
+
+   Stores all results of the different taggers.
+
+   .. py:method:: add(tagger)
+
+      Add tagger to class.
+
+      :param tagger: Instance of the puma.hlplots.Tagger class, containing tagger information.
+      :type tagger: puma.hlplots.Tagger
+
+      :raises KeyError: if model name duplicated
+
+
+   .. py:method:: get(model_name: str)
+
+      Retrieve tagger info.
+
+      :param model_name: name of model
+      :type model_name: str
+
+      :returns: Tagger class with info about tagger
+      :rtype: Tagger
+
+
+   .. py:method:: plot_rocs(plot_name: str, signal_class: str = 'bjets', args_roc_plot: dict = None)
+
+      Plots rocs
+
+      :param plot_name: roc plot object
+      :type plot_name: puma.RocPlot
+      :param signal_class: signal class to plot Roc with, wither `bjets` or `cjets`, by default `bjets`
+      :type signal_class: str, optional
+      :param args_roc_plot: key word arguments being passed to `RocPlot`
+      :type args_roc_plot: dict, optional
+
+      :raises ValueError: if specified signal class is invalid
+
+
+   .. py:method:: plot_var_perf(plot_name: str, xlabel: str = '$p_{T}$ [GeV]', signal_class: str = 'bjets', h_line: float = None, **kwargs)
+
+      Variable vs efficiency/rejection plot.
+
+      :param plot_name: plot name base
+      :type plot_name: str
+      :param xlabel: _description_, by default "$p_{T}$ [GeV]"
+      :type xlabel: regexp, optional
+      :param signal_class: takes either `bjets` or `cjets` as signal class, by default "bjets"
+      :type signal_class: str, optional
+      :param h_line: draws a horizonatal line in the signal efficiency plot
+      :type h_line: float, optional
+      :param \*\*kwargs: key word arguments for `puma.VarVsEff`
+      :type \*\*kwargs: kwargs
+
+      :raises ValueError: if specified signal class is invalid
+
+
+   .. py:method:: plot_discs(plot_name: str, exclude_tagger: list = None, xlabel: str = None, signal_class: str = 'bjets', **kwargs)
+
+      Plots discriminant
+
+
+      :param plot_name: Name of the plot.
+      :type plot_name: _type_
+      :param exclude_tagger: List of taggers to be excluded from this plot, by default None
+      :type exclude_tagger: list, optional
+      :param xlabel: x-axis label, by default "$D_{b}$"
+      :type xlabel: str, optional
+      :param signal_class: Signal class which can be either "bjets" or "cjets", by default "bjets"
+      :type signal_class: str, optional
+      :param \*\*kwargs: key word arguments for `puma.HistogramPlot`
+      :type \*\*kwargs: kwargs
+
+      :raises ValueError: if specified signal class is invalid
+
+
+

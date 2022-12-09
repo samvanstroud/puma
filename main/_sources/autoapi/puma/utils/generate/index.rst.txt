@@ -60,7 +60,7 @@ Functions
 
    :returns: **df_gen** -- Dataframe with columns
              [HadronConeExclTruthLabelID, rnnip_pu, rnnip_pc, rnnip_pb, dips_pu, dips_pc,
-             dips_pb]
+             dips_pb] if `add_pt` is True also pt is added
    :rtype: pandas.DataFrame
 
 

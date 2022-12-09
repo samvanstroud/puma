@@ -15,6 +15,7 @@ Subpackages
    :titlesonly:
    :maxdepth: 3
 
+   hlplots/index.rst
    utils/index.rst
 
 

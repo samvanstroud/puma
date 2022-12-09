@@ -1,0 +1,103 @@
+:py:mod:`puma.utils.discriminant`
+=================================
+
+.. py:module:: puma.utils.discriminant
+
+.. autoapi-nested-parse::
+
+   Discriminant calculation for flavour tagging.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   puma.utils.discriminant.calc_disc
+   puma.utils.discriminant.calc_disc_b
+   puma.utils.discriminant.calc_disc_c
+
+
+
+.. py:function:: calc_disc(scores: numpy.ndarray, flvs: list = None, flv_map: dict = None, epsilon: float = 1e-10) -> numpy.ndarray
+
+   Calculate arbitrary flavour tagging score.
+
+   :param scores: tagger scores in the shape (n_jets, n_flavours)
+   :type scores: np.ndarray
+   :param flvs: List of flavours corresponding to the order in the scores array, by default None
+   :type flvs: list, optional
+   :param flv_map: flavour map containing signal and background mapping from `flv` and their
+                   fractions, by default None
+   :type flv_map: dict, optional
+   :param epsilon: adds a small epsilon to the numerator and denominator to avoid infinities,
+                   by default 1e-10
+   :type epsilon: float, optional
+
+   :returns: discriminant values
+   :rtype: np.ndarray
+
+   :raises ValueError: if scores and shapes have different shapes
+
+   .. rubric:: Examples
+
+   The `flv_map` can e.g. look like this together with the `flvs`
+   >>> flv_map ={
+   ...     "sig": {"b": 1.0},
+   ...     "bkg": {"l": 1 - 0.5, "c": 0.5},
+   ... }
+   >>> flvs = ["l", "c", "b"]
+   >>> scores = np.column_stack((np.ones(10), np.ones(10), np.ones(10)))
+   >>> calc_disc(scores, flvs=flvs, flv_map=flv_map)
+   array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+
+
+.. py:function:: calc_disc_b(arr_pu: numpy.ndarray, arr_pc: numpy.ndarray, arr_pb: numpy.ndarray, fc_par: float, epsilon: float = 1e-10) -> numpy.ndarray
+
+   Calculate b-tagging discriminant with one fc parameter.
+
+   :param arr_pu: Light prediction scores
+   :type arr_pu: np.ndarray
+   :param arr_pc: c prediction scores
+   :type arr_pc: np.ndarray
+   :param arr_pb: b prediction scores
+   :type arr_pb: np.ndarray
+   :param fc_par: fc parameter for b-jet discriminant
+   :type fc_par: float
+   :param epsilon: adds a small epsilon to the numerator and denominator to avoid infinities,
+                   by default 1e-10
+   :type epsilon: float, optional
+
+   :returns: b-tagging discriminant
+   :rtype: np.ndarray
+
+   :raises ValueError: if inputs has not the same length
+
+
+.. py:function:: calc_disc_c(arr_pu: numpy.ndarray, arr_pc: numpy.ndarray, arr_pb: numpy.ndarray, fb_par: float, epsilon: float = 1e-10) -> numpy.ndarray
+
+   Calculate c-tagging discriminant with one fb parameter.
+
+   :param arr_pu: Light prediction scores
+   :type arr_pu: np.ndarray
+   :param arr_pc: c prediction scores
+   :type arr_pc: np.ndarray
+   :param arr_pb: b prediction scores
+   :type arr_pb: np.ndarray
+   :param fb_par: fb parameter for c-jet discriminant
+   :type fb_par: float
+   :param epsilon: adds a small epsilon to the numerator and denominator to avoid infinities,
+                   by default 1e-10
+   :type epsilon: float, optional
+
+   :returns: b-tagging discriminant
+   :rtype: np.ndarray
+
+   :raises ValueError: if inputs has not the same length
+
+
