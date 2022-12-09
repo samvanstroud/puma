@@ -531,7 +531,7 @@ here for the <em>b</em>-jet discriminant</p>
 </section>
 <section id="performance-vs-a-variable">
 <h2>Performance vs a variable<a class="headerlink" href="#performance-vs-a-variable" title="Permalink to this heading">#</a></h2>
-<p>In this case we plot the performance as a function of the jet pT with the same syntax as above</p>
+<p>In this case we plot the performance as a function of the jet pT with the same syntax as above for an inclusive working point of 70%</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Plotting efficiency/rejection vs pT curves.&quot;</span><span class="p">)</span>
 <span class="c1"># eff/rej vs. variable plots</span>
 <span class="n">results</span><span class="o">.</span><span class="n">atlas_second_tag</span> <span class="o">=</span> <span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">sqrt</span><span class="si">{s}</span><span class="s2">=13$ TeV, dummy jets </span><span class="se">\n</span><span class="s2">$t</span><span class="se">\\</span><span class="s2">bar</span><span class="si">{t}</span><span class="s2">$</span><span class="se">\n</span><span class="s2">70% WP&quot;</span>
@@ -551,7 +551,7 @@ here for the <em>b</em>-jet discriminant</p>
 <img src=https://github.com/umami-hep/puma/raw/examples-material/hlplots_dummy_tagger_pt_b_eff.png width=500>
 <img src=https://github.com/umami-hep/puma/raw/examples-material/hlplots_dummy_tagger_pt_c_rej.png width=500>
 <img src=https://github.com/umami-hep/puma/raw/examples-material/hlplots_dummy_tagger_pt_light_rej.png width=500>
-<p>and similar for the <em>c</em>-tagging performance</p>
+<p>and similar for a fixed b-efficiency per bin.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">atlas_second_tag</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">sqrt</span><span class="si">{s}</span><span class="s2">=13$ TeV, dummy jets </span><span class="se">\n</span><span class="s2">$t</span><span class="se">\\</span><span class="s2">bar</span><span class="si">{t}</span><span class="s2">$</span><span class="se">\n</span><span class="s2">70% WP per bin&quot;</span>
 <span class="p">)</span>
@@ -568,6 +568,7 @@ here for the <em>b</em>-jet discriminant</p>
 <img src=https://github.com/umami-hep/puma/raw/examples-material/hlplots_dummy_tagger_fixed_per_bin_pt_b_eff.png width=500>
 <img src=https://github.com/umami-hep/puma/raw/examples-material/hlplots_dummy_tagger_fixed_per_bin_pt_c_rej.png width=500>
 <img src=https://github.com/umami-hep/puma/raw/examples-material/hlplots_dummy_tagger_fixed_per_bin_pt_light_rej.png width=500>
+<p>Similar to above you can also do these plots for <em>c</em>-tagging by changing the <code class="docutils literal notranslate"><span class="pre">signal_class</span></code> to <code class="docutils literal notranslate"><span class="pre">cjets</span></code>.</p>
 </section>
 </section>
 
